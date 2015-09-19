@@ -44,6 +44,7 @@ _cleanup()
 _supported_fs generic
 _supported_os Linux
 _require_test
+_need_to_be_root
 
 QA_FS_PERMS=$here/src/fs_perms
 

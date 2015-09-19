@@ -116,7 +116,7 @@ $XFS_IO_PROG -f					\
 	$TEST_DIR/test214-5 | _filter_xfs_io_unique
 
 # now do a direct read and see what's on-disk
-$XFS_IO_PROG -f -d				\
+$XFS_IO_PROG -f				\
 	-c 'pread -v 0 0x16000'			\
 	$TEST_DIR/test214-5 | _filter_xfs_io_unique
 

@@ -777,6 +777,13 @@ _scratch_mkfs()
     tmpfs)
 	# do nothing for tmpfs
 	;;
+	fuse.loopbackfs|fuse.gocryptfs)
+	if [ -z $SCRATCH_DEV ]; then
+		echo "Error: scratch dev not set"
+		exit
+	fi
+	rm -Rf $SCRATCH_DEV/*
+	;;
     f2fs)
         $MKFS_F2FS_PROG $MKFS_OPTIONS $* $SCRATCH_DEV > /dev/null
 	;;
@@ -1349,6 +1356,12 @@ _require_scratch_nocheck()
 		    _notrun "this test requires a valid \$SCRATCH_MNT and unique $SCRATCH_DEV"
 		fi
 		;;
+	fuse.loopbackfs|fuse.gocryptfs)
+		if [ ! -d "$SCRATCH_DEV" -o ! -d "$SCRATCH_MNT" ];
+		then
+		    _notrun "\$SCRATCH_DEV=$SCRATCH_DEV and \$SCRATCH_MNT=$SCRATCH_MNT must be directories"
+		fi
+		;;
 	*)
 		 if [ -z "$SCRATCH_DEV" -o "`_is_block_dev "$SCRATCH_DEV"`" = "" ]
 		 then
@@ -1420,7 +1433,7 @@ _require_test()
 		     _notrun "this test requires a valid \$TEST_DIR"
 		fi
 		;;
-	overlay)
+	overlay|fuse.loopbackfs|fuse.gocryptfs)
 		if [ -z "$TEST_DEV" -o ! -d "$TEST_DEV" ]; then
 			_notrun "this test requires a valid \$TEST_DEV as ovl base dir"
 		fi
@@ -1491,6 +1504,11 @@ _require_logdev()
 #
 _require_loop()
 {
+	if [[ "$FSTYP" == fuse.* ]]
+	then
+		_notrun "fuse overlay filesystems do not support loopback devices"
+	fi
+
     if [ "$HOSTOS" != "Linux" ]
     then
 	_notrun "This test requires linux for loopback device support"
@@ -2362,7 +2380,7 @@ _check_test_fs()
     cifs)
 	# no way to check consistency for cifs
 	;;
-    overlay)
+    overlay|fuse.loopbackfs|fuse.gocryptfs)
 	# no way to check consistency for overlay
 	;;
     udf)
@@ -2913,6 +2931,8 @@ _require_atime()
 {
 	if [ "$FSTYP" == "nfs" ]; then
 		_notrun "atime related mount options have no effect on NFS"
+	elif [ "$FSTYP" == "fuse.loopbackfs" -o  "$FSTYP" == "fuse.gocryptfs" ]; then
+		_notrun "atime related mount options have no effect on loopback file systems"
 	fi
 }
 

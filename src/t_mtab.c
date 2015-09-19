@@ -91,7 +91,7 @@ lock_mtab (void) {
 		struct flock flock;
 		int fd, errsv, i, j;
 
-		i = open (linktargetfile, O_WRONLY|O_CREAT, 0);
+		i = open (linktargetfile, O_WRONLY|O_CREAT, 0600);
 		if (i < 0) {
 			int errsv = errno;
 			/* linktargetfile does not exist (as a file)

@@ -131,11 +131,24 @@ _fatal()
 export MKFS_PROG="`set_prog_path mkfs`"
 [ "$MKFS_PROG" = "" ] && _fatal "mkfs not found"
 
-export MOUNT_PROG="`set_prog_path mount`"
-[ "$MOUNT_PROG" = "" ] && _fatal "mount not found"
+#export MOUNT_PROG="`set_prog_path mount`"
+#[ "$MOUNT_PROG" = "" ] && _fatal "mount not found"
 
-export UMOUNT_PROG="`set_prog_path umount`"
-[ "$UMOUNT_PROG" = "" ] && _fatal "umount not found"
+export MOUNT_PROG="$here/fuse/mount-wrapper.sh"
+export UMOUNT_PROG=umount
+
+# Fuse filesystems cannot be unmounted by device.
+# Umount by mountpoint instead.
+umount()
+{
+	if [ "$1" == "$SCRATCH_DEV" ]; then
+		fusermount -u $SCRATCH_MNT
+	elif [ "$1" == "$TEST_DEV" ]; then
+		fusermount -u $TEST_DIR
+	else
+		fusermount -u $1
+	fi
+}
 
 export FSSTRESS_PROG="./ltp/fsstress"
 [ ! -x $FSSTRESS_PROG ] && _fatal "fsstress not found or executable"
@@ -439,7 +452,7 @@ _check_device()
 
 	echo $dev | grep -qE ":|//" > /dev/null 2>&1
 	network_dev=$?
-	if [ "$FSTYP" == "overlay" ]; then
+	if [ "$FSTYP" == "overlay" -o "$FSTYP" == "fuse.loopbackfs" -o "$FSTYP" == "fuse.gocryptfs"  ]; then
 		if [ ! -d "$dev" ]; then
 			_fatal "common/config: $name ($dev) is not a directory for overlay"
 		fi

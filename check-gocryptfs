@@ -1,0 +1,28 @@
+#!/bin/bash
+
+if [ $(id -u) -eq 0 ]; then
+	echo "Running the FUSE tests as root is not supported"
+	echo "Please run as a normal user"
+	exit 1
+fi
+
+# FS Type
+export FSTYP=fuse.gocryptfs
+
+# Test root dir
+R=/tmp/check-gocryptfs
+
+export TEST_DEV=$R/testdev
+export TEST_DIR=$R/testdir
+
+export SCRATCH_DEV=$R/scratchdev
+export SCRATCH_MNT=$R/scratchdir
+
+mkdir -p $TEST_DEV $TEST_DIR $SCRATCH_DEV $SCRATCH_MNT
+
+if [ -z "$*" ]
+then
+	./check generic/???
+else
+	./check $*
+fi

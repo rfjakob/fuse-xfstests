@@ -59,7 +59,7 @@ _supported_fs generic
 _supported_os Linux
 _require_test
 
-dmesg -c > /dev/null
+# dmesg -c > /dev/null
 
 nr_bug=`dmesg | grep -c "kernel BUG"`
 nr_error=`dmesg | grep -c "error"`

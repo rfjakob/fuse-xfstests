@@ -48,6 +48,7 @@ _supported_fs generic
 _supported_os Linux
 _require_scratch
 _require_test
+_need_to_be_root
 
 DEVNULL=$SCRATCH_MNT/devnull
 DEVZERO=$SCRATCH_MNT/devzero

@@ -49,6 +49,8 @@ _supported_fs generic
 _supported_os Linux
 _require_test
 
+_notrun "FSIZE is not supported on FUSE"
+
 [ -n "$XFS_IO_PROG" ] || _notrun "xfs_io executable not found"
 
 rm -f $seqres.full
