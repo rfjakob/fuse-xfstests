@@ -439,7 +439,7 @@ _check_device()
 
 	echo $dev | grep -qE ":|//" > /dev/null 2>&1
 	network_dev=$?
-	if [ "$FSTYP" == "overlay" ]; then
+	if [ "$FSTYP" == "overlay" -o "$FSTYP" == "fuse.gocryptfs" ]; then
 		if [ ! -d "$dev" ]; then
 			_fatal "common/config: $name ($dev) is not a directory for overlay"
 		fi

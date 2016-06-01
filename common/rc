@@ -321,10 +321,18 @@ _overlay_scratch_unmount()
 	$UMOUNT_PROG $SCRATCH_MNT
 }
 
+_gocryptfs_mount()
+{
+	gocryptfs -extpass "echo test" -quiet -nosyslog $1 $2
+}
+
 _scratch_mount()
 {
     if [ "$FSTYP" == "overlay" ]; then
         _overlay_scratch_mount $*
+        return $?
+    elif [ "$FSTYP" == "fuse.gocryptfs" ]; then
+        _gocryptfs_mount $SCRATCH_DEV $SCRATCH_MNT $*
         return $?
     fi
     _mount -t $FSTYP `_scratch_mount_options $*`
@@ -339,6 +347,9 @@ _scratch_unmount()
 	btrfs)
 		$UMOUNT_PROG $SCRATCH_MNT
 		;;
+	fuse.gocryptfs)
+		fusermount -u $SCRATCH_MNT
+		;;
 	*)
 		$UMOUNT_PROG $SCRATCH_DEV
 		;;
@@ -347,6 +358,11 @@ _scratch_unmount()
 
 _scratch_remount()
 {
+    if [ "$FSTYP" == "fuse.gocryptfs" ]; then
+        echo "gocryptfs does not support remounting"
+        return 0
+    fi
+
     local opts="$1"
 
     if test -n "$opts"; then
@@ -374,6 +390,9 @@ _test_mount()
     if [ "$FSTYP" == "overlay" ]; then
         _overlay_test_mount $*
         return $?
+    elif [ "$FSTYP" == "fuse.gocryptfs" ]; then
+        _gocryptfs_mount $TEST_DEV $TEST_DIR $*
+        return $?
     fi
     _test_options mount
     _mount -t $FSTYP $TEST_OPTIONS $TEST_FS_MOUNT_OPTS $SELINUX_MOUNT_OPTIONS $* $TEST_DEV $TEST_DIR
@@ -383,6 +402,8 @@ _test_unmount()
 {
 	if [ "$FSTYP" == "overlay" ]; then
 		_overlay_test_unmount
+	elif [ "$FSTYP" == "fuse.gocryptfs" ]; then
+		fusermount -u $TEST_DIR
 	else
 		$UMOUNT_PROG $TEST_DEV
 	fi
@@ -777,6 +798,10 @@ _scratch_mkfs()
 	# unable to re-create overlay, remove all files in $SCRATCH_MNT to
 	# avoid EEXIST caused by the leftover files created in previous runs
         _scratch_cleanup_files
+	;;
+    fuse.gocryptfs)
+	    rm -rf $SCRATCH_DEV/*
+	    gocryptfs -init -extpass "echo test" $SCRATCH_DEV
 	;;
     udf)
         $MKFS_UDF_PROG $MKFS_OPTIONS $* $SCRATCH_DEV > /dev/null
@@ -1351,7 +1376,7 @@ _require_scratch_nocheck()
 		     _notrun "this test requires a valid \$SCRATCH_MNT"
 		fi
 		;;
-	overlay)
+	overlay|fuse.gocryptfs)
 		if [ -z "$SCRATCH_DEV" -o ! -d "$SCRATCH_DEV" ]; then
 			_notrun "this test requires a valid \$SCRATCH_DEV as ovl base dir"
 		fi
@@ -1436,7 +1461,7 @@ _require_test()
 		     _notrun "this test requires a valid \$TEST_DIR"
 		fi
 		;;
-	overlay)
+	overlay|fuse.gocryptfs)
 		if [ -z "$TEST_DEV" -o ! -d "$TEST_DEV" ]; then
 			_notrun "this test requires a valid \$TEST_DEV as ovl base dir"
 		fi
@@ -2070,7 +2095,9 @@ _mount_or_remount_rw()
 	mountpoint=$3
 
 	if [ $USE_REMOUNT -eq 0 ]; then
-		if [ "$FSTYP" != "overlay" ]; then
+		if [ "$FSTYP" == "fuse.gocryptfs" ]; then
+			_gocryptfs_mount $device $mountpoint $mount_opts
+		elif [ "$FSTYP" != "overlay" ]; then
 			_mount -t $FSTYP $mount_opts $device $mountpoint
 		else
 			_overlay_mount $device $mountpoint
@@ -2080,6 +2107,10 @@ _mount_or_remount_rw()
 			return 0 # ok=0
 		fi
 	else
+		if [ "$FSTYP" == "fuse.gocryptfs" ]; then
+			echo "gocryptfs does not support remounting"
+			return 0
+		fi
 		_remount $device rw
 	fi
 
@@ -2378,7 +2409,7 @@ _check_test_fs()
     cifs)
 	# no way to check consistency for cifs
 	;;
-    overlay)
+    overlay|fuse.gocryptfs)
 	# no way to check consistency for overlay
 	;;
     udf)
@@ -2422,7 +2453,7 @@ _check_scratch_fs()
     cifs)
 	# Don't know how to check a CIFS filesystem, yet.
 	;;
-    overlay)
+    overlay|fuse.gocryptfs)
 	# no way to check consistency for overlay
 	;;
     btrfs)
