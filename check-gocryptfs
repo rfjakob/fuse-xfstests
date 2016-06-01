@@ -3,6 +3,8 @@
 # Test root dir
 R=/tmp/check-gocryptfs
 
+export FSTYP=fuse.gocryptfs
+
 export TEST_DEV=$R/testdev
 export TEST_DIR=$R/testdir
 
@@ -11,10 +13,10 @@ export SCRATCH_MNT=$R/scratchdir
 
 mkdir -p $TEST_DEV $TEST_DIR $SCRATCH_DEV $SCRATCH_MNT
 
-if [ ! -e $TEST_DEV/gocryptfs.conf ]; then
-	gocryptfs -init -quiet -extpass "echo test" $TEST_DEV
-fi
-
 export PATH=$PATH:/usr/local/bin
+
+if [ ! -e $TEST_DEV/gocryptfs.conf ]; then
+	gocryptfs -init -quiet -extpass "echo test" $TEST_DEV || exit
+fi
 
 ./check $*

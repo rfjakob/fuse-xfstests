@@ -107,7 +107,7 @@ umount_toolong_name()
 {
 	local longname=$SCRATCH_MNT/`$PERL_PROG -e 'print "a"x256;'`
 
-	_scratch_mount 2>&1 | tee -a $seqres.full
+	_scratch_mount >> $seqres.full 2>&1
 
 	echo "# umount a too-long name" >>$seqres.full
 	$UMOUNT_PROG $longname >>$seqres.full 2>&1
@@ -120,7 +120,7 @@ lazy_umount_symlink()
 {
 	local symlink=$SCRATCH_MNT/$seq.testdir_symlink
 	echo "# lazy umount a symlink" >>$seqres.full
-	_scratch_mount 2>&1 | tee -a $seqres.full
+	_scratch_mount >> $seqres.full 2>&1
 	mkdir -p $SCRATCH_MNT/testdir
 	rm -f $symlink
 	ln -s $SCRATCH_MNT/testdir $symlink
@@ -135,7 +135,6 @@ echo "Silence is golden"
 mount_nonexistent_mnt
 mount_free_loopdev
 mount_wrong_fstype
-
 umount_symlink_device
 umount_toolong_name
 lazy_umount_symlink
