@@ -455,6 +455,11 @@ _check_device()
 	fi
 
 	case "$FSTYP" in
+	fuse.gocryptfs)
+		if [ ! -d "$dev" ]; then
+			_fatal "common/config: $name ($dev) is not a directory for gocryptfs"
+		fi
+		;;
 	overlay)
 		if [ ! -d "$dev" ]; then
 			_fatal "common/config: $name ($dev) is not a directory for overlay"

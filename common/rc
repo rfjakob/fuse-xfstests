@@ -464,10 +464,33 @@ _overlay_scratch_unmount()
 	_overlay_base_scratch_unmount
 }
 
+_gocryptfs_mount()
+{
+	# $1 ... cipherdir
+	# $2 ... mountpoint
+	# $3 ... -o
+	# $4 ... remount,ro / nosuid / etc
+
+	o="dev,suid"
+	if [[ "$4" == *"remount"* ]]; then
+		fusermount -u $2
+	fi
+	if [[ "$4" == *"ro"* ]]; then
+		o="$o,ro"
+	elif [[ "$4" == "nosuid" ]]; then
+		# Drop suid option
+		o="dev"
+	fi
+	gocryptfs -extpass "echo test" -quiet -nosyslog -allow_other -ko $o $1 $2
+}
+
 _scratch_mount()
 {
     if [ "$FSTYP" == "overlay" ]; then
         _overlay_scratch_mount $*
+        return $?
+    elif [ "$FSTYP" == "fuse.gocryptfs" ]; then
+        _gocryptfs_mount $SCRATCH_DEV $SCRATCH_MNT $*
         return $?
     fi
     _mount -t $FSTYP `_scratch_mount_options $*`
@@ -482,6 +505,9 @@ _scratch_unmount()
 	btrfs)
 		$UMOUNT_PROG $SCRATCH_MNT
 		;;
+	fuse.gocryptfs)
+		fusermount -u $SCRATCH_MNT
+		;;
 	*)
 		$UMOUNT_PROG $SCRATCH_DEV
 		;;
@@ -490,6 +516,14 @@ _scratch_unmount()
 
 _scratch_remount()
 {
+    if [ "$FSTYP" == "fuse.gocryptfs" -a "$1" == "ro" ]; then
+        _gocryptfs_mount $SCRATCH_DEV $SCRATCH_MNT -o remount,ro
+        return $?
+    elif [ "$FSTYP" == "fuse.gocryptfs" ]; then
+        echo "_scratch_remount: gocryptfs: unsupported option"
+        return 1
+    fi
+
     local opts="$1"
 
     if test -n "$opts"; then
@@ -517,6 +551,9 @@ _test_mount()
     if [ "$FSTYP" == "overlay" ]; then
         _overlay_test_mount $*
         return $?
+    elif [ "$FSTYP" == "fuse.gocryptfs" ]; then
+        _gocryptfs_mount $TEST_DEV $TEST_DIR $*
+        return $?
     fi
     _test_options mount
     _mount -t $FSTYP $TEST_OPTIONS $TEST_FS_MOUNT_OPTS $SELINUX_MOUNT_OPTIONS $* $TEST_DEV $TEST_DIR
@@ -526,6 +563,8 @@ _test_unmount()
 {
 	if [ "$FSTYP" == "overlay" ]; then
 		_overlay_test_unmount
+	elif [ "$FSTYP" == "fuse.gocryptfs" ]; then
+		fusermount -u $TEST_DIR
 	else
 		$UMOUNT_PROG $TEST_DEV
 	fi
@@ -803,6 +842,12 @@ _scratch_mkfs()
 	local mkfs_status
 
 	case $FSTYP in
+	fuse.gocryptfs)
+		[ -n "$SCRATCH_DEV" ] || return 1
+		rm -rf $SCRATCH_DEV/*
+		gocryptfs -init -scryptn 10 -extpass "echo test" $SCRATCH_DEV
+		return $?
+		;;
 	nfs*|cifs|ceph|overlay|glusterfs|pvfs2)
 		# unable to re-create this fstyp, just remove all files in
 		# $SCRATCH_MNT to avoid EEXIST caused by the leftover files
@@ -1548,6 +1593,11 @@ _check_mounted_on()
 _require_scratch_nocheck()
 {
     case "$FSTYP" in
+	fuse.gocryptfs)
+		if [ -z "$SCRATCH_DEV" -o ! -d "$SCRATCH_DEV" ]; then
+			_notrun "this test requires a valid \$SCRATCH_DEV dir"
+		fi
+		;;
 	glusterfs)
 		echo $SCRATCH_DEV | egrep -q ":/?" > /dev/null 2>&1
 		if [ -z "$SCRATCH_DEV" -o "$?" != "0" ]; then
@@ -1654,6 +1704,11 @@ _require_scratch()
 _require_test()
 {
     case "$FSTYP" in
+	fuse.gocryptfs)
+		if [ -z "$TEST_DEV" -o ! -d "$TEST_DEV" ]; then
+			_notrun "this test requires a valid \$TEST_DEV dir"
+		fi
+		;;
 	glusterfs)
 		echo $TEST_DEV | egrep -q ":/?" > /dev/null 2>&1
 		if [ -z "$TEST_DEV" -o "$?" != "0" ]; then
@@ -2479,6 +2534,8 @@ _mount_or_remount_rw()
 	if [ $USE_REMOUNT -eq 0 ]; then
 		if [ "$FSTYP" != "overlay" ]; then
 			_mount -t $FSTYP $mount_opts $device $mountpoint
+		elif [ "$FSTYP" == "fuse.gocryptfs" ]; then
+			_gocryptfs_mount $device $mountpoint $mount_opts
 		else
 			_overlay_mount $device $mountpoint
 		fi
@@ -2487,6 +2544,10 @@ _mount_or_remount_rw()
 			return 0 # ok=0
 		fi
 	else
+		if [ "$FSTYP" == "fuse.gocryptfs" ]; then
+			echo "gocryptfs does not support remounting"
+			return 0
+		fi
 		_remount $device rw
 	fi
 
@@ -2595,6 +2656,9 @@ _check_udf_filesystem()
 _check_test_fs()
 {
     case $FSTYP in
+	fuse.gocryptfs)
+	# no way to check consistency for gocryptfs
+	;;
     xfs)
 	_check_xfs_test_fs
 	;;
@@ -2639,6 +2703,9 @@ _check_scratch_fs()
     [ $# -eq 1 ] && device=$1
 
     case $FSTYP in
+	fuse.gocryptfs)
+	# no way to check consistency for gocryptfs
+	;;
     xfs)
 	SCRATCH_LOG="none"
 	SCRATCH_RT="none"
@@ -3214,11 +3281,17 @@ _require_atime()
 	_exclude_scratch_mount_option "noatime"
 	if [ "$FSTYP" == "nfs" ]; then
 		_notrun "atime related mount options have no effect on NFS"
+	elif [ "$FSTYP" == "fuse.gocryptfs" ]; then
+		_notrun "atime related mount options have no effect on gocryptfs"
 	fi
 }
 
 _require_relatime()
 {
+	if [ "$FSTYP" == "fuse.gocryptfs" ]; then
+		_notrun "atime related mount options have no effect on gocryptfs"
+	fi
+
         _scratch_mkfs > /dev/null 2>&1
         _scratch_mount -o relatime || \
                 _notrun "relatime not supported by the current kernel"
