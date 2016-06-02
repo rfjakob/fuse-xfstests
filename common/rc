@@ -323,7 +323,7 @@ _overlay_scratch_unmount()
 
 _gocryptfs_mount()
 {
-	gocryptfs -extpass "echo test" -quiet -nosyslog $1 $2
+	gocryptfs -extpass "echo test" -quiet -nosyslog -allow_other $1 $2
 }
 
 _scratch_mount()
