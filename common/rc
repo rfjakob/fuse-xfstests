@@ -323,7 +323,14 @@ _overlay_scratch_unmount()
 
 _gocryptfs_mount()
 {
-	gocryptfs -extpass "echo test" -quiet -nosyslog -allow_other $1 $2
+	o="dev,suid"
+	if [[ "$4" == *"remount"* ]]; then
+		fusermount -u $2
+	fi
+	if [[ "$4" == *"ro"* ]]; then
+		o="$o,ro"
+	fi
+	gocryptfs -extpass "echo test" -quiet -nosyslog -allow_other -o $o $1 $2
 }
 
 _scratch_mount()
@@ -358,9 +365,12 @@ _scratch_unmount()
 
 _scratch_remount()
 {
-    if [ "$FSTYP" == "fuse.gocryptfs" ]; then
-        echo "gocryptfs does not support remounting"
-        return 0
+    if [ "$FSTYP" == "fuse.gocryptfs" -a "$1" == "ro" ]; then
+        _gocryptfs_mount $SCRATCH_DEV $SCRATCH_MNT -o remount,ro
+        return $?
+    elif [ "$FSTYP" == "fuse.gocryptfs" ]; then
+        echo "_scratch_remount: gocryptfs: unsupported option"
+        return 1
     fi
 
     local opts="$1"
@@ -2970,11 +2980,17 @@ _require_atime()
 	_exclude_scratch_mount_option "noatime"
 	if [ "$FSTYP" == "nfs" ]; then
 		_notrun "atime related mount options have no effect on NFS"
+	elif [ "$FSTYP" == "fuse.gocryptfs" ]; then
+		_notrun "atime related mount options have no effect on gocryptfs"
 	fi
 }
 
 _require_relatime()
 {
+	if [ "$FSTYP" == "fuse.gocryptfs" ]; then
+		_notrun "atime related mount options have no effect on gocryptfs"
+	fi
+
         _scratch_mkfs > /dev/null 2>&1
         _scratch_mount -o relatime || \
                 _notrun "relatime not supported by the current kernel"
