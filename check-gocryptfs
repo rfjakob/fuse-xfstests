@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "fuse-xfstests version $(git rev-parse --short HEAD)"
+date -u
+
 # Test root dir
 R=/tmp/check-gocryptfs
 
