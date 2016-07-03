@@ -811,7 +811,7 @@ _scratch_mkfs()
 	;;
     fuse.gocryptfs)
 	    rm -rf $SCRATCH_DEV/*
-	    gocryptfs -init -extpass "echo test" $SCRATCH_DEV
+	    gocryptfs -init -scryptn 10 -extpass "echo test" $SCRATCH_DEV
 	;;
     udf)
         $MKFS_UDF_PROG $MKFS_OPTIONS $* $SCRATCH_DEV > /dev/null

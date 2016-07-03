@@ -19,7 +19,7 @@ mkdir -p $TEST_DEV $TEST_DIR $SCRATCH_DEV $SCRATCH_MNT
 export PATH=$PATH:/usr/local/bin
 
 if [ ! -e $TEST_DEV/gocryptfs.conf ]; then
-	gocryptfs -init -quiet -extpass "echo test" $TEST_DEV || exit
+	gocryptfs -init -quiet -scryptn 10 -extpass "echo test" $TEST_DEV || exit
 fi
 
 ./check $*
