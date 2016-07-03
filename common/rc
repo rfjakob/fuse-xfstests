@@ -323,12 +323,20 @@ _overlay_scratch_unmount()
 
 _gocryptfs_mount()
 {
+	# $1 ... cipherdir
+	# $2 ... mountpoint
+	# $3 ... -o
+	# $4 ... remount,ro / nosuid / etc
+
 	o="dev,suid"
 	if [[ "$4" == *"remount"* ]]; then
 		fusermount -u $2
 	fi
 	if [[ "$4" == *"ro"* ]]; then
 		o="$o,ro"
+	elif [[ "$4" == "nosuid" ]]; then
+		# Drop suid option
+		o="dev"
 	fi
 	gocryptfs -extpass "echo test" -quiet -nosyslog -allow_other -o $o $1 $2
 }

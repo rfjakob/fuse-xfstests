@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [[ $EUID -ne 0 ]]; then
+	echo "must run as root"
+	exit 1
+fi
+
 echo "fuse-xfstests version $(git rev-parse --short HEAD)"
 date -u
 
