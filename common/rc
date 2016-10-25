@@ -338,7 +338,7 @@ _gocryptfs_mount()
 		# Drop suid option
 		o="dev"
 	fi
-	gocryptfs -extpass "echo test" -quiet -nosyslog -allow_other -o $o $1 $2
+	gocryptfs -extpass "echo test" -quiet -nosyslog -allow_other -ko $o $1 $2
 }
 
 _scratch_mount()
