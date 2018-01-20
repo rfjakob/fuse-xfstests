@@ -8,7 +8,10 @@ added.
 Prerequsites
 ------------
 
-* Working `gcc` and `make`
+* Working `gcc`, `make`, `libtool`, and several headers. On Fedora,
+```
+sudo dnf install libtool libuuid-devel xfsprogs-devel libattr-devel libacl-devel libaio-devel
+```
 * gocryptfs binary in `/usr/local/bin`
 
 Installing the tests
