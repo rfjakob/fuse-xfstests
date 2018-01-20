@@ -13,6 +13,7 @@ Prerequsites
 sudo dnf install libtool libuuid-devel xfsprogs-devel libattr-devel libacl-devel libaio-devel
 ```
 * gocryptfs binary in `/usr/local/bin`
+* `fsqa` user exists
 
 Installing the tests
 --------------------
