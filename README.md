@@ -8,9 +8,9 @@ added.
 Prerequsites
 ------------
 
-* Working `gcc`, `make`, `libtool`, and several headers. On Fedora,
+* Working `gcc`, `make`, `libtool`, several headers and dbench. On Fedora,
 ```
-sudo dnf install libtool libuuid-devel xfsprogs-devel libattr-devel libacl-devel libaio-devel
+sudo dnf install libtool libuuid-devel xfsprogs-devel libattr-devel libacl-devel libaio-devel dbench
 ```
 * gocryptfs binary in `/usr/local/bin`
 * `fsgqa` user exists
