@@ -1,0 +1,33 @@
+#
+# gocryptfs specific common functions.
+#
+
+_gocryptfs_mount()
+{
+	local dir=$1
+	local mnt=$2
+	# $3 ... -o
+	# $4 ... remount,ro / nosuid / etc
+
+	o="dev,suid"
+	if [[ "$4" == *"remount"* ]]; then
+		fusermount -u $2
+	fi
+	if [[ "$4" == *"ro"* ]]; then
+		o="$o,ro"
+	elif [[ "$4" == "nosuid" ]]; then
+		# Drop suid option
+		o="dev"
+	fi
+	gocryptfs -q -extpass "echo test" -nosyslog -allow_other -ko $o $dir $mnt
+}
+
+_check_gocryptfs_filesystem()
+{
+	gocryptfs -q -fsck -extpass "echo test" $1
+}
+
+_scratch_mkfs_gocryptfs()
+{
+	gocryptfs -q -init -scryptn 10 -extpass "echo test" $1
+}
