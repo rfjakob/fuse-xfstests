@@ -489,9 +489,9 @@ _check_device()
 		# 9p and virtiofs mount tags are just plain strings, so anything is allowed
 		# tmpfs doesn't use mount source, ignore
 		;;
-	overlay)
+	fuse.gocryptfs|fuse.loopback|overlay)
 		if [ ! -d "$dev" ]; then
-			_fatal "common/config: $name ($dev) is not a directory for overlay"
+			_fatal "common/config: $name ($dev) is not a directory for $FSTYP"
 		fi
 		;;
 	ubifs)

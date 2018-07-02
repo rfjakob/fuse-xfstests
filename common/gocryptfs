@@ -1,0 +1,97 @@
+#
+# gocryptfs-specific functions.
+#
+
+_gocryptfs_mount()
+{
+	local dir=$1
+	local mnt=$2
+	# $3 ... -o
+	# $4 ... remount,ro / nosuid / etc
+
+	o="dev,suid"
+	if [[ "$4" == *"remount"* ]]; then
+		fusermount -u $2
+	fi
+	if [[ "$4" == *"ro"* ]]; then
+		o="$o,ro"
+	elif [[ "$4" == "nosuid" ]]; then
+		# Drop suid option
+		o="dev"
+	fi
+
+	# Check that the executable is available
+	if ! type gocryptfs > /dev/null; then
+		type gocryptfs
+		return 1
+	fi
+
+	gocryptfs -q -extpass "echo test" -allow_other -ko $o $dir $mnt
+}
+
+# Mount go-fuse loopback example
+_gofuse_loopback_mount()
+{
+	local dir=$1
+	local mnt=$2
+	# $3 ... -o
+	# $4 ... remount,ro / nosuid / etc
+
+	if [[ "$4" == *"remount"* ]]; then
+		fusermount -u $2
+	fi
+
+	# Abort on "transport endpoint not connected"
+	stat $dir > /dev/null || return 1
+
+	# Check that the executable is available
+	if ! type loopback > /dev/null; then
+		type loopback
+		return 1
+	fi
+
+	loopback -allow-other -q $mnt $dir &
+	# Wait until loopback has mounted itself.
+	# Ugly, but works.
+	sleep 0.1
+	while ! mountpoint $mnt > /dev/null ; do
+		sleep 0.1
+		if [[ -z $(jobs -r) ]]; then
+			echo "_gofuse_loopback_mount: child died"
+			return 1
+		fi
+	done
+	disown
+}
+
+_check_gocryptfs_filesystem()
+{
+	gocryptfs -q -fsck -extpass "echo test" $1
+}
+
+_scratch_mkfs_gocryptfs_sized()
+{
+	local size=$1
+	local scratch_dev=$2
+	# Check args
+	if [[ -z $size ]] || [[ -z $scratch_dev ]]; then
+		echo "_scratch_mkfs_gocryptfs_sized: missing argument. size=$size, scratch_dev=$scratch_dev"
+		return 1
+	fi
+	# Unmount leftover ext4 (if any)
+	if mountpoint $scratch_dev; then
+		umount $scratch_dev || return 1
+	fi
+	truncate -s $size $scratch_dev.ext4 || return 1
+	mkfs.ext4 -F -q $scratch_dev.ext4 || return 1
+	mount $scratch_dev.ext4 $scratch_dev || return 1
+	rmdir $scratch_dev/lost+found
+	gocryptfs -q -init -scryptn 10 -extpass "echo test" $scratch_dev
+}
+
+# For go-fuse loopback example
+_scratch_mkfs_gofuse_loopback_sized()
+{
+	_scratch_mkfs_gocryptfs_sized $1 $2
+	rm $2/gocryptfs.conf $2/gocryptfs.diriv
+}

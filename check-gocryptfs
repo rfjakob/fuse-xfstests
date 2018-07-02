@@ -1,0 +1,49 @@
+#!/bin/bash
+
+MYNAME=$(basename "$0")
+
+if [[ $EUID -ne 0 ]]; then
+	echo "must run as root"
+	exit 1
+fi
+
+export PATH=$PATH:/usr/local/bin
+
+# Try to keep the machine usable while the tests are running.
+renice 19 $$ > /dev/null
+
+echo "fuse-xfstests $(git rev-parse --abbrev-ref HEAD)/$(git rev-parse --short HEAD)"
+date -u
+echo
+
+# Test root dir
+R=/var/tmp/fuse-xfstests/$MYNAME
+
+export TEST_DEV=$R/testdev
+export TEST_DIR=$R/testdir
+
+export SCRATCH_DEV=$R/scratchdev
+export SCRATCH_MNT=$R/scratchdir
+
+mkdir -p $TEST_DEV $TEST_DIR $SCRATCH_DEV $SCRATCH_MNT || exit
+
+if [[ $MYNAME == check-gocryptfs ]]; then
+	type gocryptfs
+	gocryptfs -version
+	export FSTYP=fuse.gocryptfs
+	if [[ ! -e $TEST_DEV/gocryptfs.conf ]]; then
+		gocryptfs -init -quiet -scryptn 10 -extpass "echo test" $TEST_DEV || exit
+	fi
+elif [[ $MYNAME == check-loopback ]]; then
+	type loopback
+	export FSTYP=fuse.loopback
+else
+	echo "unknown mode of operation: $MYNAME"
+	exit 1
+fi
+
+SECONDS=0
+./check $*
+RET=$?
+echo "Runtime was $SECONDS seconds, exit code $RET"
+echo $RET
