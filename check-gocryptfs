@@ -1,0 +1,32 @@
+#!/bin/bash
+
+if [[ $EUID -ne 0 ]]; then
+	echo "must run as root"
+	exit 1
+fi
+
+export PATH=$PATH:/usr/local/bin
+
+gocryptfs -version
+echo "fuse-xfstests $(git rev-parse --abbrev-ref HEAD)/$(git rev-parse --short HEAD)"
+date -u
+echo
+
+# Test root dir
+R=/var/tmp/check-gocryptfs
+
+export FSTYP=fuse.gocryptfs
+
+export TEST_DEV=$R/testdev
+export TEST_DIR=$R/testdir
+
+export SCRATCH_DEV=$R/scratchdev
+export SCRATCH_MNT=$R/scratchdir
+
+mkdir -p $TEST_DEV $TEST_DIR $SCRATCH_DEV $SCRATCH_MNT
+
+if [ ! -e $TEST_DEV/gocryptfs.conf ]; then
+	gocryptfs -init -quiet -scryptn 10 -extpass "echo test" $TEST_DEV || exit
+fi
+
+./check $*
