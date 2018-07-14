@@ -713,10 +713,7 @@ _scratch_mkfs()
 
 	case $FSTYP in
 	fuse.gocryptfs)
-		# Avoid rm -rf /* if we messed up
-		[ -n "$SCRATCH_DEV" ] || return 1
-		rm -rf $SCRATCH_DEV/*
-		_scratch_mkfs_gocryptfs $SCRATCH_DEV
+		_scratch_mkfs_gocryptfs_sized 1G $SCRATCH_DEV
 		return $?
 		;;
 	nfs*|cifs|ceph|overlay|glusterfs|pvfs2|9p)
@@ -986,6 +983,9 @@ _scratch_mkfs_sized()
 	    MKFS_OPTIONS="-J $journal_size $MKFS_OPTIONS"
 	fi
 	${MKFS_PROG}.$FSTYP $MKFS_OPTIONS -O -b $blocksize $SCRATCH_DEV $blocks
+	;;
+    fuse.gocryptfs)
+	_scratch_mkfs_gocryptfs_sized $fssize $SCRATCH_DEV
 	;;
     ocfs2)
 	yes | ${MKFS_PROG}.$FSTYP -F $MKFS_OPTIONS -b $blocksize $SCRATCH_DEV $blocks

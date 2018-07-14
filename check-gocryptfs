@@ -25,8 +25,8 @@ export SCRATCH_MNT=$R/scratchdir
 
 mkdir -p $TEST_DEV $TEST_DIR $SCRATCH_DEV $SCRATCH_MNT
 
-if [ ! -e $TEST_DEV/gocryptfs.conf ]; then
-	gocryptfs -init -quiet -scryptn 10 -extpass "echo test" $TEST_DEV || exit
+if [[ ! -e $TEST_DEV/gocryptfs.conf ]]; then
+	gocryptfs -init -quiet -scryptn 10 -extpass "echo test" $TEST_DEV || exit 1
 fi
 
 ./check $*

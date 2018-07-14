@@ -27,7 +27,22 @@ _check_gocryptfs_filesystem()
 	gocryptfs -q -fsck -extpass "echo test" $1
 }
 
-_scratch_mkfs_gocryptfs()
+_scratch_mkfs_gocryptfs_sized()
 {
-	gocryptfs -q -init -scryptn 10 -extpass "echo test" $1
+	local size=$1
+	local scratch_dev=$2
+	# Check args
+	if [[ -z $size ]] || [[ -z $scratch_dev ]]; then
+		echo "_scratch_mkfs_gocryptfs_sized: missing argument. size=$size, scratch_dev=$scratch_dev"
+		return 1
+	fi
+	# Unmount leftover ext4 (if any)
+	if mountpoint $scratch_dev; then
+		umount $scratch_dev || return 1
+	fi
+	truncate -s $size $scratch_dev.ext4 || return 1
+	mkfs.ext4 -F -q $scratch_dev.ext4 || return 1
+	mount $scratch_dev.ext4 $scratch_dev || return 1
+	rmdir $scratch_dev/lost+found
+	gocryptfs -q -init -scryptn 10 -extpass "echo test" $scratch_dev
 }
