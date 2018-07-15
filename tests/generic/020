@@ -102,6 +102,7 @@ do
     if [ $? -ne 0 ]
     then
         echo "!!! failed to add \"attribute_$v\""
+        df -Th
         exit 1
     fi
     

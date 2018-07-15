@@ -229,6 +229,15 @@ case "$FSTYP" in
 xfs|udf|pvfs2|9p|ceph)
 	MAX_ATTRS=1000
 	;;
+fuse.gocryptfs)
+        # Plain ext4 takes 110 attributes of the form
+        #   user.attribute_XXX="value.XXX".
+        # With gocryptfs on top, this expands to something like
+        #   user.gocryptfs.01E0YS5ajpK-4mfzEDOg2c0mkzP5CCdFcIk6RnsCsvk=[40 bytes binary],
+        # reducing the maximum number of attributes before ENOSPC to 36. Set to 30 to leave
+        # some headroom.
+        MAX_ATTRS=30
+        ;;
 *)
 	# Assume max ~1 block of attrs
 	BLOCK_SIZE=`_get_block_size $TEST_DIR`
