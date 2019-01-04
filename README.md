@@ -10,7 +10,7 @@ Prerequisites
 
 * Working `gcc`, `make`, `libtool`, several headers and dbench. On Fedora,
 ```
-sudo dnf install libtool libuuid-devel xfsprogs-devel libattr-devel libacl-devel libaio-devel dbench
+sudo dnf install libtool libuuid-devel xfsprogs-devel libattr-devel libacl-devel libaio-devel dbench gdbm-devel
 ```
 * gocryptfs binary in `/usr/local/bin`
 * `fsgqa` user exists
