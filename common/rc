@@ -360,15 +360,19 @@ _scratch_unmount()
 
 _scratch_remount()
 {
-    if [ "$FSTYP" == "fuse.gocryptfs" -a "$1" == "ro" ]; then
-	_gocryptfs_mount $SCRATCH_DEV $SCRATCH_MNT -o remount,ro
-	return $?
-    elif [ "$FSTYP" == "fuse.gocryptfs" ]; then
-	echo "_scratch_remount: gocryptfs: unsupported option"
-	return 1
-    fi
-
     local opts="$1"
+
+    if [ -z "$opts" ]; then
+        # generic/416 calls this function without any options
+        return 0
+    fi
+    if [ "$FSTYP" == "fuse.gocryptfs" -a "$opts" == "ro" ]; then
+        _gocryptfs_mount $SCRATCH_DEV $SCRATCH_MNT -o remount,ro
+        return $?
+    elif [ "$FSTYP" == "fuse.gocryptfs" ]; then
+        echo "_scratch_remount: gocryptfs does not support option '$opts'"
+        return 1
+    fi
 
     if test -n "$opts"; then
 	mount -o "remount,$opts" $SCRATCH_MNT
