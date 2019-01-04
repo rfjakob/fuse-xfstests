@@ -7,6 +7,9 @@ fi
 
 export PATH=$PATH:/usr/local/bin
 
+# Try to keep the machine usable while the tests are running.
+renice 19 $$ > /dev/null
+
 gocryptfs -version
 echo "fuse-xfstests $(git rev-parse --abbrev-ref HEAD)/$(git rev-parse --short HEAD)"
 date -u
@@ -29,4 +32,6 @@ if [[ ! -e $TEST_DEV/gocryptfs.conf ]]; then
 	gocryptfs -init -quiet -scryptn 10 -extpass "echo test" $TEST_DEV || exit 1
 fi
 
+SECONDS=0
 ./check $*
+echo "Runtime was $SECONDS seconds"
