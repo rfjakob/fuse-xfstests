@@ -19,7 +19,7 @@ _gocryptfs_mount()
 		# Drop suid option
 		o="dev"
 	fi
-	gocryptfs -q -extpass "echo test" -nosyslog -allow_other -ko $o $dir $mnt
+	gocryptfs -q -extpass "echo test" -allow_other -ko $o $dir $mnt
 }
 
 _check_gocryptfs_filesystem()
