@@ -39,7 +39,9 @@ test_file="$SCRATCH_MNT/$seq"
 
 ulimit -n $((16 * 1024))
 # ~10000 files on a 1 GB filesystem should be no problem.
-$here/src/multi_open_unlink -f $SCRATCH_MNT/$seq -n 10000 -s 0
+# Note: gocryptfs is limited to 4096 open files.
+# Reduced from 10000 to 4000.
+$here/src/multi_open_unlink -f $SCRATCH_MNT/$seq -n 4000 -s 0
 
 echo "Silence is golden"
 
