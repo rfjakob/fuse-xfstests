@@ -24,8 +24,16 @@ Installing the tests
 Running the tests
 -----------------
 
+All tests:
+
 ```
 sudo ./check-gocryptfs
+```
+
+One specific test:
+
+```
+sudo ./check-gocryptfs generic/001
 ```
 
 The output should look like this:
