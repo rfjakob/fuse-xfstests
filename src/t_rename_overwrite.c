@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
 {
 	const char *path1;
 	const char *path2;
-	struct stat stbuf;
+	struct stat stbuf = {0};
 	int res;
 	int fd;
 
@@ -27,6 +27,9 @@ int main(int argc, char *argv[])
 		err(1, "rename(\"%s\", \"%s\")", path1, path2);
 
 	res = fstat(fd, &stbuf);
+	printf("res=%d dev=%ld ino=%ld mode=%o nlink=%ld uid=%d\n",
+		res, stbuf.st_dev, stbuf.st_ino, stbuf.st_mode, stbuf.st_nlink,
+		stbuf.st_uid);
 	if (res == -1)
 		err(1, "fstat(%i)", fd);
 
