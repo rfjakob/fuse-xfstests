@@ -459,7 +459,7 @@ _check_device()
 	9p)
 		# 9p mount tags are just plain strings, so anything is allowed
 		;;
-	fuse.gocryptfs|overlay)
+	fuse.gocryptfs|fuse.loopback|overlay)
 		if [ ! -d "$dev" ]; then
 			_fatal "common/config: $name ($dev) is not a directory for $FSTYP"
 		fi

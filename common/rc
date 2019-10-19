@@ -147,7 +147,7 @@ case "$FSTYP" in
 	 ;;
     glusterfs)
 	 ;;
-    fuse.gocryptfs)
+    fuse.gocryptfs|fuse.loopback)
 	 . ./common/gocryptfs
 	 ;;
     overlay)
@@ -333,6 +333,9 @@ _try_scratch_mount()
 	elif [ "$FSTYP" == "fuse.gocryptfs" ]; then
 		_gocryptfs_mount $SCRATCH_DEV $SCRATCH_MNT $*
 		return $?
+	elif [ "$FSTYP" == "fuse.loopback" ]; then
+		_gofuse_loopback_mount $SCRATCH_DEV $SCRATCH_MNT $*
+		return $?
 	fi
 	_mount -t $FSTYP `_scratch_mount_options $*`
 }
@@ -349,7 +352,7 @@ _scratch_unmount()
 	overlay)
 		_overlay_scratch_unmount
 		;;
-	btrfs|fuse.gocryptfs)
+	btrfs|fuse.gocryptfs|fuse.loopback)
 		$UMOUNT_PROG $SCRATCH_MNT
 		;;
 	*)
@@ -371,6 +374,9 @@ _scratch_remount()
         return $?
     elif [ "$FSTYP" == "fuse.gocryptfs" ]; then
         echo "_scratch_remount: gocryptfs does not support option '$opts'"
+        return 1
+    elif [ "$FSTYP" == "fuse.loopback" ]; then
+        echo "_scratch_remount: fuse.loopback does not support any options (wanted: '$opts')"
         return 1
     fi
 
@@ -419,6 +425,9 @@ _test_mount()
     elif [ "$FSTYP" == "fuse.gocryptfs" ]; then
         _gocryptfs_mount $TEST_DEV $TEST_DIR $*
         return $?
+    elif [ "$FSTYP" == "fuse.loopback" ]; then
+        _gofuse_loopback_mount $TEST_DEV $TEST_DIR $*
+        return $?
     fi
     _test_options mount
     _mount -t $FSTYP $TEST_OPTIONS $TEST_FS_MOUNT_OPTS $SELINUX_MOUNT_OPTIONS $* $TEST_DEV $TEST_DIR
@@ -428,7 +437,7 @@ _test_unmount()
 {
 	if [ "$FSTYP" == "overlay" ]; then
 		_overlay_test_unmount
-	elif [ "$FSTYP" == "fuse.gocryptfs" ]; then
+	elif [ "$FSTYP" == "fuse.gocryptfs" -o "$FSTYP" == "fuse.loopback" ]; then
 		$UMOUNT_PROG $TEST_DIR
 	else
 		$UMOUNT_PROG $TEST_DEV
@@ -718,6 +727,10 @@ _scratch_mkfs()
 	case $FSTYP in
 	fuse.gocryptfs)
 		_scratch_mkfs_gocryptfs_sized 1G $SCRATCH_DEV
+		return $?
+		;;
+	fuse.loopback)
+		_scratch_mkfs_gofuse_loopback_sized 1G $SCRATCH_DEV
 		return $?
 		;;
 	nfs*|cifs|ceph|overlay|glusterfs|pvfs2|9p)
@@ -1471,7 +1484,7 @@ _check_mounted_on()
 _require_scratch_nocheck()
 {
     case "$FSTYP" in
-	fuse.gocryptfs)
+	fuse.gocryptfs|fuse.loopback)
 		if [ ! -d "$SCRATCH_DEV" ]; then
 			_notrun "this test requires a directory for \$SCRATCH_DEV"
 		fi
@@ -1603,7 +1616,7 @@ _require_scratch_size()
 _require_test()
 {
     case "$FSTYP" in
-	fuse.gocryptfs)
+	fuse.gocryptfs|fuse.loopback)
 		if [ -z "$TEST_DEV" -o ! -d "$TEST_DEV" ]; then
 			_notrun "this test requires a valid \$TEST_DEV dir"
 		fi
@@ -2507,8 +2520,8 @@ _mount_or_remount_rw()
 			return 0 # ok=0
 		fi
 	else
-		if [ "$FSTYP" == "fuse.gocryptfs" ]; then
-			echo "gocryptfs does not support remounting"
+		if [ "$FSTYP" == "fuse.gocryptfs" -o "$FSTYP" == "fuse.loopback" ]; then
+			echo "$FSTYP does not support remounting"
 			return 0
 		fi
 		_remount $device rw
@@ -2621,6 +2634,9 @@ _check_test_fs()
     fuse.gocryptfs)
 	_check_gocryptfs_filesystem $TEST_DEV
 	;;
+	fuse.loopback)
+	# no way to check consistency for loopback
+	;;
     xfs)
 	_check_xfs_test_fs
 	;;
@@ -2670,6 +2686,9 @@ _check_scratch_fs()
     case $FSTYP in
     fuse.gocryptfs)
 	_check_gocryptfs_filesystem $device
+	;;
+	fuse.loopback)
+	# Don't know how to check a fuse.loopback filesystem, yet.
 	;;
     xfs)
 	local scratch_log="none"
@@ -3280,7 +3299,7 @@ _require_atime()
 {
 	_exclude_scratch_mount_option "noatime"
 	case $FSTYP in
-	nfs|cifs|fuse.gocryptfs)
+	nfs|cifs|fuse.gocryptfs|fuse.loopback)
 		_notrun "atime related mount options have no effect on $FSTYP"
 		;;
 	esac

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+MYNAME=$(basename "$0")
+
 if [[ $EUID -ne 0 ]]; then
 	echo "must run as root"
 	exit 1
@@ -16,9 +18,7 @@ date -u
 echo
 
 # Test root dir
-R=/var/tmp/check-gocryptfs
-
-export FSTYP=fuse.gocryptfs
+R=/var/tmp/fuse-xfstests/$MYNAME
 
 export TEST_DEV=$R/testdev
 export TEST_DIR=$R/testdir
@@ -26,12 +26,22 @@ export TEST_DIR=$R/testdir
 export SCRATCH_DEV=$R/scratchdev
 export SCRATCH_MNT=$R/scratchdir
 
-mkdir -p $TEST_DEV $TEST_DIR $SCRATCH_DEV $SCRATCH_MNT
+mkdir -p $TEST_DEV $TEST_DIR $SCRATCH_DEV $SCRATCH_MNT || exit
 
-if [[ ! -e $TEST_DEV/gocryptfs.conf ]]; then
-	gocryptfs -init -quiet -scryptn 10 -extpass "echo test" $TEST_DEV || exit 1
+if [[ $MYNAME == check-gocryptfs ]]; then
+	export FSTYP=fuse.gocryptfs
+	if [[ ! -e $TEST_DEV/gocryptfs.conf ]]; then
+		gocryptfs -init -quiet -scryptn 10 -extpass "echo test" $TEST_DEV || exit
+	fi
+elif [[ $MYNAME == check-loopback ]]; then
+	export FSTYP=fuse.loopback
+else
+	echo "unknown mode of operation: $MYNAME"
+	exit 1
 fi
 
 SECONDS=0
 ./check $*
-echo "Runtime was $SECONDS seconds"
+RET=$?
+echo "Runtime was $SECONDS seconds, exit code $RET"
+echo $RET

@@ -1,5 +1,5 @@
 #
-# gocryptfs specific common functions.
+# gocryptfs-specific functions.
 #
 
 _gocryptfs_mount()
@@ -20,6 +20,30 @@ _gocryptfs_mount()
 		o="dev"
 	fi
 	gocryptfs -q -extpass "echo test" -allow_other -ko $o $dir $mnt
+}
+
+# Mount go-fuse loopback example
+_gofuse_loopback_mount()
+{
+	local dir=$1
+	local mnt=$2
+	# $3 ... -o
+	# $4 ... remount,ro / nosuid / etc
+
+	if [[ "$4" == *"remount"* ]]; then
+		fusermount -u $2
+	fi
+
+	# Abort on "transport endpoint" not connected
+	stat $dir > /dev/null || return
+
+	loopback -allow-other $mnt $dir | logger -t fuse.loopback &
+	# Wait until loopback has mounted itself.
+	# Ugly, but works.
+	sleep 0.1
+	while ! mountpoint $mnt ; do
+		sleep 0.1
+	done
 }
 
 _check_gocryptfs_filesystem()
@@ -45,4 +69,11 @@ _scratch_mkfs_gocryptfs_sized()
 	mount $scratch_dev.ext4 $scratch_dev || return 1
 	rmdir $scratch_dev/lost+found
 	gocryptfs -q -init -scryptn 10 -extpass "echo test" $scratch_dev
+}
+
+# For go-fuse loopback example
+_scratch_mkfs_gofuse_loopback_sized()
+{
+	_scratch_mkfs_gocryptfs_sized $1 $2
+	rm $2/gocryptfs.conf $2/gocryptfs.diriv
 }
