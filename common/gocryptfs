@@ -19,6 +19,13 @@ _gocryptfs_mount()
 		# Drop suid option
 		o="dev"
 	fi
+
+	# Check that the executable is available
+	if ! type gocryptfs > /dev/null; then
+		type gocryptfs
+		return 1
+	fi
+
 	gocryptfs -q -extpass "echo test" -allow_other -ko $o $dir $mnt
 }
 
@@ -34,14 +41,20 @@ _gofuse_loopback_mount()
 		fusermount -u $2
 	fi
 
-	# Abort on "transport endpoint" not connected
-	stat $dir > /dev/null || return
+	# Abort on "transport endpoint not connected"
+	stat $dir > /dev/null || return 1
+
+	# Check that the executable is available
+	if ! type loopback > /dev/null; then
+		type loopback
+		return 1
+	fi
 
 	loopback -allow-other $mnt $dir | logger -t fuse.loopback &
 	# Wait until loopback has mounted itself.
 	# Ugly, but works.
 	sleep 0.1
-	while ! mountpoint $mnt ; do
+	while ! mountpoint $mnt > /dev/null ; do
 		sleep 0.1
 		if [[ -z $(jobs -r) ]]; then
 			echo "_gofuse_loopback_mount: child died"
