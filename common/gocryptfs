@@ -43,6 +43,10 @@ _gofuse_loopback_mount()
 	sleep 0.1
 	while ! mountpoint $mnt ; do
 		sleep 0.1
+		if [[ -z $(jobs -r) ]]; then
+			echo "_gofuse_loopback_mount: child died"
+			return 1
+		fi
 	done
 }
 
