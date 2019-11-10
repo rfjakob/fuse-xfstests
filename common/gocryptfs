@@ -50,7 +50,7 @@ _gofuse_loopback_mount()
 		return 1
 	fi
 
-	loopback -allow-other $mnt $dir | logger -t fuse.loopback &
+	loopback -allow-other -q $mnt $dir &
 	# Wait until loopback has mounted itself.
 	# Ugly, but works.
 	sleep 0.1
