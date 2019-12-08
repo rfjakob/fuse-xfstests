@@ -61,6 +61,7 @@ _gofuse_loopback_mount()
 			return 1
 		fi
 	done
+	disown
 }
 
 _check_gocryptfs_filesystem()
