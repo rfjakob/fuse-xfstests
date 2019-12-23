@@ -93,5 +93,5 @@ _scratch_mkfs_gocryptfs_sized()
 _scratch_mkfs_gofuse_loopback_sized()
 {
 	_scratch_mkfs_gocryptfs_sized $1 $2
-	rm $2/gocryptfs.conf $2/gocryptfs.diriv
+	rm -f $2/gocryptfs.conf $2/gocryptfs.diriv
 }
