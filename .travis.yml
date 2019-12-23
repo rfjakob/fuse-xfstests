@@ -18,9 +18,20 @@ before_install:
   - sudo chown root:$USER /etc/fuse.conf
 
 install:
-  - make
-  - go get github.com/hanwen/go-fuse/...
-  - go install github.com/hanwen/go-fuse/example/loopback
+  - make -j $(nproc)
 
-script:
-  - sudo PATH=$HOME/go/bin:$PATH ./check-loopback
+jobs:
+  include:
+    - name: loopback
+      script:
+        - go get -d github.com/hanwen/go-fuse/...
+        - git -C $(go env GOPATH)/src/github.com/hanwen/go-fuse log --oneline -1
+        - go install github.com/hanwen/go-fuse/example/loopback
+        - sudo PATH=$HOME/go/bin:$PATH ./check-loopback
+    - name: gocryptfs
+      script:
+        - go get -d github.com/rfjakob/gocryptfs/...
+        - git -C $(go env GOPATH)/src/github.com/hanwen/go-fuse log --oneline -1
+        - git -C $(go env GOPATH)/src/github.com/rfjakob/gocryptfs log --oneline -1
+        - go install github.com/rfjakob/gocryptfs
+        - sudo PATH=$HOME/go/bin:$PATH ./check-gocryptfs
