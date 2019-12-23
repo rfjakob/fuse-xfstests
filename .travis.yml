@@ -1,0 +1,26 @@
+language: go
+
+go: stable
+
+before_install:
+  - echo Installing dependencies
+  - sudo apt-get -qq install xfslibs-dev uuid-dev libtool-bin
+    e2fsprogs automake gcc libuuid1 quota attr libattr1-dev make
+    libacl1-dev libaio-dev xfsprogs libgdbm-dev gawk fio dbench
+    uuid-runtime python sqlite3 fuse
+  - sudo useradd fsgqa
+  - sudo groupadd fsgqa || true
+  - sudo useradd 123456-fsgqa
+  - echo
+  - echo Enabling FUSE
+  - sudo modprobe fuse
+  - sudo chmod 666 /dev/fuse
+  - sudo chown root:$USER /etc/fuse.conf
+
+install:
+  - make
+  - go get github.com/hanwen/go-fuse/...
+  - go install github.com/hanwen/go-fuse/example/loopback
+
+script:
+  - sudo PATH=$HOME/go/bin:$PATH ./check-loopback
