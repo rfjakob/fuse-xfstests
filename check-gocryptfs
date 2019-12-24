@@ -46,4 +46,4 @@ SECONDS=0
 ./check $*
 RET=$?
 echo "Runtime was $SECONDS seconds, exit code $RET"
-echo $RET
+exit $RET
