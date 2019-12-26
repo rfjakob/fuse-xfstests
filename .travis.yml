@@ -22,13 +22,22 @@ install:
 
 jobs:
   include:
-    - name: loopback
+    - name: loopback hanwen-master
       script:
         - go get -d github.com/hanwen/go-fuse/...
         - git -C $(go env GOPATH)/src/github.com/hanwen/go-fuse log --oneline -1
         - go install github.com/hanwen/go-fuse/example/loopback
         - sudo PATH=$HOME/go/bin:$PATH ./check-loopback
-    - name: gocryptfs
+    - name: loopback rfjakob-next
+      script:
+        - go get -d github.com/hanwen/go-fuse/...
+        - git -C $(go env GOPATH)/src/github.com/hanwen/go-fuse remote add rfjakob https://github.com/rfjakob/go-fuse.git
+        - git -C $(go env GOPATH)/src/github.com/hanwen/go-fuse remote update rfjakob
+        - git -C $(go env GOPATH)/src/github.com/hanwen/go-fuse checkout -b rfjakob-next rfjakob/rfjakob-next
+        - git -C $(go env GOPATH)/src/github.com/hanwen/go-fuse log --oneline -1
+        - go install github.com/hanwen/go-fuse/example/loopback
+        - sudo PATH=$HOME/go/bin:$PATH ./check-loopback
+    - name: gocryptfs rfjakob-master
       script:
         - go get -d github.com/rfjakob/gocryptfs/...
         - git -C $(go env GOPATH)/src/github.com/hanwen/go-fuse log --oneline -1
