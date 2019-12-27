@@ -1004,6 +1004,9 @@ _scratch_mkfs_sized()
     fuse.gocryptfs)
 	_scratch_mkfs_gocryptfs_sized $fssize $SCRATCH_DEV
 	;;
+	fuse.loopback)
+	_scratch_mkfs_gofuse_loopback_sized $fssize $SCRATCH_DEV
+	;;
     ocfs2)
 	yes | ${MKFS_PROG}.$FSTYP -F $MKFS_OPTIONS -b $blocksize $SCRATCH_DEV $blocks
 	;;
