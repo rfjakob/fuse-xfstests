@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -u
+
 MYNAME=$(basename "$0")
 
 if [[ $EUID -ne 0 ]]; then
@@ -22,17 +24,23 @@ R=/var/tmp/fuse-xfstests/$MYNAME
 export TEST_DEV=$R/testdev
 export TEST_DIR=$R/testdir
 
+umount "$TEST_DIR" &> /dev/null
+rm -Rf "$TEST_DEV"/*
+
 export SCRATCH_DEV=$R/scratchdev
 export SCRATCH_MNT=$R/scratchdir
 
-mkdir -p $TEST_DEV $TEST_DIR $SCRATCH_DEV $SCRATCH_MNT || exit
+umount "$SCRATCH_MNT" &> /dev/null
+rm -Rf "$SCRATCH_DEV"/*
+
+mkdir -p "$TEST_DEV" "$TEST_DIR" "$SCRATCH_DEV" "$SCRATCH_MNT" || exit
 
 if [[ $MYNAME == check-gocryptfs ]]; then
 	type gocryptfs
 	gocryptfs -version
 	export FSTYP=fuse.gocryptfs
 	if [[ ! -e $TEST_DEV/gocryptfs.conf ]]; then
-		gocryptfs -init -quiet -scryptn 10 -extpass "echo test" $TEST_DEV || exit
+		gocryptfs -init -quiet -scryptn 10 -extpass "echo test" "$TEST_DEV" || exit
 	fi
 elif [[ $MYNAME == check-loopback ]]; then
 	type loopback
@@ -43,7 +51,7 @@ else
 fi
 
 SECONDS=0
-./check $*
+./check "$@"
 RET=$?
 echo "Runtime was $SECONDS seconds, exit code $RET"
 exit $RET
