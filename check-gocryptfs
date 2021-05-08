@@ -24,13 +24,17 @@ R=/var/tmp/fuse-xfstests/$MYNAME
 export TEST_DEV=$R/testdev
 export TEST_DIR=$R/testdir
 
-umount "$TEST_DIR" &> /dev/null
+if mountpoint "$TEST_DIR" &> /dev/null ; then
+	umount "$TEST_DIR" || exit 1
+fi
 rm -Rf "$TEST_DEV"/*
 
 export SCRATCH_DEV=$R/scratchdev
 export SCRATCH_MNT=$R/scratchdir
 
-umount "$SCRATCH_MNT" &> /dev/null
+if mountpoint "$SCRATCH_MNT" &> /dev/null ; then
+	umount "$SCRATCH_MNT" || exit 1
+fi
 rm -Rf "$SCRATCH_DEV"/*
 
 mkdir -p "$TEST_DEV" "$TEST_DIR" "$SCRATCH_DEV" "$SCRATCH_MNT" || exit
