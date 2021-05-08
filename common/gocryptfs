@@ -12,7 +12,7 @@ _gocryptfs_mount()
 
 	o="dev,suid"
 	if [[ "$4" == *"remount"* ]]; then
-		fusermount -u $2
+		fusermount -u $2 || return 1
 	fi
 	if [[ "$4" == *"ro"* ]]; then
 		o="$o,ro"
