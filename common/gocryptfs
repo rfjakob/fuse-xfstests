@@ -27,7 +27,7 @@ _gocryptfs_mount()
 		return 1
 	fi
 
-	gocryptfs -q -extpass "echo test" -allow_other -ko $o $dir $mnt
+	gocryptfs -q -extpass "echo test" -allow_other -acl -ko $o $dir $mnt
 }
 
 # Mount go-fuse loopback example
