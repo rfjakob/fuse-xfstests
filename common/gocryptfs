@@ -67,7 +67,11 @@ _gofuse_loopback_mount()
 
 _check_gocryptfs_filesystem()
 {
-	gocryptfs -q -fsck -extpass "echo test" $1
+	# For some some reason the go-fuse library throws these messages
+	# a lot. Unrelated to fsck results so we filter them out.
+	local noise="go-fuse: writer: Write/Writev failed"
+
+	gocryptfs -q -fsck -extpass "echo test" $1 | grep -v "$noise"
 }
 
 _scratch_mkfs_gocryptfs_sized()
