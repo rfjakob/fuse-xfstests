@@ -1,4 +1,4 @@
-fuse-xfstests [![Build Status](https://travis-ci.com/rfjakob/fuse-xfstests.svg?branch=gocryptfs-2018-08-18)](https://travis-ci.com/rfjakob/fuse-xfstests)
+fuse-xfstests [![.github/workflows/main.yml](https://github.com/rfjakob/fuse-xfstests/actions/workflows/main.yml/badge.svg)](https://github.com/rfjakob/fuse-xfstests/actions/workflows/main.yml)
 =============
 
 [xfstests](https://kernel.googlesource.com/pub/scm/fs/ext2/xfstests-bld/+/HEAD/Documentation/what-is-xfstests.md)
