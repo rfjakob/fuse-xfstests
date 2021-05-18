@@ -72,6 +72,9 @@ _check_gocryptfs_filesystem()
 	local noise="go-fuse: writer: Write/Writev failed"
 
 	gocryptfs -q -fsck -extpass "echo test" $1 | grep -v "$noise"
+
+	# Return the gocryptfs exit code, not grep.
+	return ${PIPESTATUS[0]}
 }
 
 _scratch_mkfs_gocryptfs_sized()
