@@ -1,0 +1,23 @@
+/var/tmp/fuse-xfstests/check-gocryptfs/scratchdev is a mountpoint
+
+Before writeback
+
+Space used by file foo1:
+68K	SCRATCH_MNT/foo1
+Space used by file foo2:
+136K	SCRATCH_MNT/foo2
+Space used by file foo3:
+132K	SCRATCH_MNT/foo3
+Space used by file foo4:
+68K	SCRATCH_MNT/foo4
+
+After writeback
+
+Space used by file foo1:
+68K	SCRATCH_MNT/foo1
+Space used by file foo2:
+136K	SCRATCH_MNT/foo2
+Space used by file foo3:
+132K	SCRATCH_MNT/foo3
+Space used by file foo4:
+68K	SCRATCH_MNT/foo4

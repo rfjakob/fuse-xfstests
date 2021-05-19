@@ -1,0 +1,1155 @@
+ls -i sub/d.0
+ls -i sub/k00.0
+ls -i sub/n.0
+ls -i sub/d.1
+ls -i sub/e000.0
+ls -i sub/i00.0
+ls -i sub/k.0
+ls -i sub/i00.1
+ls -i sub/b00.0
+ls -i sub/l00.0
+ls -i sub/l00.1
+ls -i sub/f00.0
+ls -i sub/h.0
+ls -i sub/d.2
+ls -i sub/g00.0
+ls -i sub/i.0
+ls -i sub/a000.0
+ls -i sub/l.0
+ls -i sub/k.1
+ls -i sub/m.0
+ls -i sub/b.0
+ls -i sub/g00.1
+ls -i sub/h00.0
+ls -i sub/a.0
+ls -i sub/l.1
+ls -i sub/a.1
+ls -i sub/m00.0
+ls -i sub/c00.0
+ls -i sub/h.1
+ls -i sub/k000.0
+ls -i sub/l.2
+ls -i sub/n.1
+ls -i sub/c00.1
+ls -i sub/h000.0
+ls -i sub/e.0
+ls -i sub/i00.2
+ls -i sub/b00.1
+ls -i sub/k00.1
+ls -i sub/i00.3
+ls -i sub/i.1
+ls -i small.0
+ls -i sub/big.0
+ls -i sub/g00.2
+ls -i sub/m.1
+ls -i sub/h00.1
+ls -i sub/g00.3
+ls -i sub/n.2
+ls -i sub/h000.1
+ls -i sub/j.0
+ls -i sub/g00.4
+ls -i sub/g.0
+ls -i sub/k00.2
+ls -i sub/f00.1
+ls -i sub/f00.2
+ls -i sub/c.0
+ls -i sub/n00.0
+ls -i sub/l00.2
+ls -i sub/n00.1
+ls -i sub/n00.2
+ls -i sub/n00.3
+ls -i sub/k000.1
+ls -i sub/c00.2
+ls -i sub/m.2
+ls -i sub/c.1
+ls -i sub/g00.5
+ls -i sub/d.3
+ls -i sub/b00.2
+ls -i sub/e00.0
+ls -i sub/n.3
+ls -i sub/g00.6
+ls -i sub/a00.0
+ls -i sub/h.2
+ls -i sub/c.2
+ls -i sub/l.3
+ls -i small.1
+ls -i sub/f.0
+ls -i sub/k000.2
+ls -i sub/k000.3
+ls -i sub/small.0
+ls -i sub/g00.7
+ls -i sub/a.2
+ls -i sub/b.1
+ls -i sub/a00.1
+ls -i sub/j.1
+ls -i sub/m00.1
+ls -i sub/l00.3
+ls -i sub/e00.1
+ls -i sub/g00.8
+ls -i sub/i.2
+ls -i sub/g00.9
+ls -i sub/j.2
+ls -i small.2
+ls -i sub/d.4
+ls -i sub/h00.2
+ls -i sub/c.3
+ls -i sub/h00.3
+ls -i sub/a000.1
+ls -i sub/m00.2
+ls -i sub/b.2
+ls -i sub/k.2
+ls -i sub/a.3
+ls -i sub/g.1
+ls -i sub/c00.3
+ls -i sub/d.5
+ls -i sub/big.1
+ls -i sub/e000.1
+ls -i sub/m00.3
+ls -i sub/k.3
+ls -i sub/g.2
+ls -i sub/h000.2
+ls -i sub/k.4
+ls -i sub/f.1
+ls -i sub/i.3
+ls -i sub/k.5
+ls -i sub/i.4
+ls -i sub/f00.3
+ls -i sub/c.4
+ls -i sub/d00.0
+ls -i sub/h.3
+ls -i sub/l00.4
+ls -i sub/h000.3
+ls -i big.0
+ls -i sub/h00.4
+ls -i sub/a000.2
+ls -i sub/i00.4
+ls -i sub/small.1
+ls -i sub/i00.5
+ls -i sub/b00.3
+ls -i sub/k.6
+ls -i sub/a00.2
+ls -i big.1
+ls -i sub/h00.5
+ls -i sub/a00.3
+ls -i small.3
+ls -i sub/b00.4
+ls -i sub/k000.4
+ls -i sub/i.5
+ls -i sub/k00.3
+ls -i sub/e00.2
+ls -i sub/d00.1
+ls -i sub/e00.3
+ls -i sub/h.4
+ls -i sub/b00.5
+ls -i sub/m.3
+ls -i sub/e.1
+ls -i sub/big.2
+ls -i sub/c.5
+ls -i sub/f00.4
+ls -i sub/l.4
+ls -i sub/g00.10
+ls -i sub/h.5
+ls -i big.2
+ls -i sub/m00.4
+ls -i sub/m00.5
+ls -i sub/l.5
+ls -i sub/f.2
+ls -i sub/k000.5
+ls -i sub/k00.4
+ls -i sub/g00.11
+ls -i sub/k.7
+ls -i sub/k000.6
+ls -i sub/k00.5
+ls -i sub/g.3
+ls -i sub/l00.5
+ls -i sub/e.2
+ls -i sub/l00.6
+ls -i small.4
+ls -i sub/g00.12
+ls -i sub/n00.4
+ls -i sub/k.8
+ls -i sub/k00.6
+ls -i sub/j00.0
+ls -i sub/j00.1
+ls -i sub/c00.4
+ls -i sub/g00.13
+ls -i sub/n00.5
+ls -i sub/k.9
+ls -i sub/g.4
+ls -i sub/b00.6
+ls -i sub/i00.6
+ls -i sub/h.6
+ls -i sub/d.6
+ls -i sub/h00.6
+ls -i sub/i00.7
+ls -i sub/i.6
+ls -i sub/d.7
+ls -i sub/n.4
+ls -i sub/k000.7
+ls -i sub/c00.5
+ls -i sub/h000.4
+ls -i sub/i.7
+ls -i sub/m.4
+ls -i sub/m00.6
+ls -i sub/a00.4
+ls -i sub/h000.5
+ls -i sub/m00.7
+ls -i sub/a000.3
+ls -i sub/n00.6
+ls -i sub/h00.7
+ls -i sub/h.7
+ls -i small.last
+ls -i big.last
+ls -i sub/small.last
+ls -i sub/big.last
+ls -i sub/a.last
+ls -i sub/b.last
+ls -i sub/c.last
+ls -i sub/d.last
+ls -i sub/e.last
+ls -i sub/f.last
+ls -i sub/g.last
+ls -i sub/h.last
+ls -i sub/i.last
+ls -i sub/j.last
+ls -i sub/k.last
+ls -i sub/l.last
+ls -i sub/m.last
+ls -i sub/n.last
+ls -i sub/a00.last
+ls -i sub/b00.last
+ls -i sub/c00.last
+ls -i sub/d00.last
+ls -i sub/e00.last
+ls -i sub/f00.last
+ls -i sub/g00.last
+ls -i sub/h00.last
+ls -i sub/i00.last
+ls -i sub/j00.last
+ls -i sub/k00.last
+ls -i sub/l00.last
+ls -i sub/m00.last
+ls -i sub/n00.last
+ls -i sub/a000.last
+ls -i sub/e000.last
+ls -i sub/h000.last
+ls -i sub/k000.last
+ent!"; exit; fi
+cp sub/b sub/b.0 || exit 1
+# total size = 3635297
+if [ ! -f sub/g00.0 ]; then echo "sub/g00.0 missing!"; exit; fi
+if [ -f sub/g00.1 ]; then echo "sub/g00.1 already present!"; exit; fi
+cp sub/g00.0 sub/g00.1 || exit 1
+# total size = 3641697
+if [ ! -f sub/h00 ]; then echo "sub/h00 missing!"; exit; fi
+if [ -f sub/h00.0 ]; then echo "sub/h00.0 already present!"; exit; fi
+cp sub/h00 sub/h00.0 || exit 1
+# total size = 3654497
+if [ ! -f sub/a ]; then echo "sub/a missing!"; exit; fi
+if [ -f sub/a.0 ]; then echo "sub/a.0 already present!"; exit; fi
+cp sub/a sub/a.0 || exit 1
+# total size = 3654498
+if [ ! -f sub/l.0 ]; then echo "sub/l.0 missing!"; exit; fi
+if [ -f sub/l.1 ]; then echo "sub/l.1 already present!"; exit; fi
+cp sub/l.0 sub/l.1 || exit 1
+# total size = 3656546
+if [ ! -f sub/a.0 ]; then echo "sub/a.0 missing!"; exit; fi
+if [ -f sub/a.1 ]; then echo "sub/a.1 already present!"; exit; fi
+cp sub/a.0 sub/a.1 || exit 1
+# total size = 3656547
+if [ ! -f sub/m00 ]; then echo "sub/m00 missing!"; exit; fi
+if [ -f sub/m00.0 ]; then echo "sub/m00.0 already present!"; exit; fi
+cp sub/m00 sub/m00.0 || exit 1
+# total size = 4066147
+if [ ! -f sub/c00 ]; then echo "sub/c00 missing!"; exit; fi
+if [ -f sub/c00.0 ]; then echo "sub/c00.0 already present!"; exit; fi
+cp sub/c00 sub/c00.0 || exit 1
+# total size = 4066547
+if [ ! -f sub/h.0 ]; then echo "sub/h.0 missing!"; exit; fi
+if [ -f sub/h.1 ]; then echo "sub/h.1 already present!"; exit; fi
+cp sub/h.0 sub/h.1 || exit 1
+# total size = 4066675
+if [ ! -f sub/k000 ]; then echo "sub/k000 missing!"; exit; fi
+if [ -f sub/k000.0 ]; then echo "sub/k000.0 already present!"; exit; fi
+cp sub/k000 sub/k000.0 || exit 1
+# total size = 5090675
+if [ ! -f sub/l.1 ]; then echo "sub/l.1 missing!"; exit; fi
+if [ -f sub/l.2 ]; then echo "sub/l.2 already present!"; exit; fi
+cp sub/l.1 sub/l.2 || exit 1
+# total size = 5092723
+if [ ! -f sub/n.0 ]; then echo "sub/n.0 missing!"; exit; fi
+if [ -f sub/n.1 ]; then echo "sub/n.1 already present!"; exit; fi
+cp sub/n.0 sub/n.1 || exit 1
+# total size = 5100915
+if [ ! -f sub/c00.0 ]; then echo "sub/c00.0 missing!"; exit; fi
+if [ -f sub/c00.1 ]; then echo "sub/c00.1 already present!"; exit; fi
+cp sub/c00.0 sub/c00.1 || exit 1
+# total size = 5101315
+if [ ! -f sub/h000 ]; then echo "sub/h000 missing!"; exit; fi
+if [ -f sub/h000.0 ]; then echo "sub/h000.0 already present!"; exit; fi
+cp sub/h000 sub/h000.0 || exit 1
+# total size = 5229315
+if [ ! -f sub/e ]; then echo "sub/e missing!"; exit; fi
+if [ -f sub/e.0 ]; then echo "sub/e.0 already present!"; exit; fi
+cp sub/e sub/e.0 || exit 1
+# total size = 5229331
+if [ ! -f sub/i00.1 ]; then echo "sub/i00.1 missing!"; exit; fi
+if [ -f sub/i00.2 ]; then echo "sub/i00.2 already present!"; exit; fi
+cp sub/i00.1 sub/i00.2 || exit 1
+# total size = 5254931
+if [ ! -f sub/b00.0 ]; then echo "sub/b00.0 missing!"; exit; fi
+if [ -f sub/b00.1 ]; then echo "sub/b00.1 already present!"; exit; fi
+cp sub/b00.0 sub/b00.1 || exit 1
+# total size = 5255131
+if [ ! -f sub/k00.0 ]; then echo "sub/k00.0 missing!"; exit; fi
+if [ -f sub/k00.1 ]; then echo "sub/k00.1 already present!"; exit; fi
+cp sub/k00.0 sub/k00.1 || exit 1
+# total size = 5357531
+if [ ! -f sub/i00.2 ]; then echo "sub/i00.2 missing!"; exit; fi
+if [ -f sub/i00.3 ]; then echo "sub/i00.3 already present!"; exit; fi
+cp sub/i00.2 sub/i00.3 || exit 1
+# total size = 5383131
+if [ ! -f sub/i.0 ]; then echo "sub/i.0 missing!"; exit; fi
+if [ -f sub/i.1 ]; then echo "sub/i.1 already present!"; exit; fi
+cp sub/i.0 sub/i.1 || exit 1
+# total size = 5383387
+if [ ! -f small ]; then echo "small missing!"; exit; fi
+if [ -f small.0 ]; then echo "small.0 already present!"; exit; fi
+cp small small.0 || exit 1
+# total size = 5383397
+if [ ! -f sub/big ]; then echo "sub/big missing!"; exit; fi
+if [ -f sub/big.0 ]; then echo "sub/big.0 already present!"; exit; fi
+cp sub/big sub/big.0 || exit 1
+# total size = 5485797
+if [ ! -f sub/g00.1 ]; then echo "sub/g00.1 missing!"; exit; fi
+if [ -f sub/g00.2 ]; then echo "sub/g00.2 already present!"; exit; fi
+cp sub/g00.1 sub/g00.2 || exit 1
+# total size = 5492197
+if [ ! -f sub/m.0 ]; then echo "sub/m.0 missing!"; exit; fi
+if [ -f sub/m.1 ]; then echo "sub/m.1 already present!"; exit; fi
+cp sub/m.0 sub/m.1 || exit 1
+# total size = 5496293
+if [ ! -f sub/h00.0 ]; then echo "sub/h00.0 missing!"; exit; fi
+if [ -f sub/h00.1 ]; then echo "sub/h00.1 already present!"; exit; fi
+cp sub/h00.0 sub/h00.1 || exit 1
+# total size = 5509093
+if [ ! -f sub/g00.2 ]; then echo "sub/g00.2 missing!"; exit; fi
+if [ -f sub/g00.3 ]; then echo "sub/g00.3 already present!"; exit; fi
+cp sub/g00.2 sub/g00.3 || exit 1
+# total size = 5515493
+if [ ! -f sub/n.1 ]; then echo "sub/n.1 missing!"; exit; fi
+if [ -f sub/n.2 ]; then echo "sub/n.2 already present!"; exit; fi
+cp sub/n.1 sub/n.2 || exit 1
+# total size = 5523685
+if [ ! -f sub/h000.0 ]; then echo "sub/h000.0 missing!"; exit; fi
+if [ -f sub/h000.1 ]; then echo "sub/h000.1 already present!"; exit; fi
+cp sub/h000.0 sub/h000.1 || exit 1
+# total size = 5651685
+if [ ! -f sub/j ]; then echo "sub/j missing!"; exit; fi
+if [ -f sub/j.0 ]; then echo "sub/j.0 already present!"; exit; fi
+cp sub/j sub/j.0 || exit 1
+# total size = 5652197
+if [ ! -f sub/g00.3 ]; then echo "sub/g00.3 missing!"; exit; fi
+if [ -f sub/g00.4 ]; then echo "sub/g00.4 already present!"; exit; fi
+cp sub/g00.3 sub/g00.4 || exit 1
+# total size = 5658597
+if [ ! -f sub/g ]; then echo "sub/g missing!"; exit; fi
+if [ -f sub/g.0 ]; then echo "sub/g.0 already present!"; exit; fi
+cp sub/g sub/g.0 || exit 1
+# total size = 5658661
+if [ ! -f sub/k00.1 ]; then echo "sub/k00.1 missing!"; exit; fi
+if [ -f sub/k00.2 ]; then echo "sub/k00.2 already present!"; exit; fi
+cp sub/k00.1 sub/k00.2 || exit 1
+# total size = 5761061
+if [ ! -f sub/f00.0 ]; then echo "sub/f00.0 missing!"; exit; fi
+if [ -f sub/f00.1 ]; then echo "sub/f00.1 already present!"; exit; fi
+cp sub/f00.0 sub/f00.1 || exit 1
+# total size = 5764261
+if [ ! -f sub/f00.1 ]; then echo "sub/f00.1 missing!"; exit; fi
+if [ -f sub/f00.2 ]; then echo "sub/f00.2 already present!"; exit; fi
+cp sub/f00.1 sub/f00.2 || exit 1
+# total size = 5767461
+if [ ! -f sub/c ]; then echo "sub/c missing!"; exit; fi
+if [ -f sub/c.0 ]; then echo "sub/c.0 already present!"; exit; fi
+cp sub/c sub/c.0 || exit 1
+# total size = 5767465
+if [ ! -f sub/n00 ]; then echo "sub/n00 missing!"; exit; fi
+if [ -f sub/n00.0 ]; then echo "sub/n00.0 already present!"; exit; fi
+cp sub/n00 sub/n00.0 || exit 1
+# total size = 6586665
+if [ ! -f sub/l00.1 ]; then echo "sub/l00.1 missing!"; exit; fi
+if [ -f sub/l00.2 ]; then echo "sub/l00.2 already present!"; exit; fi
+cp sub/l00.1 sub/l00.2 || exit 1
+# total size = 6791465
+if [ ! -f sub/n00.0 ]; then echo "sub/n00.0 missing!"; exit; fi
+if [ -f sub/n00.1 ]; then echo "sub/n00.1 already present!"; exit; fi
+cp sub/n00.0 sub/n00.1 || exit 1
+# total size = 7610665
+if [ ! -f sub/n00.1 ]; then echo "sub/n00.1 missing!"; exit; fi
+if [ -f sub/n00.2 ]; then echo "sub/n00.2 already present!"; exit; fi
+cp sub/n00.1 sub/n00.2 || exit 1
+# total size = 8429865
+if [ ! -f sub/n00.2 ]; then echo "sub/n00.2 missing!"; exit; fi
+if [ -f sub/n00.3 ]; then echo "sub/n00.3 already present!"; exit; fi
+cp sub/n00.2 sub/n00.3 || exit 1
+# total size = 9249065
+if [ ! -f sub/k000.0 ]; then echo "sub/k000.0 missing!"; exit; fi
+if [ -f sub/k000.1 ]; then echo "sub/k000.1 already present!"; exit; fi
+cp sub/k000.0 sub/k000.1 || exit 1
+# total size = 10273065
+if [ ! -f sub/c00.1 ]; then echo "sub/c00.1 missing!"; exit; fi
+if [ -f sub/c00.2 ]; then echo "sub/c00.2 already present!"; exit; fi
+cp sub/c00.1 sub/c00.2 || exit 1
+# total size = 10273465
+if [ ! -f sub/m.1 ]; then echo "sub/m.1 missing!"; exit; fi
+if [ -f sub/m.2 ]; then echo "sub/m.2 already present!"; exit; fi
+cp sub/m.1 sub/m.2 || exit 1
+# total size = 10277561
+if [ ! -f sub/c.0 ]; then echo "sub/c.0 missing!"; exit; fi
+if [ -f sub/c.1 ]; then echo "sub/c.1 already present!"; exit; fi
+cp sub/c.0 sub/c.1 || exit 1
+# total size = 10277565
+if [ ! -f sub/g00.4 ]; then echo "sub/g00.4 missing!"; exit; fi
+if [ -f sub/g00.5 ]; then echo "sub/g00.5 already present!"; exit; fi
+cp sub/g00.4 sub/g00.5 || exit 1
+# total size = 10283965
+if [ ! -f sub/d.2 ]; then echo "sub/d.2 missing!"; exit; fi
+if [ -f sub/d.3 ]; then echo "sub/d.3 already present!"; exit; fi
+cp sub/d.2 sub/d.3 || exit 1
+# total size = 10283973
+if [ ! -f sub/b00.1 ]; then echo "sub/b00.1 missing!"; exit; fi
+if [ -f sub/b00.2 ]; then echo "sub/b00.2 already present!"; exit; fi
+cp sub/b00.1 sub/b00.2 || exit 1
+# total size = 10284173
+if [ ! -f sub/e00 ]; then echo "sub/e00 missing!"; exit; fi
+if [ -f sub/e00.0 ]; then echo "sub/e00.0 already present!"; exit; fi
+cp sub/e00 sub/e00.0 || exit 1
+# total size = 10285773
+if [ ! -f sub/n.2 ]; then echo "sub/n.2 missing!"; exit; fi
+if [ -f sub/n.3 ]; then echo "sub/n.3 already present!"; exit; fi
+cp sub/n.2 sub/n.3 || exit 1
+# total size = 10293965
+if [ ! -f sub/g00.5 ]; then echo "sub/g00.5 missing!"; exit; fi
+if [ -f sub/g00.6 ]; then echo "sub/g00.6 already present!"; exit; fi
+cp sub/g00.5 sub/g00.6 || exit 1
+# total size = 10300365
+if [ ! -f sub/a00 ]; then echo "sub/a00 missing!"; exit; fi
+if [ -f sub/a00.0 ]; then echo "sub/a00.0 already present!"; exit; fi
+cp sub/a00 sub/a00.0 || exit 1
+# total size = 10300465
+if [ ! -f sub/h.1 ]; then echo "sub/h.1 missing!"; exit; fi
+if [ -f sub/h.2 ]; then echo "sub/h.2 already present!"; exit; fi
+cp sub/h.1 sub/h.2 || exit 1
+# total size = 10300593
+if [ ! -f sub/c.1 ]; then echo "sub/c.1 missing!"; exit; fi
+if [ -f sub/c.2 ]; then echo "sub/c.2 already present!"; exit; fi
+cp sub/c.1 sub/c.2 || exit 1
+# total size = 10300597
+if [ ! -f sub/l.2 ]; then echo "sub/l.2 missing!"; exit; fi
+if [ -f sub/l.3 ]; then echo "sub/l.3 already present!"; exit; fi
+cp sub/l.2 sub/l.3 || exit 1
+# total size = 10302645
+if [ ! -f small.0 ]; then echo "small.0 missing!"; exit; fi
+if [ -f small.1 ]; then echo "small.1 already present!"; exit; fi
+cp small.0 small.1 || exit 1
+# total size = 10302655
+if [ ! -f sub/f ]; then echo "sub/f missing!"; exit; fi
+if [ -f sub/f.0 ]; then echo "sub/f.0 already present!"; exit; fi
+cp sub/f sub/f.0 || exit 1
+# total size = 10302687
+if [ ! -f sub/k000.1 ]; then echo "sub/k000.1 missing!"; exit; fi
+if [ -f sub/k000.2 ]; then echo "sub/k000.2 already present!"; exit; fi
+cp sub/k000.1 sub/k000.2 || exit 1
+# total size = 11326687
+if [ ! -f sub/k000.2 ]; then echo "sub/k000.2 missing!"; exit; fi
+if [ -f sub/k000.3 ]; then echo "sub/k000.3 already present!"; exit; fi
+cp sub/k000.2 sub/k000.3 || exit 1
+# total size = 12350687
+if [ ! -f sub/small ]; then echo "sub/small missing!"; exit; fi
+if [ -f sub/small.0 ]; then echo "sub/small.0 already present!"; exit; fi
+cp sub/small sub/small.0 || exit 1
+# total size = 12350697
+if [ ! -f sub/g00.6 ]; then echo "sub/g00.6 missing!"; exit; fi
+if [ -f sub/g00.7 ]; then echo "sub/g00.7 already present!"; exit; fi
+cp sub/g00.6 sub/g00.7 || exit 1
+# total size = 12357097
+if [ ! -f sub/a.1 ]; then echo "sub/a.1 missing!"; exit; fi
+if [ -f sub/a.2 ]; then echo "sub/a.2 already present!"; exit; fi
+cp sub/a.1 sub/a.2 || exit 1
+# total size = 12357098
+if [ ! -f sub/b.0 ]; then echo "sub/b.0 missing!"; exit; fi
+if [ -f sub/b.1 ]; then echo "sub/b.1 already present!"; exit; fi
+cp sub/b.0 sub/b.1 || exit 1
+# total size = 12357100
+if [ ! -f sub/a00.0 ]; then echo "sub/a00.0 missing!"; exit; fi
+if [ -f sub/a00.1 ]; then echo "sub/a00.1 already present!"; exit; fi
+cp sub/a00.0 sub/a00.1 || exit 1
+# total size = 12357200
+if [ ! -f sub/j.0 ]; then echo "sub/j.0 missing!"; exit; fi
+if [ -f sub/j.1 ]; then echo "sub/j.1 already present!"; exit; fi
+cp sub/j.0 sub/j.1 || exit 1
+# total size = 12357712
+if [ ! -f sub/m00.0 ]; then echo "sub/m00.0 missing!"; exit; fi
+if [ -f sub/m00.1 ]; then echo "sub/m00.1 already present!"; exit; fi
+cp sub/m00.0 sub/m00.1 || exit 1
+# total size = 12767312
+if [ ! -f sub/l00.2 ]; then echo "sub/l00.2 missing!"; exit; fi
+if [ -f sub/l00.3 ]; then echo "sub/l00.3 already present!"; exit; fi
+cp sub/l00.2 sub/l00.3 || exit 1
+# total size = 12972112
+if [ ! -f sub/e00.0 ]; then echo "sub/e00.0 missing!"; exit; fi
+if [ -f sub/e00.1 ]; then echo "sub/e00.1 already present!"; exit; fi
+cp sub/e00.0 sub/e00.1 || exit 1
+# total size = 12973712
+if [ ! -f sub/g00.7 ]; then echo "sub/g00.7 missing!"; exit; fi
+if [ -f sub/g00.8 ]; then echo "sub/g00.8 already present!"; exit; fi
+cp sub/g00.7 sub/g00.8 || exit 1
+# total size = 12980112
+if [ ! -f sub/i.1 ]; then echo "sub/i.1 missing!"; exit; fi
+if [ -f sub/i.2 ]; then echo "sub/i.2 already present!"; exit; fi
+cp sub/i.1 sub/i.2 || exit 1
+# total size = 12980368
+if [ ! -f sub/g00.8 ]; then echo "sub/g00.8 missing!"; exit; fi
+if [ -f sub/g00.9 ]; then echo "sub/g00.9 already present!"; exit; fi
+cp sub/g00.8 sub/g00.9 || exit 1
+# total size = 12986768
+if [ ! -f sub/j.1 ]; then echo "sub/j.1 missing!"; exit; fi
+if [ -f sub/j.2 ]; then echo "sub/j.2 already present!"; exit; fi
+cp sub/j.1 sub/j.2 || exit 1
+# total size = 12987280
+if [ ! -f small.1 ]; then echo "small.1 missing!"; exit; fi
+if [ -f small.2 ]; then echo "small.2 already present!"; exit; fi
+cp small.1 small.2 || exit 1
+# total size = 12987290
+if [ ! -f sub/d.3 ]; then echo "sub/d.3 missing!"; exit; fi
+if [ -f sub/d.4 ]; then echo "sub/d.4 already present!"; exit; fi
+cp sub/d.3 sub/d.4 || exit 1
+# total size = 12987298
+if [ ! -f sub/h00.1 ]; then echo "sub/h00.1 missing!"; exit; fi
+if [ -f sub/h00.2 ]; then echo "sub/h00.2 already present!"; exit; fi
+cp sub/h00.1 sub/h00.2 || exit 1
+# total size = 13000098
+if [ ! -f sub/c.2 ]; then echo "sub/c.2 missing!"; exit; fi
+if [ -f sub/c.3 ]; then echo "sub/c.3 already present!"; exit; fi
+cp sub/c.2 sub/c.3 || exit 1
+# total size = 13000102
+if [ ! -f sub/h00.2 ]; then echo "sub/h00.2 missing!"; exit; fi
+if [ -f sub/h00.3 ]; then echo "sub/h00.3 already present!"; exit; fi
+cp sub/h00.2 sub/h00.3 || exit 1
+# total size = 13012902
+if [ ! -f sub/a000.0 ]; then echo "sub/a000.0 missing!"; exit; fi
+if [ -f sub/a000.1 ]; then echo "sub/a000.1 already present!"; exit; fi
+cp sub/a000.0 sub/a000.1 || exit 1
+# total size = 13013902
+if [ ! -f sub/m00.1 ]; then echo "sub/m00.1 missing!"; exit; fi
+if [ -f sub/m00.2 ]; then echo "sub/m00.2 already present!"; exit; fi
+cp sub/m00.1 sub/m00.2 || exit 1
+# total size = 13423502
+if [ ! -f sub/b.1 ]; then echo "sub/b.1 missing!"; exit; fi
+if [ -f sub/b.2 ]; then echo "sub/b.2 already present!"; exit; fi
+cp sub/b.1 sub/b.2 || exit 1
+# total size = 13423504
+if [ ! -f sub/k.1 ]; then echo "sub/k.1 missing!"; exit; fi
+if [ -f sub/k.2 ]; then echo "sub/k.2 already present!"; exit; fi
+cp sub/k.1 sub/k.2 || exit 1
+# total size = 13424528
+if [ ! -f sub/a.2 ]; then echo "sub/a.2 missing!"; exit; fi
+if [ -f sub/a.3 ]; then echo "sub/a.3 already present!"; exit; fi
+cp sub/a.2 sub/a.3 || exit 1
+# total size = 13424529
+if [ ! -f sub/g.0 ]; then echo "sub/g.0 missing!"; exit; fi
+if [ -f sub/g.1 ]; then echo "sub/g.1 already present!"; exit; fi
+cp sub/g.0 sub/g.1 || exit 1
+# total size = 13424593
+if [ ! -f sub/c00.2 ]; then echo "sub/c00.2 missing!"; exit; fi
+if [ -f sub/c00.3 ]; then echo "sub/c00.3 already present!"; exit; fi
+cp sub/c00.2 sub/c00.3 || exit 1
+# total size = 13424993
+if [ ! -f sub/d.4 ]; then echo "sub/d.4 missing!"; exit; fi
+if [ -f sub/d.5 ]; then echo "sub/d.5 already present!"; exit; fi
+cp sub/d.4 sub/d.5 || exit 1
+# total size = 13425001
+if [ ! -f sub/big.0 ]; then echo "sub/big.0 missing!"; exit; fi
+if [ -f sub/big.1 ]; then echo "sub/big.1 already present!"; exit; fi
+cp sub/big.0 sub/big.1 || exit 1
+# total size = 13527401
+if [ ! -f sub/e000.0 ]; then echo "sub/e000.0 missing!"; exit; fi
+if [ -f sub/e000.1 ]; then echo "sub/e000.1 already present!"; exit; fi
+cp sub/e000.0 sub/e000.1 || exit 1
+# total size = 13543401
+if [ ! -f sub/m00.2 ]; then echo "sub/m00.2 missing!"; exit; fi
+if [ -f sub/m00.3 ]; then echo "sub/m00.3 already present!"; exit; fi
+cp sub/m00.2 sub/m00.3 || exit 1
+# total size = 13953001
+if [ ! -f sub/k.2 ]; then echo "sub/k.2 missing!"; exit; fi
+if [ -f sub/k.3 ]; then echo "sub/k.3 already present!"; exit; fi
+cp sub/k.2 sub/k.3 || exit 1
+# total size = 13954025
+if [ ! -f sub/g.1 ]; then echo "sub/g.1 missing!"; exit; fi
+if [ -f sub/g.2 ]; then echo "sub/g.2 already present!"; exit; fi
+cp sub/g.1 sub/g.2 || exit 1
+# total size = 13954089
+if [ ! -f sub/h000.1 ]; then echo "sub/h000.1 missing!"; exit; fi
+if [ -f sub/h000.2 ]; then echo "sub/h000.2 already present!"; exit; fi
+cp sub/h000.1 sub/h000.2 || exit 1
+# total size = 14082089
+if [ ! -f sub/k.3 ]; then echo "sub/k.3 missing!"; exit; fi
+if [ -f sub/k.4 ]; then echo "sub/k.4 already present!"; exit; fi
+cp sub/k.3 sub/k.4 || exit 1
+# total size = 14083113
+if [ ! -f sub/f.0 ]; then echo "sub/f.0 missing!"; exit; fi
+if [ -f sub/f.1 ]; then echo "sub/f.1 already present!"; exit; fi
+cp sub/f.0 sub/f.1 || exit 1
+# total size = 14083145
+if [ ! -f sub/i.2 ]; then echo "sub/i.2 missing!"; exit; fi
+if [ -f sub/i.3 ]; then echo "sub/i.3 already present!"; exit; fi
+cp sub/i.2 sub/i.3 || exit 1
+# total size = 14083401
+if [ ! -f sub/k.4 ]; then echo "sub/k.4 missing!"; exit; fi
+if [ -f sub/k.5 ]; then echo "sub/k.5 already present!"; exit; fi
+cp sub/k.4 sub/k.5 || exit 1
+# total size = 14084425
+if [ ! -f sub/i.3 ]; then echo "sub/i.3 missing!"; exit; fi
+if [ -f sub/i.4 ]; then echo "sub/i.4 already present!"; exit; fi
+cp sub/i.3 sub/i.4 || exit 1
+# total size = 14084681
+if [ ! -f sub/f00.2 ]; then echo "sub/f00.2 missing!"; exit; fi
+if [ -f sub/f00.3 ]; then echo "sub/f00.3 already present!"; exit; fi
+cp sub/f00.2 sub/f00.3 || exit 1
+# total size = 14087881
+if [ ! -f sub/c.3 ]; then echo "sub/c.3 missing!"; exit; fi
+if [ -f sub/c.4 ]; then echo "sub/c.4 already present!"; exit; fi
+cp sub/c.3 sub/c.4 || exit 1
+# total size = 14087885
+if [ ! -f sub/d00 ]; then echo "sub/d00 missing!"; exit; fi
+if [ -f sub/d00.0 ]; then echo "sub/d00.0 already present!"; exit; fi
+cp sub/d00 sub/d00.0 || exit 1
+# total size = 14088685
+if [ ! -f sub/h.2 ]; then echo "sub/h.2 missing!"; exit; fi
+if [ -f sub/h.3 ]; then echo "sub/h.3 already present!"; exit; fi
+cp sub/h.2 sub/h.3 || exit 1
+# total size = 14088813
+if [ ! -f sub/l00.3 ]; then echo "sub/l00.3 missing!"; exit; fi
+if [ -f sub/l00.4 ]; then echo "sub/l00.4 already present!"; exit; fi
+cp sub/l00.3 sub/l00.4 || exit 1
+# total size = 14293613
+if [ ! -f sub/h000.2 ]; then echo "sub/h000.2 missing!"; exit; fi
+if [ -f sub/h000.3 ]; then echo "sub/h000.3 already present!"; exit; fi
+cp sub/h000.2 sub/h000.3 || exit 1
+# total size = 14421613
+if [ ! -f big ]; then echo "big missing!"; exit; fi
+if [ -f big.0 ]; then echo "big.0 already present!"; exit; fi
+cp big big.0 || exit 1
+# total size = 14524013
+if [ ! -f sub/h00.3 ]; then echo "sub/h00.3 missing!"; exit; fi
+if [ -f sub/h00.4 ]; then echo "sub/h00.4 already present!"; exit; fi
+cp sub/h00.3 sub/h00.4 || exit 1
+# total size = 14536813
+if [ ! -f sub/a000.1 ]; then echo "sub/a000.1 missing!"; exit; fi
+if [ -f sub/a000.2 ]; then echo "sub/a000.2 already present!"; exit; fi
+cp sub/a000.1 sub/a000.2 || exit 1
+# total size = 14537813
+if [ ! -f sub/i00.3 ]; then echo "sub/i00.3 missing!"; exit; fi
+if [ -f sub/i00.4 ]; then echo "sub/i00.4 already present!"; exit; fi
+cp sub/i00.3 sub/i00.4 || exit 1
+# total size = 14563413
+if [ ! -f sub/small.0 ]; then echo "sub/small.0 missing!"; exit; fi
+if [ -f sub/small.1 ]; then echo "sub/small.1 already present!"; exit; fi
+cp sub/small.0 sub/small.1 || exit 1
+# total size = 14563423
+if [ ! -f sub/i00.4 ]; then echo "sub/i00.4 missing!"; exit; fi
+if [ -f sub/i00.5 ]; then echo "sub/i00.5 already present!"; exit; fi
+cp sub/i00.4 sub/i00.5 || exit 1
+# total size = 14589023
+if [ ! -f sub/b00.2 ]; then echo "sub/b00.2 missing!"; exit; fi
+if [ -f sub/b00.3 ]; then echo "sub/b00.3 already present!"; exit; fi
+cp sub/b00.2 sub/b00.3 || exit 1
+# total size = 14589223
+if [ ! -f sub/k.5 ]; then echo "sub/k.5 missing!"; exit; fi
+if [ -f sub/k.6 ]; then echo "sub/k.6 already present!"; exit; fi
+cp sub/k.5 sub/k.6 || exit 1
+# total size = 14590247
+if [ ! -f sub/a00.1 ]; then echo "sub/a00.1 missing!"; exit; fi
+if [ -f sub/a00.2 ]; then echo "sub/a00.2 already present!"; exit; fi
+cp sub/a00.1 sub/a00.2 || exit 1
+# total size = 14590347
+if [ ! -f big.0 ]; then echo "big.0 missing!"; exit; fi
+if [ -f big.1 ]; then echo "big.1 already present!"; exit; fi
+cp big.0 big.1 || exit 1
+# total size = 14692747
+if [ ! -f sub/h00.4 ]; then echo "sub/h00.4 missing!"; exit; fi
+if [ -f sub/h00.5 ]; then echo "sub/h00.5 already present!"; exit; fi
+cp sub/h00.4 sub/h00.5 || exit 1
+# total size = 14705547
+if [ ! -f sub/a00.2 ]; then echo "sub/a00.2 missing!"; exit; fi
+if [ -f sub/a00.3 ]; then echo "sub/a00.3 already present!"; exit; fi
+cp sub/a00.2 sub/a00.3 || exit 1
+# total size = 14705647
+if [ ! -f small.2 ]; then echo "small.2 missing!"; exit; fi
+if [ -f small.3 ]; then echo "small.3 already present!"; exit; fi
+cp small.2 small.3 || exit 1
+# total size = 14705657
+if [ ! -f sub/b00.3 ]; then echo "sub/b00.3 missing!"; exit; fi
+if [ -f sub/b00.4 ]; then echo "sub/b00.4 already present!"; exit; fi
+cp sub/b00.3 sub/b00.4 || exit 1
+# total size = 14705857
+if [ ! -f sub/k000.3 ]; then echo "sub/k000.3 missing!"; exit; fi
+if [ -f sub/k000.4 ]; then echo "sub/k000.4 already present!"; exit; fi
+cp sub/k000.3 sub/k000.4 || exit 1
+# total size = 15729857
+if [ ! -f sub/i.4 ]; then echo "sub/i.4 missing!"; exit; fi
+if [ -f sub/i.5 ]; then echo "sub/i.5 already present!"; exit; fi
+cp sub/i.4 sub/i.5 || exit 1
+# total size = 15730113
+if [ ! -f sub/k00.2 ]; then echo "sub/k00.2 missing!"; exit; fi
+if [ -f sub/k00.3 ]; then echo "sub/k00.3 already present!"; exit; fi
+cp sub/k00.2 sub/k00.3 || exit 1
+# total size = 15832513
+if [ ! -f sub/e00.1 ]; then echo "sub/e00.1 missing!"; exit; fi
+if [ -f sub/e00.2 ]; then echo "sub/e00.2 already present!"; exit; fi
+cp sub/e00.1 sub/e00.2 || exit 1
+# total size = 15834113
+if [ ! -f sub/d00.0 ]; then echo "sub/d00.0 missing!"; exit; fi
+if [ -f sub/d00.1 ]; then echo "sub/d00.1 already present!"; exit; fi
+cp sub/d00.0 sub/d00.1 || exit 1
+# total size = 15834913
+if [ ! -f sub/e00.2 ]; then echo "sub/e00.2 missing!"; exit; fi
+if [ -f sub/e00.3 ]; then echo "sub/e00.3 already present!"; exit; fi
+cp sub/e00.2 sub/e00.3 || exit 1
+# total size = 15836513
+if [ ! -f sub/h.3 ]; then echo "sub/h.3 missing!"; exit; fi
+if [ -f sub/h.4 ]; then echo "sub/h.4 already present!"; exit; fi
+cp sub/h.3 sub/h.4 || exit 1
+# total size = 15836641
+if [ ! -f sub/b00.4 ]; then echo "sub/b00.4 missing!"; exit; fi
+if [ -f sub/b00.5 ]; then echo "sub/b00.5 already present!"; exit; fi
+cp sub/b00.4 sub/b00.5 || exit 1
+# total size = 15836841
+if [ ! -f sub/m.2 ]; then echo "sub/m.2 missing!"; exit; fi
+if [ -f sub/m.3 ]; then echo "sub/m.3 already present!"; exit; fi
+cp sub/m.2 sub/m.3 || exit 1
+# total size = 15840937
+if [ ! -f sub/e.0 ]; then echo "sub/e.0 missing!"; exit; fi
+if [ -f sub/e.1 ]; then echo "sub/e.1 already present!"; exit; fi
+cp sub/e.0 sub/e.1 || exit 1
+# total size = 15840953
+if [ ! -f sub/big.1 ]; then echo "sub/big.1 missing!"; exit; fi
+if [ -f sub/big.2 ]; then echo "sub/big.2 already present!"; exit; fi
+cp sub/big.1 sub/big.2 || exit 1
+# total size = 15943353
+if [ ! -f sub/c.4 ]; then echo "sub/c.4 missing!"; exit; fi
+if [ -f sub/c.5 ]; then echo "sub/c.5 already present!"; exit; fi
+cp sub/c.4 sub/c.5 || exit 1
+# total size = 15943357
+if [ ! -f sub/f00.3 ]; then echo "sub/f00.3 missing!"; exit; fi
+if [ -f sub/f00.4 ]; then echo "sub/f00.4 already present!"; exit; fi
+cp sub/f00.3 sub/f00.4 || exit 1
+# total size = 15946557
+if [ ! -f sub/l.3 ]; then echo "sub/l.3 missing!"; exit; fi
+if [ -f sub/l.4 ]; then echo "sub/l.4 already present!"; exit; fi
+cp sub/l.3 sub/l.4 || exit 1
+# total size = 15948605
+if [ ! -f sub/g00.9 ]; then echo "sub/g00.9 missing!"; exit; fi
+if [ -f sub/g00.10 ]; then echo "sub/g00.10 already present!"; exit; fi
+cp sub/g00.9 sub/g00.10 || exit 1
+# total size = 15955005
+if [ ! -f sub/h.4 ]; then echo "sub/h.4 missing!"; exit; fi
+if [ -f sub/h.5 ]; then echo "sub/h.5 already present!"; exit; fi
+cp sub/h.4 sub/h.5 || exit 1
+# total size = 15955133
+if [ ! -f big.1 ]; then echo "big.1 missing!"; exit; fi
+if [ -f big.2 ]; then echo "big.2 already present!"; exit; fi
+cp big.1 big.2 || exit 1
+# total size = 16057533
+if [ ! -f sub/m00.3 ]; then echo "sub/m00.3 missing!"; exit; fi
+if [ -f sub/m00.4 ]; then echo "sub/m00.4 already present!"; exit; fi
+cp sub/m00.3 sub/m00.4 || exit 1
+# total size = 16467133
+if [ ! -f sub/m00.4 ]; then echo "sub/m00.4 missing!"; exit; fi
+if [ -f sub/m00.5 ]; then echo "sub/m00.5 already present!"; exit; fi
+cp sub/m00.4 sub/m00.5 || exit 1
+# total size = 16876733
+if [ ! -f sub/l.4 ]; then echo "sub/l.4 missing!"; exit; fi
+if [ -f sub/l.5 ]; then echo "sub/l.5 already present!"; exit; fi
+cp sub/l.4 sub/l.5 || exit 1
+# total size = 16878781
+if [ ! -f sub/f.1 ]; then echo "sub/f.1 missing!"; exit; fi
+if [ -f sub/f.2 ]; then echo "sub/f.2 already present!"; exit; fi
+cp sub/f.1 sub/f.2 || exit 1
+# total size = 16878813
+if [ ! -f sub/k000.4 ]; then echo "sub/k000.4 missing!"; exit; fi
+if [ -f sub/k000.5 ]; then echo "sub/k000.5 already present!"; exit; fi
+cp sub/k000.4 sub/k000.5 || exit 1
+# total size = 17902813
+if [ ! -f sub/k00.3 ]; then echo "sub/k00.3 missing!"; exit; fi
+if [ -f sub/k00.4 ]; then echo "sub/k00.4 already present!"; exit; fi
+cp sub/k00.3 sub/k00.4 || exit 1
+# total size = 18005213
+if [ ! -f sub/g00.10 ]; then echo "sub/g00.10 missing!"; exit; fi
+if [ -f sub/g00.11 ]; then echo "sub/g00.11 already present!"; exit; fi
+cp sub/g00.10 sub/g00.11 || exit 1
+# total size = 18011613
+if [ ! -f sub/k.6 ]; then echo "sub/k.6 missing!"; exit; fi
+if [ -f sub/k.7 ]; then echo "sub/k.7 already present!"; exit; fi
+cp sub/k.6 sub/k.7 || exit 1
+# total size = 18012637
+if [ ! -f sub/k000.5 ]; then echo "sub/k000.5 missing!"; exit; fi
+if [ -f sub/k000.6 ]; then echo "sub/k000.6 already present!"; exit; fi
+cp sub/k000.5 sub/k000.6 || exit 1
+# total size = 19036637
+if [ ! -f sub/k00.4 ]; then echo "sub/k00.4 missing!"; exit; fi
+if [ -f sub/k00.5 ]; then echo "sub/k00.5 already present!"; exit; fi
+cp sub/k00.4 sub/k00.5 || exit 1
+# total size = 19139037
+if [ ! -f sub/g.2 ]; then echo "sub/g.2 missing!"; exit; fi
+if [ -f sub/g.3 ]; then echo "sub/g.3 already present!"; exit; fi
+cp sub/g.2 sub/g.3 || exit 1
+# total size = 19139101
+if [ ! -f sub/l00.4 ]; then echo "sub/l00.4 missing!"; exit; fi
+if [ -f sub/l00.5 ]; then echo "sub/l00.5 already present!"; exit; fi
+cp sub/l00.4 sub/l00.5 || exit 1
+# total size = 19343901
+if [ ! -f sub/e.1 ]; then echo "sub/e.1 missing!"; exit; fi
+if [ -f sub/e.2 ]; then echo "sub/e.2 already present!"; exit; fi
+cp sub/e.1 sub/e.2 || exit 1
+# total size = 19343917
+if [ ! -f sub/l00.5 ]; then echo "sub/l00.5 missing!"; exit; fi
+if [ -f sub/l00.6 ]; then echo "sub/l00.6 already present!"; exit; fi
+cp sub/l00.5 sub/l00.6 || exit 1
+# total size = 19548717
+if [ ! -f small.3 ]; then echo "small.3 missing!"; exit; fi
+if [ -f small.4 ]; then echo "small.4 already present!"; exit; fi
+cp small.3 small.4 || exit 1
+# total size = 19548727
+if [ ! -f sub/g00.11 ]; then echo "sub/g00.11 missing!"; exit; fi
+if [ -f sub/g00.12 ]; then echo "sub/g00.12 already present!"; exit; fi
+cp sub/g00.11 sub/g00.12 || exit 1
+# total size = 19555127
+if [ ! -f sub/n00.3 ]; then echo "sub/n00.3 missing!"; exit; fi
+if [ -f sub/n00.4 ]; then echo "sub/n00.4 already present!"; exit; fi
+cp sub/n00.3 sub/n00.4 || exit 1
+# total size = 20374327
+if [ ! -f sub/k.7 ]; then echo "sub/k.7 missing!"; exit; fi
+if [ -f sub/k.8 ]; then echo "sub/k.8 already present!"; exit; fi
+cp sub/k.7 sub/k.8 || exit 1
+# total size = 20375351
+if [ ! -f sub/k00.5 ]; then echo "sub/k00.5 missing!"; exit; fi
+if [ -f sub/k00.6 ]; then echo "sub/k00.6 already present!"; exit; fi
+cp sub/k00.5 sub/k00.6 || exit 1
+# total size = 20477751
+if [ ! -f sub/j00 ]; then echo "sub/j00 missing!"; exit; fi
+if [ -f sub/j00.0 ]; then echo "sub/j00.0 already present!"; exit; fi
+cp sub/j00 sub/j00.0 || exit 1
+# total size = 20528951
+if [ ! -f sub/j00.0 ]; then echo "sub/j00.0 missing!"; exit; fi
+if [ -f sub/j00.1 ]; then echo "sub/j00.1 already present!"; exit; fi
+cp sub/j00.0 sub/j00.1 || exit 1
+# total size = 20580151
+if [ ! -f sub/c00.3 ]; then echo "sub/c00.3 missing!"; exit; fi
+if [ -f sub/c00.4 ]; then echo "sub/c00.4 already present!"; exit; fi
+cp sub/c00.3 sub/c00.4 || exit 1
+# total size = 20580551
+if [ ! -f sub/g00.12 ]; then echo "sub/g00.12 missing!"; exit; fi
+if [ -f sub/g00.13 ]; then echo "sub/g00.13 already present!"; exit; fi
+cp sub/g00.12 sub/g00.13 || exit 1
+# total size = 20586951
+if [ ! -f sub/n00.4 ]; then echo "sub/n00.4 missing!"; exit; fi
+if [ -f sub/n00.5 ]; then echo "sub/n00.5 already present!"; exit; fi
+cp sub/n00.4 sub/n00.5 || exit 1
+# total size = 21406151
+if [ ! -f sub/k.8 ]; then echo "sub/k.8 missing!"; exit; fi
+if [ -f sub/k.9 ]; then echo "sub/k.9 already present!"; exit; fi
+cp sub/k.8 sub/k.9 || exit 1
+# total size = 21407175
+if [ ! -f sub/g.3 ]; then echo "sub/g.3 missing!"; exit; fi
+if [ -f sub/g.4 ]; then echo "sub/g.4 already present!"; exit; fi
+cp sub/g.3 sub/g.4 || exit 1
+# total size = 21407239
+if [ ! -f sub/b00.5 ]; then echo "sub/b00.5 missing!"; exit; fi
+if [ -f sub/b00.6 ]; then echo "sub/b00.6 already present!"; exit; fi
+cp sub/b00.5 sub/b00.6 || exit 1
+# total size = 21407439
+if [ ! -f sub/i00.5 ]; then echo "sub/i00.5 missing!"; exit; fi
+if [ -f sub/i00.6 ]; then echo "sub/i00.6 already present!"; exit; fi
+cp sub/i00.5 sub/i00.6 || exit 1
+# total size = 21433039
+if [ ! -f sub/h.5 ]; then echo "sub/h.5 missing!"; exit; fi
+if [ -f sub/h.6 ]; then echo "sub/h.6 already present!"; exit; fi
+cp sub/h.5 sub/h.6 || exit 1
+# total size = 21433167
+if [ ! -f sub/d.5 ]; then echo "sub/d.5 missing!"; exit; fi
+if [ -f sub/d.6 ]; then echo "sub/d.6 already present!"; exit; fi
+cp sub/d.5 sub/d.6 || exit 1
+# total size = 21433175
+if [ ! -f sub/h00.5 ]; then echo "sub/h00.5 missing!"; exit; fi
+if [ -f sub/h00.6 ]; then echo "sub/h00.6 already present!"; exit; fi
+cp sub/h00.5 sub/h00.6 || exit 1
+# total size = 21445975
+if [ ! -f sub/i00.6 ]; then echo "sub/i00.6 missing!"; exit; fi
+if [ -f sub/i00.7 ]; then echo "sub/i00.7 already present!"; exit; fi
+cp sub/i00.6 sub/i00.7 || exit 1
+# total size = 21471575
+if [ ! -f sub/i.5 ]; then echo "sub/i.5 missing!"; exit; fi
+if [ -f sub/i.6 ]; then echo "sub/i.6 already present!"; exit; fi
+cp sub/i.5 sub/i.6 || exit 1
+# total size = 21471831
+if [ ! -f sub/d.6 ]; then echo "sub/d.6 missing!"; exit; fi
+if [ -f sub/d.7 ]; then echo "sub/d.7 already present!"; exit; fi
+cp sub/d.6 sub/d.7 || exit 1
+# total size = 21471839
+if [ ! -f sub/n.3 ]; then echo "sub/n.3 missing!"; exit; fi
+if [ -f sub/n.4 ]; then echo "sub/n.4 already present!"; exit; fi
+cp sub/n.3 sub/n.4 || exit 1
+# total size = 21480031
+if [ ! -f sub/k000.6 ]; then echo "sub/k000.6 missing!"; exit; fi
+if [ -f sub/k000.7 ]; then echo "sub/k000.7 already present!"; exit; fi
+cp sub/k000.6 sub/k000.7 || exit 1
+# total size = 22504031
+if [ ! -f sub/c00.4 ]; then echo "sub/c00.4 missing!"; exit; fi
+if [ -f sub/c00.5 ]; then echo "sub/c00.5 already present!"; exit; fi
+cp sub/c00.4 sub/c00.5 || exit 1
+# total size = 22504431
+if [ ! -f sub/h000.3 ]; then echo "sub/h000.3 missing!"; exit; fi
+if [ -f sub/h000.4 ]; then echo "sub/h000.4 already present!"; exit; fi
+cp sub/h000.3 sub/h000.4 || exit 1
+# total size = 22632431
+if [ ! -f sub/i.6 ]; then echo "sub/i.6 missing!"; exit; fi
+if [ -f sub/i.7 ]; then echo "sub/i.7 already present!"; exit; fi
+cp sub/i.6 sub/i.7 || exit 1
+# total size = 22632687
+if [ ! -f sub/m.3 ]; then echo "sub/m.3 missing!"; exit; fi
+if [ -f sub/m.4 ]; then echo "sub/m.4 already present!"; exit; fi
+cp sub/m.3 sub/m.4 || exit 1
+# total size = 22636783
+if [ ! -f sub/m00.5 ]; then echo "sub/m00.5 missing!"; exit; fi
+if [ -f sub/m00.6 ]; then echo "sub/m00.6 already present!"; exit; fi
+cp sub/m00.5 sub/m00.6 || exit 1
+# total size = 23046383
+if [ ! -f sub/a00.3 ]; then echo "sub/a00.3 missing!"; exit; fi
+if [ -f sub/a00.4 ]; then echo "sub/a00.4 already present!"; exit; fi
+cp sub/a00.3 sub/a00.4 || exit 1
+# total size = 23046483
+if [ ! -f sub/h000.4 ]; then echo "sub/h000.4 missing!"; exit; fi
+if [ -f sub/h000.5 ]; then echo "sub/h000.5 already present!"; exit; fi
+cp sub/h000.4 sub/h000.5 || exit 1
+# total size = 23174483
+if [ ! -f sub/m00.6 ]; then echo "sub/m00.6 missing!"; exit; fi
+if [ -f sub/m00.7 ]; then echo "sub/m00.7 already present!"; exit; fi
+cp sub/m00.6 sub/m00.7 || exit 1
+# total size = 23584083
+if [ ! -f sub/a000.2 ]; then echo "sub/a000.2 missing!"; exit; fi
+if [ -f sub/a000.3 ]; then echo "sub/a000.3 already present!"; exit; fi
+cp sub/a000.2 sub/a000.3 || exit 1
+# total size = 23585083
+if [ ! -f sub/n00.5 ]; then echo "sub/n00.5 missing!"; exit; fi
+if [ -f sub/n00.6 ]; then echo "sub/n00.6 already present!"; exit; fi
+cp sub/n00.5 sub/n00.6 || exit 1
+# total size = 24404283
+if [ ! -f sub/h00.6 ]; then echo "sub/h00.6 missing!"; exit; fi
+if [ -f sub/h00.7 ]; then echo "sub/h00.7 already present!"; exit; fi
+cp sub/h00.6 sub/h00.7 || exit 1
+# total size = 24417083
+if [ ! -f sub/h.6 ]; then echo "sub/h.6 missing!"; exit; fi
+if [ -f sub/h.7 ]; then echo "sub/h.7 already present!"; exit; fi
+cp sub/h.6 sub/h.7 || exit 1
+# total size = 24417211
+mv small.4 small.last
+rm -f small.0
+rm -f small.1
+rm -f small.2
+rm -f small.3
+mv big.2 big.last
+rm -f big.0
+rm -f big.1
+mv sub/small.1 sub/small.last
+rm -f sub/small.0
+mv sub/big.2 sub/big.last
+rm -f sub/big.0
+rm -f sub/big.1
+mv sub/a.3 sub/a.last
+rm -f sub/a.0
+rm -f sub/a.1
+rm -f sub/a.2
+mv sub/b.2 sub/b.last
+rm -f sub/b.0
+rm -f sub/b.1
+mv sub/c.5 sub/c.last
+rm -f sub/c.0
+rm -f sub/c.1
+rm -f sub/c.2
+rm -f sub/c.3
+rm -f sub/c.4
+mv sub/d.7 sub/d.last
+rm -f sub/d.0
+rm -f sub/d.1
+rm -f sub/d.2
+rm -f sub/d.3
+rm -f sub/d.4
+rm -f sub/d.5
+rm -f sub/d.6
+mv sub/e.2 sub/e.last
+rm -f sub/e.0
+rm -f sub/e.1
+mv sub/f.2 sub/f.last
+rm -f sub/f.0
+rm -f sub/f.1
+mv sub/g.4 sub/g.last
+rm -f sub/g.0
+rm -f sub/g.1
+rm -f sub/g.2
+rm -f sub/g.3
+mv sub/h.7 sub/h.last
+rm -f sub/h.0
+rm -f sub/h.1
+rm -f sub/h.2
+rm -f sub/h.3
+rm -f sub/h.4
+rm -f sub/h.5
+rm -f sub/h.6
+mv sub/i.7 sub/i.last
+rm -f sub/i.0
+rm -f sub/i.1
+rm -f sub/i.2
+rm -f sub/i.3
+rm -f sub/i.4
+rm -f sub/i.5
+rm -f sub/i.6
+mv sub/j.2 sub/j.last
+rm -f sub/j.0
+rm -f sub/j.1
+mv sub/k.9 sub/k.last
+rm -f sub/k.0
+rm -f sub/k.1
+rm -f sub/k.2
+rm -f sub/k.3
+rm -f sub/k.4
+rm -f sub/k.5
+rm -f sub/k.6
+rm -f sub/k.7
+rm -f sub/k.8
+mv sub/l.5 sub/l.last
+rm -f sub/l.0
+rm -f sub/l.1
+rm -f sub/l.2
+rm -f sub/l.3
+rm -f sub/l.4
+mv sub/m.4 sub/m.last
+rm -f sub/m.0
+rm -f sub/m.1
+rm -f sub/m.2
+rm -f sub/m.3
+mv sub/n.4 sub/n.last
+rm -f sub/n.0
+rm -f sub/n.1
+rm -f sub/n.2
+rm -f sub/n.3
+mv sub/a00.4 sub/a00.last
+rm -f sub/a00.0
+rm -f sub/a00.1
+rm -f sub/a00.2
+rm -f sub/a00.3
+mv sub/b00.6 sub/b00.last
+rm -f sub/b00.0
+rm -f sub/b00.1
+rm -f sub/b00.2
+rm -f sub/b00.3
+rm -f sub/b00.4
+rm -f sub/b00.5
+mv sub/c00.5 sub/c00.last
+rm -f sub/c00.0
+rm -f sub/c00.1
+rm -f sub/c00.2
+rm -f sub/c00.3
+rm -f sub/c00.4
+mv sub/d00.1 sub/d00.last
+rm -f sub/d00.0
+mv sub/e00.3 sub/e00.last
+rm -f sub/e00.0
+rm -f sub/e00.1
+rm -f sub/e00.2
+mv sub/f00.4 sub/f00.last
+rm -f sub/f00.0
+rm -f sub/f00.1
+rm -f sub/f00.2
+rm -f sub/f00.3
+mv sub/g00.13 sub/g00.last
+rm -f sub/g00.0
+rm -f sub/g00.1
+rm -f sub/g00.2
+rm -f sub/g00.3
+rm -f sub/g00.4
+rm -f sub/g00.5
+rm -f sub/g00.6
+rm -f sub/g00.7
+rm -f sub/g00.8
+rm -f sub/g00.9
+rm -f sub/g00.10
+rm -f sub/g00.11
+rm -f sub/g00.12
+mv sub/h00.7 sub/h00.last
+rm -f sub/h00.0
+rm -f sub/h00.1
+rm -f sub/h00.2
+rm -f sub/h00.3
+rm -f sub/h00.4
+rm -f sub/h00.5
+rm -f sub/h00.6
+mv sub/i00.7 sub/i00.last
+rm -f sub/i00.0
+rm -f sub/i00.1
+rm -f sub/i00.2
+rm -f sub/i00.3
+rm -f sub/i00.4
+rm -f sub/i00.5
+rm -f sub/i00.6
+mv sub/j00.1 sub/j00.last
+rm -f sub/j00.0
+mv sub/k00.6 sub/k00.last
+rm -f sub/k00.0
+rm -f sub/k00.1
+rm -f sub/k00.2
+rm -f sub/k00.3
+rm -f sub/k00.4
+rm -f sub/k00.5
+mv sub/l00.6 sub/l00.last
+rm -f sub/l00.0
+rm -f sub/l00.1
+rm -f sub/l00.2
+rm -f sub/l00.3
+rm -f sub/l00.4
+rm -f sub/l00.5
+mv sub/m00.7 sub/m00.last
+rm -f sub/m00.0
+rm -f sub/m00.1
+rm -f sub/m00.2
+rm -f sub/m00.3
+rm -f sub/m00.4
+rm -f sub/m00.5
+rm -f sub/m00.6
+mv sub/n00.6 sub/n00.last
+rm -f sub/n00.0
+rm -f sub/n00.1
+rm -f sub/n00.2
+rm -f sub/n00.3
+rm -f sub/n00.4
+rm -f sub/n00.5
+mv sub/a000.3 sub/a000.last
+rm -f sub/a000.0
+rm -f sub/a000.1
+rm -f sub/a000.2
+mv sub/e000.1 sub/e000.last
+rm -f sub/e000.0
+mv sub/h000.5 sub/h000.last
+rm -f sub/h000.0
+rm -f sub/h000.1
+rm -f sub/h000.2
+rm -f sub/h000.3
+rm -f sub/h000.4
+mv sub/k000.7 sub/k000.last
+rm -f sub/k000.0
+rm -f sub/k000.1
+rm -f sub/k000.2
+rm -f sub/k000.3
+rm -f sub/k000.4
+rm -f sub/k000.5
+rm -f sub/k000.6

@@ -1,0 +1,9 @@
+File system does not support unwritten extents.
+File system does not support punch hole.
+File system magic#: 0x65735546
+Allocation size: 4096
+
+18. Test file with negative SEEK_{HOLE,DATA} offsets  
+18.01 SEEK_HOLE expected -1 with errno -6, got -6.                succ
+18.02 SEEK_DATA expected -1 with errno -6, got -6.                succ
+

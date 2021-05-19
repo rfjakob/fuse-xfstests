@@ -1,0 +1,48 @@
+QA output created by 477
+test_file_handles after cycle mount
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000000) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000001) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000002) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000003) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000004) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000005) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000006) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000007) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000008) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000009) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir) returned 116 incorrectly on a linked dir!
+test_file_handles after rename parent
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000000) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000001) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000002) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000003) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000004) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000005) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000006) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000007) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000008) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000009) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir) returned 116 incorrectly on a linked dir!
+test_file_handles after rename grandparent
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000000) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000001) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000002) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000003) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000004) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000005) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000006) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000007) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000008) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000009) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir) returned 116 incorrectly on a linked dir!
+test_file_handles after move to new parent
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000000) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000001) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000002) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000003) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000004) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000005) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000006) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000007) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000008) returned 116 incorrectly on a linked file!
+open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000009) returned 116 incorrectly on a linked file!

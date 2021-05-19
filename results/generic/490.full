@@ -1,0 +1,11 @@
+File system does not support unwritten extents.
+File system does not support punch hole.
+File system magic#: 0x65735546
+Allocation size: 4096
+
+19. Test file SEEK_DATA from middle of a large hole   
+19.01 SEEK_DATA expected 4243456 or 4243456, got 4243054.         FAIL
+19.02 SEEK_DATA expected 4243456 or 4243456, got 4243054.         FAIL
+19.03 SEEK_DATA expected 4243456 or 4243456, got 4243054.         FAIL
+
+seek sanity check failed!

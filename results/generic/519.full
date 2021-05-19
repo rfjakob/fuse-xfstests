@@ -1,0 +1,7 @@
+/var/tmp/fuse-xfstests/check-gocryptfs/scratchdev is a mountpoint
+Filesystem type is: 65735546
+File size of /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/519-testfile is 0 (0 blocks of 4096 bytes)
+/var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/519-testfile: 0 extents found
+Filesystem type is: 65735546
+File size of /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/519-testfile is 5242880 (1280 blocks of 4096 bytes)
+/var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/519-testfile: 0 extents found

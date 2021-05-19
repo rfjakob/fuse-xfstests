@@ -1,0 +1,65 @@
+/var/tmp/fuse-xfstests/check-gocryptfs/scratchdev is a mountpoint
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.2168 sec (295.153 MiB/sec and 590.3052 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.1892 sec (338.227 MiB/sec and 676.4541 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.1714 sec (373.265 MiB/sec and 746.5298 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.1850 sec (345.888 MiB/sec and 691.7760 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.1768 sec (361.801 MiB/sec and 723.6013 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.1714 sec (373.213 MiB/sec and 746.4253 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.2014 sec (317.728 MiB/sec and 635.4565 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.1759 sec (363.698 MiB/sec and 727.3967 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.1739 sec (367.985 MiB/sec and 735.9706 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.2021 sec (316.611 MiB/sec and 633.2214 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.1870 sec (342.182 MiB/sec and 684.3639 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.1835 sec (348.601 MiB/sec and 697.2019 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.2056 sec (311.264 MiB/sec and 622.5287 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.1757 sec (364.164 MiB/sec and 728.3280 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.1767 sec (362.106 MiB/sec and 724.2113 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.2124 sec (301.236 MiB/sec and 602.4720 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.1551 sec (412.480 MiB/sec and 824.9602 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.1533 sec (417.441 MiB/sec and 834.8824 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.1896 sec (337.480 MiB/sec and 674.9595 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.1525 sec (419.441 MiB/sec and 838.8822 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.1945 sec (328.910 MiB/sec and 657.8204 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.2014 sec (317.730 MiB/sec and 635.4596 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.1541 sec (415.185 MiB/sec and 830.3708 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.1545 sec (414.012 MiB/sec and 828.0234 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.1844 sec (346.993 MiB/sec and 693.9851 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.1551 sec (412.533 MiB/sec and 825.0666 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.1544 sec (414.400 MiB/sec and 828.8008 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.1875 sec (341.333 MiB/sec and 682.6667 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.1572 sec (406.975 MiB/sec and 813.9491 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.1571 sec (407.221 MiB/sec and 814.4411 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.2133 sec (300.020 MiB/sec and 600.0403 ops/sec)
+wrote 67108864/67108864 bytes at offset 0
+64 MiB, 128 ops; 0.1574 sec (406.388 MiB/sec and 812.7758 ops/sec)

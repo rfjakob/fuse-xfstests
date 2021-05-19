@@ -1,0 +1,9 @@
+----------. 1 500 users 0 May 19 17:57 /var/tmp/fuse-xfstests/check-gocryptfs/testdir/t_access
+access(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/t_access, 0) returns 0
+access(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/t_access, R_OK) returns 0
+access(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/t_access, W_OK) returns 0
+access(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/t_access, X_OK) returns -1
+access(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/t_access, R_OK | W_OK) returns 0
+access(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/t_access, R_OK | X_OK) returns -1
+access(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/t_access, W_OK | X_OK) returns -1
+access(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/t_access, R_OK | W_OK | X_OK) returns -1

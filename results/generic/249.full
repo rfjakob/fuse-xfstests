@@ -1,0 +1,4 @@
+wrote 33554432/33554432 bytes at offset 0
+32 MiB, 8192 ops; 0.3953 sec (80.942 MiB/sec and 20721.1423 ops/sec)
+sent 33554432/33554432 bytes at offset 0
+32 MiB, 1 ops; 0.1444 sec (221.505 MiB/sec and 6.9220 ops/sec)

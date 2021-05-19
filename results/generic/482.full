@@ -1,0 +1,10 @@
+No device specified.
+Command failed.
+device-mapper: remove ioctl on thin-vol  failed: No such device or address
+Command failed.
+device-mapper: remove ioctl on thin-pool  failed: No such device or address
+Command failed.
+device-mapper: remove ioctl on thin-meta  failed: No such device or address
+Command failed.
+device-mapper: remove ioctl on thin-data  failed: No such device or address
+Command failed.

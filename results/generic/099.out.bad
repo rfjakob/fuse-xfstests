@@ -1,0 +1,220 @@
+QA output created by 099
+
+=== Test minimal ACE ===
+Setup file
+-rwxrw-r-- id1 id2 file1
+
+--- Test get and set of ACL ---
+Note: Old interface gave an empty ACL - now output an ACL
+file1 [u::rwx,g::rw-,o::r--]
+Try using single colon separator
+Note: Old interface FAILed because of single colon - new one allows it
+Expect to PASS
+file1 [u::r--,g::rwx,o::rw-]
+
+--- Test sync of ACL with std permissions ---
+-r--rwxrw- id1 id2 file1
+-rw-rwxrw- id1 id2 file1
+file1 [u::rw-,g::rwx,o::rw-]
+
+--- Test owner permissions ---
+file1 [u::r-x,g::---,o::---]
+Expect to PASS
+Test was executed
+Expect to FAIL
+./file1: Permission denied
+
+--- Test group permissions ---
+file1 [u::---,g::r-x,o::---]
+Expect to FAIL - acl1 is owner
+./file1: Permission denied
+Expect to PASS - acl2 matches group
+Test was executed
+Expect to PASS - acl2 matches sup group
+Test was executed
+Expect to FAIL - acl3 is not in group
+./file1: Permission denied
+
+--- Test other permissions ---
+file1 [u::---,g::---,o::r-x]
+Expect to FAIL - acl1 is owner
+./file1: Permission denied
+Expect to FAIL - acl2 is in group
+./file1: Permission denied
+Expect to FAIL - acl2 is in sup. group
+./file1: Permission denied
+Expect to PASS - acl3 is not owner or in group
+Test was executed
+
+=== Test Extended ACLs ===
+
+--- Test adding a USER ACE ---
+Expect to FAIL as no MASK provided
+chacl: access ACL 'u::---,g::---,o::---,u:id2:r-x': Missing or wrong entry at entry 3
+Ensure that ACL has not been changed
+file1 [u::---,g::---,o::r-x]
+Expect to PASS - USER ACE matches user
+file1 [u::---,u:id2:r-x,g::---,m::rwx,o::---]
+Test was executed
+Expect to FAIL - USER ACE does not match user
+./file1: Permission denied
+
+--- Test adding a GROUP ACE ---
+Expect to FAIL as no MASK provided
+chacl: access ACL 'u::---,g::---,o::---,g:id2:r-x': Missing or wrong entry at entry 3
+Ensure that ACL has not been changed
+file1 [u::---,u:id2:r-x,g::---,m::rwx,o::---]
+file1 [u::---,g::---,g:id2:r-x,m::rwx,o::---]
+Expect to PASS - GROUP ACE matches group
+Test was executed
+Expect to PASS - GROUP ACE matches sup group
+Test was executed
+Expect to FAIL - GROUP ACE does not match group
+./file1: Permission denied
+
+--- Test MASK ---
+file1 [u::---,g::---,g:id2:r-x,m::-w-,o::---]
+Expect to FAIL as MASK prohibits execution
+./file1: Permission denied
+Expect to FAIL as MASK prohibits execution
+./file1: Permission denied
+Expect to PASS as MASK allows execution
+Test was executed
+
+--- Test ACE priority ---
+Expect to FAIL as should match on owner
+./file1: Permission denied
+Expect to PASS as should match on user
+Test was executed
+
+=== Test can read ACLs without access permissions ===
+file1 [u::---,g::---,o::---]
+
+=== Test Default ACLs ===
+acldir [u::rwx,g::rwx,o::rwx/u::r-x,g::r--,o::---]
+-r--r----- 0 0 file2
+file2 [u::r--,g::r--,o::---]
+----r----- 0 0 file3
+file3 [u::---,g::r--,o::---]
+
+=== Removing ACLs ===
+file1 [u::---,g::---,o::---]
+acldir [u::rwx,g::rwx,o::rwx/u::r-x,g::r--,o::---]
+acldir/file2 [u::r--,g::r--,o::---]
+Remove ACLs...
+Note: Old interface would mean empty ACLs - now we show mode ACLs
+file1 [u::---,g::---,o::---]
+acldir [u::rwx,g::rwx,o::rwx]
+acldir/file2 [u::r--,g::r--,o::---]
+
+=== Recursive change ACL ===
+Change #1...
+root [u::rwx,g::-w-,o::--x]
+root/a [u::rwx,g::-w-,o::--x]
+root/a/0 [u::rwx,g::-w-,o::--x]
+root/a/0/mumble [u::rwx,g::-w-,o::--x]
+root/a/1 [u::rwx,g::-w-,o::--x]
+root/a/1/mumble [u::rwx,g::-w-,o::--x]
+root/a/2 [u::rwx,g::-w-,o::--x]
+root/a/2/mumble [u::rwx,g::-w-,o::--x]
+root/a/3 [u::rwx,g::-w-,o::--x]
+root/a/3/mumble [u::rwx,g::-w-,o::--x]
+root/a/4 [u::rwx,g::-w-,o::--x]
+root/a/4/mumble [u::rwx,g::-w-,o::--x]
+root/a/5 [u::rwx,g::-w-,o::--x]
+root/a/5/mumble [u::rwx,g::-w-,o::--x]
+root/a/6 [u::rwx,g::-w-,o::--x]
+root/a/6/mumble [u::rwx,g::-w-,o::--x]
+root/a/7 [u::rwx,g::-w-,o::--x]
+root/a/7/mumble [u::rwx,g::-w-,o::--x]
+root/a/8 [u::rwx,g::-w-,o::--x]
+root/a/8/mumble [u::rwx,g::-w-,o::--x]
+root/a/9 [u::rwx,g::-w-,o::--x]
+root/a/9/mumble [u::rwx,g::-w-,o::--x]
+root/b [u::rwx,g::-w-,o::--x]
+root/b/c0 [u::rwx,g::-w-,o::--x]
+root/b/c0/0 [u::rwx,g::-w-,o::--x]
+root/b/c1 [u::rwx,g::-w-,o::--x]
+root/b/c1/1 [u::rwx,g::-w-,o::--x]
+root/b/c2 [u::rwx,g::-w-,o::--x]
+root/b/c2/2 [u::rwx,g::-w-,o::--x]
+root/b/c3 [u::rwx,g::-w-,o::--x]
+root/b/c3/3 [u::rwx,g::-w-,o::--x]
+root/b/c4 [u::rwx,g::-w-,o::--x]
+root/b/c4/4 [u::rwx,g::-w-,o::--x]
+root/b/c5 [u::rwx,g::-w-,o::--x]
+root/b/c5/5 [u::rwx,g::-w-,o::--x]
+root/b/c6 [u::rwx,g::-w-,o::--x]
+root/b/c6/6 [u::rwx,g::-w-,o::--x]
+root/b/c7 [u::rwx,g::-w-,o::--x]
+root/b/c7/7 [u::rwx,g::-w-,o::--x]
+root/b/c8 [u::rwx,g::-w-,o::--x]
+root/b/c8/8 [u::rwx,g::-w-,o::--x]
+root/b/c9 [u::rwx,g::-w-,o::--x]
+root/b/c9/9 [u::rwx,g::-w-,o::--x]
+Change #2...
+root [u::---,g::---,o::---]
+root/a [u::---,g::---,o::---]
+root/a/0 [u::---,g::---,o::---]
+root/a/0/mumble [u::---,g::---,o::---]
+root/a/1 [u::---,g::---,o::---]
+root/a/1/mumble [u::---,g::---,o::---]
+root/a/2 [u::---,g::---,o::---]
+root/a/2/mumble [u::---,g::---,o::---]
+root/a/3 [u::---,g::---,o::---]
+root/a/3/mumble [u::---,g::---,o::---]
+root/a/4 [u::---,g::---,o::---]
+root/a/4/mumble [u::---,g::---,o::---]
+root/a/5 [u::---,g::---,o::---]
+root/a/5/mumble [u::---,g::---,o::---]
+root/a/6 [u::---,g::---,o::---]
+root/a/6/mumble [u::---,g::---,o::---]
+root/a/7 [u::---,g::---,o::---]
+root/a/7/mumble [u::---,g::---,o::---]
+root/a/8 [u::---,g::---,o::---]
+root/a/8/mumble [u::---,g::---,o::---]
+root/a/9 [u::---,g::---,o::---]
+root/a/9/mumble [u::---,g::---,o::---]
+root/b [u::---,g::---,o::---]
+root/b/c0 [u::---,g::---,o::---]
+root/b/c0/0 [u::---,g::---,o::---]
+root/b/c1 [u::---,g::---,o::---]
+root/b/c1/1 [u::---,g::---,o::---]
+root/b/c2 [u::---,g::---,o::---]
+root/b/c2/2 [u::---,g::---,o::---]
+root/b/c3 [u::---,g::---,o::---]
+root/b/c3/3 [u::---,g::---,o::---]
+root/b/c4 [u::---,g::---,o::---]
+root/b/c4/4 [u::---,g::---,o::---]
+root/b/c5 [u::---,g::---,o::---]
+root/b/c5/5 [u::---,g::---,o::---]
+root/b/c6 [u::---,g::---,o::---]
+root/b/c6/6 [u::---,g::---,o::---]
+root/b/c7 [u::---,g::---,o::---]
+root/b/c7/7 [u::---,g::---,o::---]
+root/b/c8 [u::---,g::---,o::---]
+root/b/c8/8 [u::---,g::---,o::---]
+root/b/c9 [u::---,g::---,o::---]
+root/b/c9/9 [u::---,g::---,o::---]
+
+=== Test out error messages for ACL text parsing  ===
+Note: Old interface gave more informative error msgs
++ chacl u file1
+chacl: u - Invalid argument
++ chacl u: file1
+chacl: u: - Invalid argument
++ chacl u:rumpledumpleunknownuser file1
+chacl: u:rumpledumpleunknownuser - Invalid argument
++ chacl u:rumpledumpleunknownuser: file1
+chacl: u:rumpledumpleunknownuser: - Invalid argument
++ chacl g:rumpledumpleunknowngrp file1
+chacl: g:rumpledumpleunknowngrp - Invalid argument
++ chacl g:rumpledumpleunknowngrp: file1
+chacl: g:rumpledumpleunknowngrp: - Invalid argument
++ chacl o:user1:rwx file1
+chacl: o:user1:rwx - Invalid argument
++ chacl m:user1:rwx file1
+chacl: m:user1:rwx - Invalid argument
++ chacl a::rwx file1
+chacl: a::rwx - Invalid argument
++ set +x

@@ -1,0 +1,10 @@
+wrote 1000/1000 bytes at offset 0
+1000.000000 bytes, 1 ops; 0.0000 sec (12.072 MiB/sec and 12658.2278 ops/sec)
+wrote 1000/1000 bytes at offset 1000
+1000.000000 bytes, 1 ops; 0.0000 sec (10.480 MiB/sec and 10989.0110 ops/sec)
+wrote 1000/1000 bytes at offset 2000
+1000.000000 bytes, 1 ops; 0.0000 sec (13.432 MiB/sec and 14084.5070 ops/sec)
+wrote 1000/1000 bytes at offset 3000
+1000.000000 bytes, 1 ops; 0.0001 sec (7.753 MiB/sec and 8130.0813 ops/sec)
+wrote 1000/1000 bytes at offset 4000
+1000.000000 bytes, 1 ops; 0.0001 sec (5.815 MiB/sec and 6097.5610 ops/sec)

@@ -1,0 +1,1 @@
+require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be local device

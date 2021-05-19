@@ -1,0 +1,2 @@
+/var/tmp/fuse-xfstests/check-gocryptfs/scratchdev is a mountpoint
+Attribute "world" has a 3072 byte value for /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/hello

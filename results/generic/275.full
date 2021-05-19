@@ -1,0 +1,23 @@
+/var/tmp/fuse-xfstests/check-gocryptfs/scratchdev is a mountpoint
+1+0 records in
+1+0 records out
+dd: error writing '/var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/tmp2': No space left on device
+1915+0 records in
+1914+0 records out
+dd: error writing '/var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/tmp3': No space left on device
+1+0 records in
+0+0 records out
+dd: error writing '/var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/tmp4': No space left on device
+1+0 records in
+0+0 records out
+Pre rm space:
+Filesystem                                        Type           1024-blocks    Used Available Capacity Mounted on
+/var/tmp/fuse-xfstests/check-gocryptfs/scratchdev fuse.gocryptfs     1998672 1982324         0     100% /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir
+Post rm space:
+Filesystem                                        Type           1024-blocks    Used Available Capacity Mounted on
+/var/tmp/fuse-xfstests/check-gocryptfs/scratchdev fuse.gocryptfs     1998672 1982064         0     100% /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir
+dd: error writing '/var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/tmp1': No space left on device
+2+0 records in
+1+0 records out
+Bytes written until ENOSPC:
+212	/var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/tmp1

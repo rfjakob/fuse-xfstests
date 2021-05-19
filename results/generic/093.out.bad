@@ -1,0 +1,18 @@
+QA output created by 093
+
+**** Verifying that appending to file clears capabilities ****
+Failed to get capabilities of file '/var/tmp/fuse-xfstests/check-gocryptfs/testdir/093.file' (Operation not supported)
+data1
+Failed to get capabilities of file '/var/tmp/fuse-xfstests/check-gocryptfs/testdir/093.file' (Operation not supported)
+
+**** Verifying that appending to file doesn't clear other xattrs ****
+data1
+data2
+# file: file
+trusted.name
+
+**** Verifying that chmod doesn't affect open file descriptors ****
+open for write "file" with 777
+remove perms on file
+write to the file
+hi there

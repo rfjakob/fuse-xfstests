@@ -1,0 +1,4 @@
+QA output created by 035
+overwriting regular file:
+overwriting directory:
+t_rename_overwrite: fstat(3): No such file or directory

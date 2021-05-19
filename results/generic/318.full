@@ -1,0 +1,4 @@
+/var/tmp/fuse-xfstests/check-gocryptfs/testdir/syscalltest [u::rw-,g::r--,o::r--]
+*** MKFS ***
+
+/var/tmp/fuse-xfstests/check-gocryptfs/scratchdev is a mountpoint

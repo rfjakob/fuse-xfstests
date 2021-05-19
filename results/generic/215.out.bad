@@ -1,0 +1,10 @@
+QA output created by 215
+
+creating test file
+4096+0 records in
+4096+0 records out
+
+writing via mmap
+FAIL: mtime not update after mapped write
+FAIL: ctime not update after mapped write
+*** done

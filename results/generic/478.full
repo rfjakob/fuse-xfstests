@@ -1,0 +1,122 @@
+wrote 4096/4096 bytes at offset 0
+4 KiB, 1 ops; 0.0001 sec (19.629 MiB/sec and 5025.1256 ops/sec)
+-s -w -o 0 -l 10 -W -g -w -o 0 -l 10 -W wrlck unlck wrlck
+get wrlck
+lock could be placed
+get wrlck
+-s -w -o 0 -l 10 -W -g -w -o 5 -l 20 -W -P wrlck unlck wrlck
+get wrlck
+lock could be placed
+get wrlck
+-s -w -o 0 -l 10 -W -g -w -o 20 -l 10 -W unlck unlck unlck
+lock could be placed
+lock could be placed
+lock could be placed
+-s -w -o 0 -l 10 -W -P -g -w -o 5 -l 20 -W wrlck unlck unlck
+get wrlck
+lock could be placed
+lock could be placed
+-s -w -o 0 -l 10 -W -P -g -w -o 20 -l 10 -W unlck unlck unlck
+lock could be placed
+lock could be placed
+lock could be placed
+-s -w -o 0 -l 10 -W -g -r -o 0 -l 10 -W wrlck unlck wrlck
+get wrlck
+lock could be placed
+get wrlck
+-s -w -o 0 -l 10 -g -r -o 5 -l 20 -P wrlck unlck wrlck
+get wrlck
+lock could be placed
+get wrlck
+-s -w -o 0 -l 10 -g -r -o 20 -l 10 unlck unlck unlck
+lock could be placed
+lock could be placed
+lock could be placed
+-s -w -o 0 -l 10 -P -g -r -o 5 -l 20 wrlck unlck unlck
+get wrlck
+lock could be placed
+lock could be placed
+-s -w -o 0 -l 10 -P -g -r -o 20 -l 10 unlck unlck unlck
+lock could be placed
+lock could be placed
+lock could be placed
+-s -r -o 0 -l 10 -R -g -w -o 0 -l 10 -R rdlck unlck rdlck
+get rdlck
+lock could be placed
+get rdlck
+-s -r -o 0 -l 10 -R -g -w -o 5 -l 20 -R -P rdlck unlck rdlck
+get rdlck
+lock could be placed
+get rdlck
+-s -r -o 0 -l 10 -R -P -g -w -o 5 -l 20 -R rdlck unlck unlck
+get rdlck
+lock could be placed
+lock could be placed
+-s -r -o 0 -l 10 -g -w -o 0 -l 10 rdlck unlck rdlck
+get rdlck
+lock could be placed
+get rdlck
+-s -r -o 0 -l 10 -g -w -o 5 -l 20 -P rdlck unlck rdlck
+get rdlck
+lock could be placed
+get rdlck
+-s -r -o 0 -l 10 -P -g -w -o 5 -l 20 rdlck unlck unlck
+get rdlck
+lock could be placed
+lock could be placed
+-s -r -o 0 -l 10 -R -g -w -o 20 -l 10 -R unlck unlck unlck
+lock could be placed
+lock could be placed
+lock could be placed
+-s -r -o 0 -l 10 -R -P -g -w -o 20 -l 10 -R unlck unlck unlck
+lock could be placed
+lock could be placed
+lock could be placed
+-s -r -o 0 -l 10 -g -w -o 20 -l 10 unlck unlck unlck
+lock could be placed
+lock could be placed
+lock could be placed
+-s -r -o 0 -l 10 -P -g -w -o 20 -l 10 unlck unlck unlck
+lock could be placed
+lock could be placed
+lock could be placed
+-s -r -o 0 -l 10 -R -g -r -o 0 -l 10 -R unlck unlck unlck
+lock could be placed
+lock could be placed
+lock could be placed
+-s -r -o 0 -l 10 -R -g -r -o 0 -l 10 -R -P unlck unlck unlck
+lock could be placed
+lock could be placed
+lock could be placed
+-s -r -o 0 -l 10 -R -P -g -r -o 0 -l 10 -R unlck unlck unlck
+lock could be placed
+lock could be placed
+lock could be placed
+-s -r -o 0 -l 10 -g -r -o 0 -l 10 unlck unlck unlck
+lock could be placed
+lock could be placed
+lock could be placed
+-s -r -o 0 -l 10 -P -g -r -o 0 -l 10 unlck unlck unlck
+lock could be placed
+lock could be placed
+lock could be placed
+-s -r -o 0 -l 10 -R -g -r -o 20 -l 10 -R unlck unlck unlck
+lock could be placed
+lock could be placed
+lock could be placed
+-s -r -o 0 -l 10 -R -g -r -o 20 -l 10 -R -P unlck unlck unlck
+lock could be placed
+lock could be placed
+lock could be placed
+-s -r -o 0 -l 10 -R -P -g -r -o 20 -l 10 -R unlck unlck unlck
+lock could be placed
+lock could be placed
+lock could be placed
+-s -r -o 0 -l 10 -g -r -o 20 -l 10 unlck unlck unlck
+lock could be placed
+lock could be placed
+lock could be placed
+-s -r -o 0 -l 10 -P -g -r -o 20 -l 10 unlck unlck unlck
+lock could be placed
+lock could be placed
+lock could be placed

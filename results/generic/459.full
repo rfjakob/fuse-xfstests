@@ -1,0 +1,6 @@
+umount: /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir: not mounted.
+  No command with matching syntax recognised.  Run 'vgremove --help' for more information.
+  Correct command syntax is:
+  vgremove VG|Tag|Select ...
+
+  No device found for /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev.

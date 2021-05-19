@@ -1,0 +1,5 @@
+/var/tmp/fuse-xfstests/check-gocryptfs/testdir/syscalltest [u::rw-,g::r--,o::r--]
+Attribute "user.xfstests" set to a 4 byte value for /var/tmp/fuse-xfstests/check-gocryptfs/testdir/syscalltest:
+attr
+/var/tmp/fuse-xfstests/check-gocryptfs/scratchdev is a mountpoint
+pwrite: No space left on device

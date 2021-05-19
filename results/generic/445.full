@@ -1,0 +1,8 @@
+File system does not support unwritten extents.
+File system does not support punch hole.
+File system magic#: 0x65735546
+Allocation size: 4096
+
+17. Test file with unwritten extents, data-hole-data inside page
+Test skipped as fs doesn't support unwritten extents.
+

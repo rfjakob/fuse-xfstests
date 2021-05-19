@@ -1,0 +1,2 @@
+/var/tmp/fuse-xfstests/check-gocryptfs/scratchdev is a mountpoint
+fallocate: No space left on device

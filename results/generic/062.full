@@ -1,0 +1,116 @@
+BACKUP /tmp/2858740.backup1
+# file: /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/descend
+user.1="23"
+user.x="yz"
+
+# file: /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/descend/down
+user.1="23"
+user.x="yz"
+
+# file: /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/descend/down/here
+user.1="23"
+user.x="yz"
+
+# file: /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/dir
+trusted.name=0sur4=
+trusted.name3=0s3vrO
+user.name=0sur4=
+user.name3=0s3vrO
+
+# file: /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/here
+trusted.9="87"
+trusted.a="bc"
+
+# file: /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/here/up
+trusted.9="87"
+trusted.a="bc"
+
+# file: /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/here/up/ascend
+trusted.9="87"
+trusted.a="bc"
+
+# file: /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/reg
+trusted.name=0sur4=
+trusted.name3=0s3vrO
+user.name=0sur4=
+user.name3=0s3vrO
+
+AFTER REMOVE
+BACKUP /tmp/2858740.backup2
+# file: /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/descend
+user.1="23"
+user.x="yz"
+
+# file: /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/descend/down
+user.1="23"
+user.x="yz"
+
+# file: /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/descend/down/here
+user.1="23"
+user.x="yz"
+
+# file: /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/dir
+trusted.name=0sur4=
+trusted.name3=0s3vrO
+user.name=0sur4=
+user.name3=0s3vrO
+
+# file: /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/here
+trusted.9="87"
+trusted.a="bc"
+
+# file: /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/here/up
+trusted.9="87"
+trusted.a="bc"
+
+# file: /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/here/up/ascend
+trusted.9="87"
+trusted.a="bc"
+
+# file: /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/reg
+trusted.name=0sur4=
+trusted.name3=0s3vrO
+user.name=0sur4=
+user.name3=0s3vrO
+
+AFTER RESTORE
+# file: SCRATCH_MNT/dir
+trusted.name=0sur4=
+trusted.name3=0s3vrO
+user.name=0sur4=
+user.name3=0s3vrO
+
+# file: SCRATCH_MNT/descend
+user.1="23"
+user.x="yz"
+
+# file: SCRATCH_MNT/descend/and/ascend
+trusted.9="87"
+trusted.a="bc"
+
+# file: SCRATCH_MNT/descend/down
+user.1="23"
+user.x="yz"
+
+# file: SCRATCH_MNT/descend/down/here
+user.1="23"
+user.x="yz"
+
+# file: SCRATCH_MNT/reg
+trusted.name=0sur4=
+trusted.name3=0s3vrO
+user.name=0sur4=
+user.name3=0s3vrO
+
+# file: SCRATCH_MNT/here
+trusted.9="87"
+trusted.a="bc"
+
+# file: SCRATCH_MNT/here/up
+trusted.9="87"
+trusted.a="bc"
+
+# file: SCRATCH_MNT/here/up/ascend
+trusted.9="87"
+trusted.a="bc"
+

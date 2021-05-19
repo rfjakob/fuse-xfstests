@@ -1,0 +1,80 @@
+fsx --replay-ops fsxops.0
+Seed set to 1
+main: filesystem does not support fallocate mode FALLOC_FL_PUNCH_HOLE | FALLOC_FL_KEEP_SIZE, disabling!
+main: filesystem does not support fallocate mode FALLOC_FL_ZERO_RANGE, disabling!
+main: filesystem does not support fallocate mode FALLOC_FL_COLLAPSE_RANGE, disabling!
+main: filesystem does not support fallocate mode FALLOC_FL_INSERT_RANGE, disabling!
+main: filesystem does not support clone range, disabling!
+main: filesystem does not support dedupe range, disabling!
+truncating to largest ever: 0x10
+All 6 operations completed A-OK!
+fsx -y --replay-ops fsxops.0
+Seed set to 1
+main: filesystem does not support fallocate mode FALLOC_FL_PUNCH_HOLE | FALLOC_FL_KEEP_SIZE, disabling!
+main: filesystem does not support fallocate mode FALLOC_FL_ZERO_RANGE, disabling!
+main: filesystem does not support fallocate mode FALLOC_FL_COLLAPSE_RANGE, disabling!
+main: filesystem does not support fallocate mode FALLOC_FL_INSERT_RANGE, disabling!
+main: filesystem does not support clone range, disabling!
+main: filesystem does not support dedupe range, disabling!
+truncating to largest ever: 0x10
+All 6 operations completed A-OK!
+fsx --replay-ops fsxops.1
+Seed set to 1
+main: filesystem does not support fallocate mode FALLOC_FL_PUNCH_HOLE | FALLOC_FL_KEEP_SIZE, disabling!
+main: filesystem does not support fallocate mode FALLOC_FL_ZERO_RANGE, disabling!
+main: filesystem does not support fallocate mode FALLOC_FL_COLLAPSE_RANGE, disabling!
+main: filesystem does not support fallocate mode FALLOC_FL_INSERT_RANGE, disabling!
+main: filesystem does not support clone range, disabling!
+main: filesystem does not support dedupe range, disabling!
+truncating to largest ever: 0x10
+All 5 operations completed A-OK!
+fsx -y --replay-ops fsxops.1
+Seed set to 1
+main: filesystem does not support fallocate mode FALLOC_FL_PUNCH_HOLE | FALLOC_FL_KEEP_SIZE, disabling!
+main: filesystem does not support fallocate mode FALLOC_FL_ZERO_RANGE, disabling!
+main: filesystem does not support fallocate mode FALLOC_FL_COLLAPSE_RANGE, disabling!
+main: filesystem does not support fallocate mode FALLOC_FL_INSERT_RANGE, disabling!
+main: filesystem does not support clone range, disabling!
+main: filesystem does not support dedupe range, disabling!
+truncating to largest ever: 0x10
+All 5 operations completed A-OK!
+fsx --replay-ops fsxops.2
+Seed set to 1
+main: filesystem does not support fallocate mode FALLOC_FL_PUNCH_HOLE | FALLOC_FL_KEEP_SIZE, disabling!
+main: filesystem does not support fallocate mode FALLOC_FL_ZERO_RANGE, disabling!
+main: filesystem does not support fallocate mode FALLOC_FL_COLLAPSE_RANGE, disabling!
+main: filesystem does not support fallocate mode FALLOC_FL_INSERT_RANGE, disabling!
+main: filesystem does not support clone range, disabling!
+main: filesystem does not support dedupe range, disabling!
+fallocating to largest ever: 0x1000
+All 6 operations completed A-OK!
+fsx -y --replay-ops fsxops.2
+Seed set to 1
+main: filesystem does not support fallocate mode FALLOC_FL_PUNCH_HOLE | FALLOC_FL_KEEP_SIZE, disabling!
+main: filesystem does not support fallocate mode FALLOC_FL_ZERO_RANGE, disabling!
+main: filesystem does not support fallocate mode FALLOC_FL_COLLAPSE_RANGE, disabling!
+main: filesystem does not support fallocate mode FALLOC_FL_INSERT_RANGE, disabling!
+main: filesystem does not support clone range, disabling!
+main: filesystem does not support dedupe range, disabling!
+fallocating to largest ever: 0x1000
+All 6 operations completed A-OK!
+fsx --replay-ops fsxops.3
+Seed set to 1
+main: filesystem does not support fallocate mode FALLOC_FL_PUNCH_HOLE | FALLOC_FL_KEEP_SIZE, disabling!
+main: filesystem does not support fallocate mode FALLOC_FL_ZERO_RANGE, disabling!
+main: filesystem does not support fallocate mode FALLOC_FL_COLLAPSE_RANGE, disabling!
+main: filesystem does not support fallocate mode FALLOC_FL_INSERT_RANGE, disabling!
+main: filesystem does not support clone range, disabling!
+main: filesystem does not support dedupe range, disabling!
+truncating to largest ever: 0x36dcd
+All 6 operations completed A-OK!
+fsx -y --replay-ops fsxops.3
+Seed set to 1
+main: filesystem does not support fallocate mode FALLOC_FL_PUNCH_HOLE | FALLOC_FL_KEEP_SIZE, disabling!
+main: filesystem does not support fallocate mode FALLOC_FL_ZERO_RANGE, disabling!
+main: filesystem does not support fallocate mode FALLOC_FL_COLLAPSE_RANGE, disabling!
+main: filesystem does not support fallocate mode FALLOC_FL_INSERT_RANGE, disabling!
+main: filesystem does not support clone range, disabling!
+main: filesystem does not support dedupe range, disabling!
+truncating to largest ever: 0x36dcd
+All 6 operations completed A-OK!

@@ -1,0 +1,21 @@
+/var/tmp/fuse-xfstests/check-gocryptfs/testdir/syscalltest [u::rw-,g::r--,o::r--]
+--- _scratch_mkfs
+/var/tmp/fuse-xfstests/check-gocryptfs/scratchdev is a mountpoint
+--- _try_scratch_mount
+--- touch /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/test.0
+--- chacl u::r--,g::rwx,o::rw- /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/test.0
+--- touch /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/test.1
+--- chacl u::r-x,g::---,o::--- /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/test.1
+--- touch /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/test.2
+--- chacl u::---,g::r-x,o::--- /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/test.2
+--- touch /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/test.3
+--- chacl u::---,g::---,o::r-x /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/test.3
+--- touch /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/test.4
+--- chacl u::---,g::r-x,o::rwx /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/test.4
+--- touch /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/test.5
+--- chacl u::---,g::---,o::---,u:16:r-x,m::rwx /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/test.5
+--- touch /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/test.6
+--- chacl u::rwx,g::r-x,o::r-- /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/test.6
+--- touch /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/test.7
+--- chacl u::---,g::---,o::---,g:16:r-x,m::-w- /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/test.7
+--- _check_scratch_fs

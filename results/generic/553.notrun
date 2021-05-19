@@ -1,0 +1,1 @@
+xfs_io chattr +i support is missing (missing syscall?)

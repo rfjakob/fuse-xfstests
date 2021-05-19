@@ -1,0 +1,20 @@
+/var/tmp/fuse-xfstests/check-gocryptfs/scratchdev is a mountpoint
+create
+Opened 494 files in 0.38s.
+Opened 494 files in 0.38s.
+Opened 500 files in 0.38s.
+Closed 500 files in 0.06s.
+Closed 494 files in 0.06s.
+Closed 494 files in 0.06s.
+Opened 809 files in 0.50s.
+Opened 874 files in 0.56s.
+Opened 815 files in 0.50s.
+Opened 782 files in 0.50s.
+Closed 782 files in 0.06s.
+Closed 809 files in 0.06s.
+Closed 874 files in 0.06s.
+Closed 815 files in 0.06s.
+Opened 4071 files in 1.12s.
+Closed 4071 files in 0.06s.
+umount
+Unmount took 0s.

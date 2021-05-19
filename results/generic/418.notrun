@@ -1,0 +1,1 @@
+require /var/tmp/fuse-xfstests/check-gocryptfs/testdev to be valid block disk

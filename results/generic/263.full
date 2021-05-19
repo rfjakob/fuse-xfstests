@@ -1,0 +1,33 @@
+/opt/fuse-xfstests/ltp/fsx -N 10000 -o 8192 -l 500000 -r 4096 -t 4096 -w 4096 -Z /var/tmp/fuse-xfstests/check-gocryptfs/testdir/junk
+Seed set to 1
+main: filesystem does not support fallocate mode FALLOC_FL_PUNCH_HOLE | FALLOC_FL_KEEP_SIZE, disabling!
+main: filesystem does not support fallocate mode FALLOC_FL_ZERO_RANGE, disabling!
+main: filesystem does not support fallocate mode FALLOC_FL_COLLAPSE_RANGE, disabling!
+main: filesystem does not support fallocate mode FALLOC_FL_INSERT_RANGE, disabling!
+main: filesystem does not support clone range, disabling!
+main: filesystem does not support dedupe range, disabling!
+skipping zero size read
+truncating to largest ever: 0xe000
+fallocating to largest ever: 0x6651d
+copying to largest ever: 0x67000
+truncating to largest ever: 0x76000
+truncating to largest ever: 0x77000
+fallocating to largest ever: 0x77141
+fallocating to largest ever: 0x7a120
+skipping zero size read
+All 10000 operations completed A-OK!
+/opt/fuse-xfstests/ltp/fsx -N 10000 -o 128000 -l 500000 -r 4096 -t 4096 -w 4096 -Z /var/tmp/fuse-xfstests/check-gocryptfs/testdir/junk
+Seed set to 1
+main: filesystem does not support fallocate mode FALLOC_FL_PUNCH_HOLE | FALLOC_FL_KEEP_SIZE, disabling!
+main: filesystem does not support fallocate mode FALLOC_FL_ZERO_RANGE, disabling!
+main: filesystem does not support fallocate mode FALLOC_FL_COLLAPSE_RANGE, disabling!
+main: filesystem does not support fallocate mode FALLOC_FL_INSERT_RANGE, disabling!
+main: filesystem does not support clone range, disabling!
+main: filesystem does not support dedupe range, disabling!
+skipping zero size read
+truncating to largest ever: 0xe000
+fallocating to largest ever: 0x6dbfa
+copying to largest ever: 0x77000
+fallocating to largest ever: 0x7a120
+skipping zero size read
+All 10000 operations completed A-OK!

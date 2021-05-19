@@ -1,0 +1,2 @@
+/var/tmp/fuse-xfstests/check-gocryptfs/scratchdev is a mountpoint
+fstrim: /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir: FITRIM ioctl failed: Function not implemented

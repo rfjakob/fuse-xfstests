@@ -1,0 +1,113 @@
+/var/tmp/fuse-xfstests/check-gocryptfs/scratchdev is a mountpoint
+Storing french_café.txt (66 72 65 6e 63 68 5f 63 61 66 c3 a9 2e 74 78 74) -> NFC
+Storing french_café.txt (66 72 65 6e 63 68 5f 63 61 66 65 cc 81 2e 74 78 74) -> NFD
+Storing chinese_ｶ.txt (63 68 69 6e 65 73 65 5f ef bd b6 2e 74 78 74) -> NFKC1
+Storing chinese_カ.txt (63 68 69 6e 65 73 65 5f e3 82 ab 2e 74 78 74) -> NFKC2
+Storing greek_ϓ.txt (67 72 65 65 6b 5f cf 93 2e 74 78 74) -> GREEK UPSILON WITH ACUTE AND HOOK SYMBOL, NFC
+Storing greek_ϓ.txt (67 72 65 65 6b 5f cf 92 cc 81 2e 74 78 74) -> GREEK UPSILON WITH ACUTE AND HOOK SYMBOL, NFD
+Storing greek_Ύ.txt (67 72 65 65 6b 5f ce 8e 2e 74 78 74) -> GREEK UPSILON WITH ACUTE AND HOOK SYMBOL, NFKC
+Storing greek_Ύ.txt (67 72 65 65 6b 5f ce a5 cc 81 2e 74 78 74) -> GREEK UPSILON WITH ACUTE AND HOOK SYMBOL, NFKD
+Storing arabic_ﷺ.txt (61 72 61 62 69 63 5f ef b7 ba 2e 74 78 74) -> ARABIC LIGATURE SALLALLAHOU ALAYHE WASALLAM, NFC
+Storing arabic_صلى الله عليه وسلم.txt (61 72 61 62 69 63 5f d8 b5 d9 84 d9 89 20 d8 a7 d9 84 d9 84 d9 87 20 d8 b9 d9 84 d9 8a d9 87 20 d9 88 d8 b3 d9 84 d9 85 2e 74 78 74) -> ARABIC LIGATURE SALLALLAHOU ALAYHE WASALLAM, NFKC
+Storing urk��moo (75 72 6b c0 af 6d 6f 6f) -> FAKESLASH
+Storing emoji_🦑🦋🦉🦒.txt (65 6d 6f 6a 69 5f f0 9f a6 91 f0 9f a6 8b f0 9f a6 89 f0 9f a6 92 2e 74 78 74) -> octopus butterfly owl giraffe emoji
+Storing linedraw_
+╔═══════════╗
+║ metatable ║
+╟───────────╢
+║ __index   ║
+╚═══════════╝
+.txt (6c 69 6e 65 64 72 61 77 5f 0a e2 95 94 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 97 0a e2 95 91 20 6d 65 74 61 74 61 62 6c 65 20 e2 95 91 0a e2 95 9f e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 95 a2 0a e2 95 91 20 5f 5f 69 6e 64 65 78 20 20 20 e2 95 91 0a e2 95 9a e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 9d 0a 2e 74 78 74) -> ugly box because we can
+Storing moo‮gnp.txt (6d 6f 6f e2 80 ae 67 6e 70 2e 74 78 74) -> Well say hello,
+Storing mootxt.png (6d 6f 6f 74 78 74 2e 70 6e 67) -> Harvey
+Storing mixed_tοp.txt (6d 69 78 65 64 5f 74 ce bf 70 2e 74 78 74) -> greek omicron instead of o
+Storing mixed_top.txt (6d 69 78 65 64 5f 74 6f 70 2e 74 78 74) -> greek omicron instead of o
+Storing hyphens_a‐b.txt (68 79 70 68 65 6e 73 5f 61 e2 80 90 62 2e 74 78 74) -> hyphens
+Storing hyphens_a-b.txt (68 79 70 68 65 6e 73 5f 61 2d 62 2e 74 78 74) -> hyphens
+Storing dz_digraph_dze.txt (64 7a 5f 64 69 67 72 61 70 68 5f 64 7a 65 2e 74 78 74) -> d-z digraph
+Storing dz_digraph_ʣe.txt (64 7a 5f 64 69 67 72 61 70 68 5f ca a3 65 2e 74 78 74) -> d-z digraph
+Storing inadequate_al.txt (69 6e 61 64 65 71 75 61 74 65 5f 61 6c 2e 74 78 74) -> is it l or is it 1
+Storing inadequate_a1.txt (69 6e 61 64 65 71 75 61 74 65 5f 61 31 2e 74 78 74) -> is it l or is it 1
+Storing prohibition_Rs.txt (70 72 6f 68 69 62 69 74 69 6f 6e 5f 52 73 2e 74 78 74) -> rupee symbol
+Storing prohibition_₨.txt (70 72 6f 68 69 62 69 74 69 6f 6e 5f e2 82 a8 2e 74 78 74) -> rupee symbol
+Storing zerojoin_moocow.txt (7a 65 72 6f 6a 6f 69 6e 5f 6d 6f 6f 63 6f 77 2e 74 78 74) -> zero width joiners
+Storing zerojoin_moo‍cow.txt (7a 65 72 6f 6a 6f 69 6e 5f 6d 6f 6f e2 80 8d 63 6f 77 2e 74 78 74) -> zero width joiners
+Storing combmark_လို.txt (63 6f 6d 62 6d 61 72 6b 5f e1 80 9c e1 80 ad e1 80 af 2e 74 78 74) -> combining marks
+Storing combmark_လုိ.txt (63 6f 6d 62 6d 61 72 6b 5f e1 80 9c e1 80 af e1 80 ad 2e 74 78 74) -> combining marks
+Storing .‍ (2e e2 80 8d) -> zero width joiners in dot entry
+Storing ..‍ (2e 2e e2 80 8d) -> zero width joiners in dotdot entry
+total 124
+drwxr-xr-x. 2 root root 4096 May 19 18:30 ..‍
+drwxr-xr-x. 2 root root 4096 May 19 18:30 .‍
+-rw-r--r--. 1 root root   50 May 19 18:30 arabic_صلى الله عليه وسلم.txt
+-rw-r--r--. 1 root root   49 May 19 18:30 arabic_ﷺ.txt
+-rw-r--r--. 1 root root    6 May 19 18:30 chinese_カ.txt
+-rw-r--r--. 1 root root    6 May 19 18:30 chinese_ｶ.txt
+-rw-r--r--. 1 root root   16 May 19 18:30 combmark_လို.txt
+-rw-r--r--. 1 root root   16 May 19 18:30 combmark_လုိ.txt
+-rw-r--r--. 1 root root   12 May 19 18:30 dz_digraph_dze.txt
+-rw-r--r--. 1 root root   12 May 19 18:30 dz_digraph_ʣe.txt
+-rw-r--r--. 1 root root   36 May 19 18:30 emoji_🦑🦋🦉🦒.txt
+-rw-r--r--. 1 root root    4 May 19 18:30 french_café.txt
+-rw-r--r--. 1 root root    4 May 19 18:30 french_café.txt
+-rw-r--r--. 1 root root   47 May 19 18:30 greek_Ύ.txt
+-rw-r--r--. 1 root root   47 May 19 18:30 greek_Ύ.txt
+-rw-r--r--. 1 root root   46 May 19 18:30 greek_ϓ.txt
+-rw-r--r--. 1 root root   46 May 19 18:30 greek_ϓ.txt
+-rw-r--r--. 1 root root    8 May 19 18:30 hyphens_a-b.txt
+-rw-r--r--. 1 root root    8 May 19 18:30 hyphens_a‐b.txt
+-rw-r--r--. 1 root root   19 May 19 18:30 inadequate_a1.txt
+-rw-r--r--. 1 root root   19 May 19 18:30 inadequate_al.txt
+-rw-r--r--. 1 root root   24 May 19 18:30 linedraw_
+╔═══════════╗
+║ metatable ║
+╟───────────╢
+║ __index   ║
+╚═══════════╝
+.txt
+-rw-r--r--. 1 root root   27 May 19 18:30 mixed_top.txt
+-rw-r--r--. 1 root root   27 May 19 18:30 mixed_tοp.txt
+-rw-r--r--. 1 root root    7 May 19 18:30 mootxt.png
+-rw-r--r--. 1 root root   16 May 19 18:30 moo‮gnp.txt
+-rw-r--r--. 1 root root   13 May 19 18:30 prohibition_Rs.txt
+-rw-r--r--. 1 root root   13 May 19 18:30 prohibition_₨.txt
+-rw-r--r--. 1 root root   10 May 19 18:30 urk��moo
+-rw-r--r--. 1 root root   19 May 19 18:30 zerojoin_moocow.txt
+-rw-r--r--. 1 root root   19 May 19 18:30 zerojoin_moo‍cow.txt
+Testing french_café.txt (66 72 65 6e 63 68 5f 63 61 66 c3 a9 2e 74 78 74) -> NFC
+Testing french_café.txt (66 72 65 6e 63 68 5f 63 61 66 65 cc 81 2e 74 78 74) -> NFD
+Testing chinese_ｶ.txt (63 68 69 6e 65 73 65 5f ef bd b6 2e 74 78 74) -> NFKC1
+Testing chinese_カ.txt (63 68 69 6e 65 73 65 5f e3 82 ab 2e 74 78 74) -> NFKC2
+Testing greek_ϓ.txt (67 72 65 65 6b 5f cf 93 2e 74 78 74) -> GREEK UPSILON WITH ACUTE AND HOOK SYMBOL, NFC
+Testing greek_ϓ.txt (67 72 65 65 6b 5f cf 92 cc 81 2e 74 78 74) -> GREEK UPSILON WITH ACUTE AND HOOK SYMBOL, NFD
+Testing greek_Ύ.txt (67 72 65 65 6b 5f ce 8e 2e 74 78 74) -> GREEK UPSILON WITH ACUTE AND HOOK SYMBOL, NFKC
+Testing greek_Ύ.txt (67 72 65 65 6b 5f ce a5 cc 81 2e 74 78 74) -> GREEK UPSILON WITH ACUTE AND HOOK SYMBOL, NFKD
+Testing arabic_ﷺ.txt (61 72 61 62 69 63 5f ef b7 ba 2e 74 78 74) -> ARABIC LIGATURE SALLALLAHOU ALAYHE WASALLAM, NFC
+Testing arabic_صلى الله عليه وسلم.txt (61 72 61 62 69 63 5f d8 b5 d9 84 d9 89 20 d8 a7 d9 84 d9 84 d9 87 20 d8 b9 d9 84 d9 8a d9 87 20 d9 88 d8 b3 d9 84 d9 85 2e 74 78 74) -> ARABIC LIGATURE SALLALLAHOU ALAYHE WASALLAM, NFKC
+Testing urk��moo (75 72 6b c0 af 6d 6f 6f) -> FAKESLASH
+Testing emoji_🦑🦋🦉🦒.txt (65 6d 6f 6a 69 5f f0 9f a6 91 f0 9f a6 8b f0 9f a6 89 f0 9f a6 92 2e 74 78 74) -> octopus butterfly owl giraffe emoji
+Testing linedraw_
+╔═══════════╗
+║ metatable ║
+╟───────────╢
+║ __index   ║
+╚═══════════╝
+.txt (6c 69 6e 65 64 72 61 77 5f 0a e2 95 94 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 97 0a e2 95 91 20 6d 65 74 61 74 61 62 6c 65 20 e2 95 91 0a e2 95 9f e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 94 80 e2 95 a2 0a e2 95 91 20 5f 5f 69 6e 64 65 78 20 20 20 e2 95 91 0a e2 95 9a e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 90 e2 95 9d 0a 2e 74 78 74) -> ugly box because we can
+Testing moo‮gnp.txt (6d 6f 6f e2 80 ae 67 6e 70 2e 74 78 74) -> Well say hello,
+Testing mootxt.png (6d 6f 6f 74 78 74 2e 70 6e 67) -> Harvey
+Testing mixed_tοp.txt (6d 69 78 65 64 5f 74 ce bf 70 2e 74 78 74) -> greek omicron instead of o
+Testing mixed_top.txt (6d 69 78 65 64 5f 74 6f 70 2e 74 78 74) -> greek omicron instead of o
+Testing hyphens_a‐b.txt (68 79 70 68 65 6e 73 5f 61 e2 80 90 62 2e 74 78 74) -> hyphens
+Testing hyphens_a-b.txt (68 79 70 68 65 6e 73 5f 61 2d 62 2e 74 78 74) -> hyphens
+Testing dz_digraph_dze.txt (64 7a 5f 64 69 67 72 61 70 68 5f 64 7a 65 2e 74 78 74) -> d-z digraph
+Testing dz_digraph_ʣe.txt (64 7a 5f 64 69 67 72 61 70 68 5f ca a3 65 2e 74 78 74) -> d-z digraph
+Testing inadequate_al.txt (69 6e 61 64 65 71 75 61 74 65 5f 61 6c 2e 74 78 74) -> is it l or is it 1
+Testing inadequate_a1.txt (69 6e 61 64 65 71 75 61 74 65 5f 61 31 2e 74 78 74) -> is it l or is it 1
+Testing prohibition_Rs.txt (70 72 6f 68 69 62 69 74 69 6f 6e 5f 52 73 2e 74 78 74) -> rupee symbol
+Testing prohibition_₨.txt (70 72 6f 68 69 62 69 74 69 6f 6e 5f e2 82 a8 2e 74 78 74) -> rupee symbol
+Testing zerojoin_moocow.txt (7a 65 72 6f 6a 6f 69 6e 5f 6d 6f 6f 63 6f 77 2e 74 78 74) -> zero width joiners
+Testing zerojoin_moo‍cow.txt (7a 65 72 6f 6a 6f 69 6e 5f 6d 6f 6f e2 80 8d 63 6f 77 2e 74 78 74) -> zero width joiners
+Testing combmark_လို.txt (63 6f 6d 62 6d 61 72 6b 5f e1 80 9c e1 80 ad e1 80 af 2e 74 78 74) -> combining marks
+Testing combmark_လုိ.txt (63 6f 6d 62 6d 61 72 6b 5f e1 80 9c e1 80 af e1 80 ad 2e 74 78 74) -> combining marks
+Testing .‍ (2e e2 80 8d) -> zero width joiners in dot entry
+Testing ..‍ (2e 2e e2 80 8d) -> zero width joiners in dotdot entry

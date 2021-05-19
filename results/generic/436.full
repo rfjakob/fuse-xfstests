@@ -1,0 +1,17 @@
+File system does not support unwritten extents.
+File system does not support punch hole.
+File system magic#: 0x65735546
+Allocation size: 4096
+
+13. Test file with unwritten extents, only have pagevec dirty pages
+Test skipped as fs doesn't support unwritten extents.
+
+14. Test file with unwritten extents, small hole after pagevec dirty pages
+Test skipped as fs doesn't support unwritten extents.
+
+15. Test file with unwritten extents, page after unwritten extent
+Test skipped as fs doesn't support unwritten extents.
+
+16. Test file with unwritten extents, non-contiguous dirty pages
+Test skipped as fs doesn't support unwritten extents.
+
