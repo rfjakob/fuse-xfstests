@@ -27,7 +27,13 @@ _gocryptfs_mount()
 		return 1
 	fi
 
-	gocryptfs -q -extpass "echo test" -allow_other -acl -ko $o $dir $mnt
+	# Run "check-gocryptfs -d" to enable debug ouput
+	local DBG_ARGS=""
+	if [[ $DUMP_OUTPUT == true ]] ; then
+		DBG_ARGS="-nosyslog -fusedebug"
+	fi
+
+	gocryptfs -q -extpass "echo test" -allow_other $DBG_ARGS -ko $o $dir $mnt
 }
 
 # Mount go-fuse loopback example
@@ -51,7 +57,13 @@ _gofuse_loopback_mount()
 		return 1
 	fi
 
-	loopback -allow-other -q $mnt $dir &
+	# Run "check-loopback -d" to enable debug ouput
+	local DBG_ARGS=""
+	if [[ $DUMP_OUTPUT == true ]] ; then
+		DBG_ARGS="-debug"
+	fi
+
+	loopback -allow-other -q $DBG_ARGS $mnt $dir &
 	# Wait until loopback has mounted itself.
 	# Ugly, but works.
 	sleep 0.1
