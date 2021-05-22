@@ -98,7 +98,7 @@ do_extent_copy(int src_fd, int dest_fd, off_t data_off, off_t hole_off)
 	}
 
 	while (len > 0) {
-		ssize_t nr_read = read(src_fd, buf, BUF_SIZE);
+		ssize_t nr_read = read(src_fd, buf, MIN(len, BUF_SIZE));
 		if (nr_read < 0) {
 			if (errno == EINTR)
 				continue;
