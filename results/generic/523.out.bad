@@ -1,3 +1,4 @@
 QA output created by 523
 set attr
+setfattr: /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/moofile: Invalid argument
 check attr

@@ -36,44 +36,46 @@ Storing combmark_လို.txt (63 6f 6d 62 6d 61 72 6b 5f e1 80 9c e1 80 ad e1 
 Storing combmark_လုိ.txt (63 6f 6d 62 6d 61 72 6b 5f e1 80 9c e1 80 af e1 80 ad 2e 74 78 74) -> combining marks
 Storing .‍ (2e e2 80 8d) -> zero width joiners in dot entry
 Storing ..‍ (2e 2e e2 80 8d) -> zero width joiners in dotdot entry
-total 124
-drwxr-xr-x. 2 root root 4096 May 19 18:30 ..‍
-drwxr-xr-x. 2 root root 4096 May 19 18:30 .‍
--rw-r--r--. 1 root root   50 May 19 18:30 arabic_صلى الله عليه وسلم.txt
--rw-r--r--. 1 root root   49 May 19 18:30 arabic_ﷺ.txt
--rw-r--r--. 1 root root    6 May 19 18:30 chinese_カ.txt
--rw-r--r--. 1 root root    6 May 19 18:30 chinese_ｶ.txt
--rw-r--r--. 1 root root   16 May 19 18:30 combmark_လို.txt
--rw-r--r--. 1 root root   16 May 19 18:30 combmark_လုိ.txt
--rw-r--r--. 1 root root   12 May 19 18:30 dz_digraph_dze.txt
--rw-r--r--. 1 root root   12 May 19 18:30 dz_digraph_ʣe.txt
--rw-r--r--. 1 root root   36 May 19 18:30 emoji_🦑🦋🦉🦒.txt
--rw-r--r--. 1 root root    4 May 19 18:30 french_café.txt
--rw-r--r--. 1 root root    4 May 19 18:30 french_café.txt
--rw-r--r--. 1 root root   47 May 19 18:30 greek_Ύ.txt
--rw-r--r--. 1 root root   47 May 19 18:30 greek_Ύ.txt
--rw-r--r--. 1 root root   46 May 19 18:30 greek_ϓ.txt
--rw-r--r--. 1 root root   46 May 19 18:30 greek_ϓ.txt
--rw-r--r--. 1 root root    8 May 19 18:30 hyphens_a-b.txt
--rw-r--r--. 1 root root    8 May 19 18:30 hyphens_a‐b.txt
--rw-r--r--. 1 root root   19 May 19 18:30 inadequate_a1.txt
--rw-r--r--. 1 root root   19 May 19 18:30 inadequate_al.txt
--rw-r--r--. 1 root root   24 May 19 18:30 linedraw_
+total 132
+drwxr-xr-x. 4 root root 4096 Jun  2 21:46 .
+drwxr-xr-x. 3 root root 4096 Jun  2 21:46 ..
+drwxr-xr-x. 2 root root 4096 Jun  2 21:46 ..‍
+drwxr-xr-x. 2 root root 4096 Jun  2 21:46 .‍
+-rw-r--r--. 1 root root   50 Jun  2 21:46 arabic_صلى الله عليه وسلم.txt
+-rw-r--r--. 1 root root   49 Jun  2 21:46 arabic_ﷺ.txt
+-rw-r--r--. 1 root root    6 Jun  2 21:46 chinese_カ.txt
+-rw-r--r--. 1 root root    6 Jun  2 21:46 chinese_ｶ.txt
+-rw-r--r--. 1 root root   16 Jun  2 21:46 combmark_လို.txt
+-rw-r--r--. 1 root root   16 Jun  2 21:46 combmark_လုိ.txt
+-rw-r--r--. 1 root root   12 Jun  2 21:46 dz_digraph_dze.txt
+-rw-r--r--. 1 root root   12 Jun  2 21:46 dz_digraph_ʣe.txt
+-rw-r--r--. 1 root root   36 Jun  2 21:46 emoji_🦑🦋🦉🦒.txt
+-rw-r--r--. 1 root root    4 Jun  2 21:46 french_café.txt
+-rw-r--r--. 1 root root    4 Jun  2 21:46 french_café.txt
+-rw-r--r--. 1 root root   47 Jun  2 21:46 greek_Ύ.txt
+-rw-r--r--. 1 root root   47 Jun  2 21:46 greek_Ύ.txt
+-rw-r--r--. 1 root root   46 Jun  2 21:46 greek_ϓ.txt
+-rw-r--r--. 1 root root   46 Jun  2 21:46 greek_ϓ.txt
+-rw-r--r--. 1 root root    8 Jun  2 21:46 hyphens_a-b.txt
+-rw-r--r--. 1 root root    8 Jun  2 21:46 hyphens_a‐b.txt
+-rw-r--r--. 1 root root   19 Jun  2 21:46 inadequate_a1.txt
+-rw-r--r--. 1 root root   19 Jun  2 21:46 inadequate_al.txt
+-rw-r--r--. 1 root root   24 Jun  2 21:46 linedraw_
 ╔═══════════╗
 ║ metatable ║
 ╟───────────╢
 ║ __index   ║
 ╚═══════════╝
 .txt
--rw-r--r--. 1 root root   27 May 19 18:30 mixed_top.txt
--rw-r--r--. 1 root root   27 May 19 18:30 mixed_tοp.txt
--rw-r--r--. 1 root root    7 May 19 18:30 mootxt.png
--rw-r--r--. 1 root root   16 May 19 18:30 moo‮gnp.txt
--rw-r--r--. 1 root root   13 May 19 18:30 prohibition_Rs.txt
--rw-r--r--. 1 root root   13 May 19 18:30 prohibition_₨.txt
--rw-r--r--. 1 root root   10 May 19 18:30 urk��moo
--rw-r--r--. 1 root root   19 May 19 18:30 zerojoin_moocow.txt
--rw-r--r--. 1 root root   19 May 19 18:30 zerojoin_moo‍cow.txt
+-rw-r--r--. 1 root root   27 Jun  2 21:46 mixed_top.txt
+-rw-r--r--. 1 root root   27 Jun  2 21:46 mixed_tοp.txt
+-rw-r--r--. 1 root root    7 Jun  2 21:46 mootxt.png
+-rw-r--r--. 1 root root   16 Jun  2 21:46 moo‮gnp.txt
+-rw-r--r--. 1 root root   13 Jun  2 21:46 prohibition_Rs.txt
+-rw-r--r--. 1 root root   13 Jun  2 21:46 prohibition_₨.txt
+-rw-r--r--. 1 root root   10 Jun  2 21:46 urk��moo
+-rw-r--r--. 1 root root   19 Jun  2 21:46 zerojoin_moocow.txt
+-rw-r--r--. 1 root root   19 Jun  2 21:46 zerojoin_moo‍cow.txt
 Testing french_café.txt (66 72 65 6e 63 68 5f 63 61 66 c3 a9 2e 74 78 74) -> NFC
 Testing french_café.txt (66 72 65 6e 63 68 5f 63 61 66 65 cc 81 2e 74 78 74) -> NFD
 Testing chinese_ｶ.txt (63 68 69 6e 65 73 65 5f ef bd b6 2e 74 78 74) -> NFKC1

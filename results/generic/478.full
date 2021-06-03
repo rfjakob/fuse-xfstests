@@ -1,5 +1,5 @@
 wrote 4096/4096 bytes at offset 0
-4 KiB, 1 ops; 0.0001 sec (19.629 MiB/sec and 5025.1256 ops/sec)
+4 KiB, 1 ops; 0.0001 sec (21.230 MiB/sec and 5434.7826 ops/sec)
 -s -w -o 0 -l 10 -W -g -w -o 0 -l 10 -W wrlck unlck wrlck
 get wrlck
 lock could be placed

@@ -1,8 +1,8 @@
 wrote 4096/4096 bytes at offset 0
-4 KiB, 1 ops; 0.0001 sec (25.365 MiB/sec and 6493.5065 ops/sec)
+4 KiB, 1 ops; 0.0002 sec (14.256 MiB/sec and 3649.6350 ops/sec)
 wrote 4096/4096 bytes at offset 0
-4 KiB, 1 ops; 0.0001 sec (22.711 MiB/sec and 5813.9535 ops/sec)
+4 KiB, 1 ops; 0.0001 sec (24.414 MiB/sec and 6250.0000 ops/sec)
 wrote 4096/4096 bytes at offset 0
-4 KiB, 1 ops; 0.0002 sec (19.243 MiB/sec and 4926.1084 ops/sec)
+4 KiB, 1 ops; 0.0001 sec (21.823 MiB/sec and 5586.5922 ops/sec)
 wrote 4096/4096 bytes at offset 0
-4 KiB, 1 ops; 0.0002 sec (17.517 MiB/sec and 4484.3049 ops/sec)
+4 KiB, 1 ops; 0.0002 sec (17.133 MiB/sec and 4385.9649 ops/sec)

@@ -1,6 +1,6 @@
 wrote 2048/2048 bytes at offset 4096
-2 KiB, 1 ops; 0.0002 sec (8 MiB/sec and 4000.0000 ops/sec)
+2 KiB, 1 ops; 0.0002 sec (7.154 MiB/sec and 3663.0037 ops/sec)
 wrote 2048/2048 bytes at offset 65536
-2 KiB, 1 ops; 0.0000 sec (31.502 MiB/sec and 16129.0323 ops/sec)
+2 KiB, 1 ops; 0.0000 sec (21.230 MiB/sec and 10869.5652 ops/sec)
 wrote 2048/2048 bytes at offset 67584
-2 KiB, 1 ops; 0.0005 sec (3.610 MiB/sec and 1848.4288 ops/sec)
+2 KiB, 1 ops; 0.0003 sec (5.533 MiB/sec and 2832.8612 ops/sec)

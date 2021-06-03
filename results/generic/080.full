@@ -1,4 +1,4 @@
 wrote 4096/4096 bytes at offset 0
-4 KiB, 1 ops; 0.0001 sec (23.819 MiB/sec and 6097.5610 ops/sec)
-before mwrite: 1621439833 1621439833
-after mwrite : 1621439833 1621439833
+4 KiB, 1 ops; 0.0001 sec (34.569 MiB/sec and 8849.5575 ops/sec)
+before mwrite: 1622661220 1622661220
+after mwrite : 1622661220 1622661220

@@ -1,1 +1,1 @@
-fuse.gocryptfs does not support shutdown
+_scratch_mkfs failed on /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev

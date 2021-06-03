@@ -1,4 +1,4 @@
-BACKUP /tmp/2858740.backup1
+BACKUP /tmp/1612257.backup1
 # file: /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/descend
 user.1="23"
 user.x="yz"
@@ -36,7 +36,7 @@ user.name=0sur4=
 user.name3=0s3vrO
 
 AFTER REMOVE
-BACKUP /tmp/2858740.backup2
+BACKUP /tmp/1612257.backup2
 # file: /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/descend
 user.1="23"
 user.x="yz"
@@ -74,7 +74,7 @@ user.name=0sur4=
 user.name3=0s3vrO
 
 AFTER RESTORE
-# file: SCRATCH_MNT/dir
+# file: SCRATCH_MNT/reg
 trusted.name=0sur4=
 trusted.name3=0s3vrO
 user.name=0sur4=
@@ -96,7 +96,7 @@ user.x="yz"
 user.1="23"
 user.x="yz"
 
-# file: SCRATCH_MNT/reg
+# file: SCRATCH_MNT/dir
 trusted.name=0sur4=
 trusted.name3=0s3vrO
 user.name=0sur4=

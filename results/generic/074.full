@@ -51,20 +51,6 @@ Child 0 cleaning up /var/tmp/fuse-xfstests/check-gocryptfs/testdir/fstest.2/chil
 num_children=3 file_size=31457280 num_files=5 loop_count=10 block_size=512
 mmap=0 sync=0 prealloc=0
 Total data size 471.9 Mbyte
-Child 1 loop 0
-Child 1 loop 1
-Child 1 loop 2
-Child 1 loop 3
-Child 1 loop 4
-Child 1 loop 5
-Child 1 loop 6
-Child 1 loop 7
-Child 1 loop 8
-Child 1 loop 9
-Child 1 cleaning up /var/tmp/fuse-xfstests/check-gocryptfs/testdir/fstest.2/child1
-num_children=3 file_size=31457280 num_files=5 loop_count=10 block_size=512
-mmap=0 sync=0 prealloc=0
-Total data size 471.9 Mbyte
 Child 2 loop 0
 Child 2 loop 1
 Child 2 loop 2
@@ -76,6 +62,20 @@ Child 2 loop 7
 Child 2 loop 8
 Child 2 loop 9
 Child 2 cleaning up /var/tmp/fuse-xfstests/check-gocryptfs/testdir/fstest.2/child2
+num_children=3 file_size=31457280 num_files=5 loop_count=10 block_size=512
+mmap=0 sync=0 prealloc=0
+Total data size 471.9 Mbyte
+Child 1 loop 0
+Child 1 loop 1
+Child 1 loop 2
+Child 1 loop 3
+Child 1 loop 4
+Child 1 loop 5
+Child 1 loop 6
+Child 1 loop 7
+Child 1 loop 8
+Child 1 loop 9
+Child 1 cleaning up /var/tmp/fuse-xfstests/check-gocryptfs/testdir/fstest.2/child1
 num_children=3 file_size=31457280 num_files=5 loop_count=10 block_size=512
 mmap=0 sync=0 prealloc=0
 Total data size 471.9 Mbyte
@@ -127,20 +127,6 @@ Total data size 471.9 Mbyte
 num_children=3 file_size=10485760 num_files=5 loop_count=10 block_size=512
 mmap=1 sync=1 prealloc=0
 Total data size 157.3 Mbyte
-Child 1 loop 0
-Child 1 loop 1
-Child 1 loop 2
-Child 1 loop 3
-Child 1 loop 4
-Child 1 loop 5
-Child 1 loop 6
-Child 1 loop 7
-Child 1 loop 8
-Child 1 loop 9
-Child 1 cleaning up /var/tmp/fuse-xfstests/check-gocryptfs/testdir/fstest.4/child1
-num_children=3 file_size=10485760 num_files=5 loop_count=10 block_size=512
-mmap=1 sync=1 prealloc=0
-Total data size 157.3 Mbyte
 Child 0 loop 0
 Child 0 loop 1
 Child 0 loop 2
@@ -152,6 +138,20 @@ Child 0 loop 7
 Child 0 loop 8
 Child 0 loop 9
 Child 0 cleaning up /var/tmp/fuse-xfstests/check-gocryptfs/testdir/fstest.4/child0
+num_children=3 file_size=10485760 num_files=5 loop_count=10 block_size=512
+mmap=1 sync=1 prealloc=0
+Total data size 157.3 Mbyte
+Child 1 loop 0
+Child 1 loop 1
+Child 1 loop 2
+Child 1 loop 3
+Child 1 loop 4
+Child 1 loop 5
+Child 1 loop 6
+Child 1 loop 7
+Child 1 loop 8
+Child 1 loop 9
+Child 1 cleaning up /var/tmp/fuse-xfstests/check-gocryptfs/testdir/fstest.4/child1
 num_children=3 file_size=10485760 num_files=5 loop_count=10 block_size=512
 mmap=1 sync=1 prealloc=0
 Total data size 157.3 Mbyte

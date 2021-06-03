@@ -1,50 +1,49 @@
-kroot@brikett:/opt/fuse-xfstests\[?2004h[root@brikett fuse-xfstests]# ./check-gocryptfs 
-[?2004lfuse-xfstests gocryptfs-2019-12/ab38faeb
-Mi 19. Mai 15:45:21 UTC 2021
+fuse-xfstests results_2021-05-19/e5744d56
+Mi 2. Jun 19:01:57 UTC 2021
 
 gocryptfs is /usr/local/bin/gocryptfs
-gocryptfs v2.0-beta4-2-g0650a51; go-fuse v2.1.1-0.20210423170155-a90e1f463c3f => github.com/rfjakob/go-fuse/v2 v2.1.1-0.20210508151621-62c5aa1919a7; 2021-05-19 go1.16.2 linux/amd64
+gocryptfs v2.0-beta4-26-g8f2be5d; go-fuse v2.1.1-0.20210508151621-62c5aa1919a7; 2021-06-02 go1.16.2 linux/amd64
 FSTYP         -- fuse.gocryptfs
-PLATFORM      -- Linux/x86_64 brikett 5.11.18-300.fc34.x86_64 #1 SMP Mon May 3 15:10:32 UTC 2021
+PLATFORM      -- Linux/x86_64 brikett 5.11.21-300.fc34.x86_64 #1 SMP Fri May 14 17:43:38 UTC 2021
 MKFS_OPTIONS  -- /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev
 MOUNT_OPTIONS -- -o context=system_u:object_r:root_t:s0 /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir
 
-generic/001	 4s
-generic/002	 0s
+generic/001 4s ...  3s
+generic/002 0s ...  1s
 generic/003	[not run] atime related mount options have no effect on fuse.gocryptfs
 generic/004	[not run] O_TMPFILE is not supported
-generic/005	 0s
-generic/006	 1s
-generic/007	 5s
+generic/005 0s ...  0s
+generic/006 1s ...  2s
+generic/007 5s ...  5s
 generic/008	[not run] xfs_io fzero  failed (old kernel/wrong fs?)
 generic/009	[not run] xfs_io fzero  failed (old kernel/wrong fs?)
-generic/010	 0s
-generic/011	 3s
+generic/010 0s ...  1s
+generic/011 3s ...  2s
 generic/012	[not run] xfs_io fpunch  failed (old kernel/wrong fs?)
-generic/013	 10s
-generic/014	 2s
-generic/015	 1s
+generic/013 10s ...  11s
+generic/014 2s ...  2s
+generic/015 1s ...  1s
 generic/016	[not run] xfs_io fpunch  failed (old kernel/wrong fs?)
 generic/017	[not run] xfs_io fiemap  failed (old kernel/wrong fs?)
 generic/018	[not run] defragmentation not supported for fstype "fuse.gocryptfs"
-generic/020	 0s
+generic/020 0s ...  0s
 generic/021	[not run] xfs_io fpunch  failed (old kernel/wrong fs?)
 generic/022	[not run] xfs_io fpunch  failed (old kernel/wrong fs?)
-generic/023	 0s
-generic/024	 1s
+generic/023 0s ...  1s
+generic/024 1s ...  0s
 generic/025	[not run] kernel doesn't support renameat2 syscall
 generic/026	[not run] fuse.gocryptfs does not define maximum ACL count
-generic/027	 92s
-generic/028	 5s
-generic/029	 0s
-generic/030	 1s
+generic/027 92s ...  92s
+generic/028 5s ...  5s
+generic/029 0s ...  0s
+generic/030 1s ...  1s
 generic/031	[not run] xfs_io fcollapse  failed (old kernel/wrong fs?)
 generic/032	[not run] xfs_io fiemap  failed (old kernel/wrong fs?)
 generic/033	[not run] xfs_io fzero  failed (old kernel/wrong fs?)
 generic/034	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/035	- output mismatch (see /opt/fuse-xfstests/results//generic/035.out.bad)
     --- tests/generic/035.out	2021-05-08 21:11:05.295395900 +0200
-    +++ /opt/fuse-xfstests/results//generic/035.out.bad	2021-05-19 17:47:32.309869989 +0200
+    +++ /opt/fuse-xfstests/results//generic/035.out.bad	2021-06-02 21:04:07.553911453 +0200
     @@ -1,3 +1,4 @@
      QA output created by 035
      overwriting regular file:
@@ -52,23 +51,23 @@ generic/035	- output mismatch (see /opt/fuse-xfstests/results//generic/035.out.b
     +t_rename_overwrite: fstat(3): No such file or directory
     ...
     (Run 'diff -u /opt/fuse-xfstests/tests/generic/035.out /opt/fuse-xfstests/results//generic/035.out.bad'  to see the entire diff)
-generic/036	 10s
-generic/037	 4s
+generic/036 10s ...  10s
+generic/037 4s ...  5s
 generic/038	[not run] This test requires at least 10GB free on /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir to run
 generic/039	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/040	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/041	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/043	[not run] fuse.gocryptfs does not support shutdown
 generic/044	[not run] fuse.gocryptfs does not support shutdown
-generic/045	[not run] fuse.gocryptfs does not support shutdown
+generic/045	[not run] _scratch_mkfs failed on /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev
 generic/046	[not run] fuse.gocryptfs does not support shutdown
-generic/047	[not run] _scratch_mkfs failed on /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev
+generic/047	[not run] fuse.gocryptfs does not support shutdown
 generic/048	[not run] fuse.gocryptfs does not support shutdown
 generic/049	[not run] fuse.gocryptfs does not support shutdown
 generic/050	[not run] fuse.gocryptfs does not support shutdown
-generic/051	[not run] fuse.gocryptfs does not support shutdown
+generic/051	[not run] _scratch_mkfs failed on /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev
 generic/052	[not run] fuse.gocryptfs does not support shutdown
-generic/053	 1s
+generic/053 1s ...  1s
 generic/054	[not run] fuse.gocryptfs does not support shutdown
 generic/055	[not run] fuse.gocryptfs does not support shutdown
 generic/056	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
@@ -79,7 +78,7 @@ generic/060	[not run] xfs_io fpunch  failed (old kernel/wrong fs?)
 generic/061	[not run] xfs_io fpunch  failed (old kernel/wrong fs?)
 generic/062	- output mismatch (see /opt/fuse-xfstests/results//generic/062.out.bad)
     --- tests/generic/062.out	2018-01-20 14:29:39.067451950 +0100
-    +++ /opt/fuse-xfstests/results//generic/062.out.bad	2021-05-19 17:47:52.709938594 +0200
+    +++ /opt/fuse-xfstests/results//generic/062.out.bad	2021-06-02 21:04:28.504989402 +0200
     @@ -304,190 +304,102 @@
      === TYPE lnk; NAMESPACE trusted
      
@@ -96,20 +95,20 @@ generic/065	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev 
 generic/066	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/067	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/068	[not run] fuse.gocryptfs does not support freezing
-generic/069	 149s
-generic/070	 4s
-generic/071	 1s
+generic/069 149s ...  151s
+generic/070 4s ...  5s
+generic/071 1s ...  0s
 generic/072	[not run] xfs_io fcollapse  failed (old kernel/wrong fs?)
 generic/073	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
-generic/074	 357s
-generic/075	 24s
+generic/074 357s ...  341s
+generic/075 24s ...  23s
 generic/076	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be local device
-generic/077	 24s
+generic/077 24s ...  29s
 generic/078	[not run] kernel doesn't support renameat2 syscall
 generic/079	[not run] file system doesn't support chattr +ia
 generic/080	[failed, exit status 2]- output mismatch (see /opt/fuse-xfstests/results//generic/080.out.bad)
     --- tests/generic/080.out	2018-01-20 14:29:39.069451955 +0100
-    +++ /opt/fuse-xfstests/results//generic/080.out.bad	2021-05-19 17:57:15.170860732 +0200
+    +++ /opt/fuse-xfstests/results//generic/080.out.bad	2021-06-02 21:13:42.221068503 +0200
     @@ -1,2 +1,4 @@
      QA output created by 080
      Silence is golden.
@@ -119,19 +118,20 @@ generic/080	[failed, exit status 2]- output mismatch (see /opt/fuse-xfstests/res
     (Run 'diff -u /opt/fuse-xfstests/tests/generic/080.out /opt/fuse-xfstests/results//generic/080.out.bad'  to see the entire diff)
 generic/081	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/082	[not run] disk quotas not supported by this filesystem type: fuse.gocryptfs
-generic/083	 11s
-generic/084	 6s
+generic/083 11s ... [33munsupported block size of 1024 bytes, disabling SEEK_DATA & SEEK_HOLE[0m
+ 13s
+generic/084 6s ...  5s
 generic/085	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
-generic/086	 1s
-generic/087	 0s
-generic/088	 0s
-generic/089	 28s
+generic/086 1s ...  0s
+generic/087 0s ...  1s
+generic/088 0s ...  0s
+generic/089 28s ...  29s
 generic/090	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
-generic/091	 3s
+generic/091 3s ...  3s
 generic/092	[not run] xfs_io fiemap  failed (old kernel/wrong fs?)
 generic/093	- output mismatch (see /opt/fuse-xfstests/results//generic/093.out.bad)
     --- tests/generic/093.out	2018-06-27 21:12:13.629235005 +0200
-    +++ /opt/fuse-xfstests/results//generic/093.out.bad	2021-05-19 17:58:06.687040564 +0200
+    +++ /opt/fuse-xfstests/results//generic/093.out.bad	2021-06-02 21:14:35.648277621 +0200
     @@ -1,8 +1,9 @@
      QA output created by 093
      
@@ -143,13 +143,13 @@ generic/093	- output mismatch (see /opt/fuse-xfstests/results//generic/093.out.b
     ...
     (Run 'diff -u /opt/fuse-xfstests/tests/generic/093.out /opt/fuse-xfstests/results//generic/093.out.bad'  to see the entire diff)
 generic/094	[not run] xfs_io fiemap  failed (old kernel/wrong fs?)
-generic/095	 15s
+generic/095 15s ...  14s
 generic/096	[not run] xfs_io fzero  failed (old kernel/wrong fs?)
-generic/097	 0s
-generic/098	 1s
+generic/097 0s ...  0s
+generic/098 1s ...  0s
 generic/099	- output mismatch (see /opt/fuse-xfstests/results//generic/099.out.bad)
     --- tests/generic/099.out	2018-06-27 21:12:13.630235009 +0200
-    +++ /opt/fuse-xfstests/results//generic/099.out.bad	2021-05-19 17:58:23.033097623 +0200
+    +++ /opt/fuse-xfstests/results//generic/099.out.bad	2021-06-02 21:14:51.695340489 +0200
     @@ -94,8 +94,8 @@
      acldir [u::rwx,g::rwx,o::rwx/u::r-x,g::r--,o::---]
      -r--r----- 0 0 file2
@@ -160,47 +160,47 @@ generic/099	- output mismatch (see /opt/fuse-xfstests/results//generic/099.out.b
     +file3 [u::---,g::r--,o::---]
     ...
     (Run 'diff -u /opt/fuse-xfstests/tests/generic/099.out /opt/fuse-xfstests/results//generic/099.out.bad'  to see the entire diff)
-generic/100	 10s
+generic/100 10s ...  11s
 generic/101	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
-generic/102	 28s
-generic/103	 2s
+generic/102 28s ...  26s
+generic/103 2s ...  2s
 generic/104	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
-generic/105	 0s
+generic/105 0s ...  1s
 generic/106	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/107	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/108	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
-generic/109	 4s
+generic/109 4s ...  4s
 generic/110	[not run] Reflink not supported by test filesystem type: fuse.gocryptfs
 generic/111	[not run] Reflink not supported by test filesystem type: fuse.gocryptfs
-generic/112	 23s
-generic/113	 39s
+generic/112 23s ...  23s
+generic/113 39s ...  38s
 generic/114	[not run] device block size: 4096 greater than 512
 generic/115	[not run] Reflink not supported by test filesystem type: fuse.gocryptfs
 generic/116	[not run] Reflink not supported by test filesystem type: fuse.gocryptfs
-generic/117	 7s
+generic/117 7s ...  6s
 generic/118	[not run] Reflink not supported by test filesystem type: fuse.gocryptfs
 generic/119	[not run] Reflink not supported by test filesystem type: fuse.gocryptfs
 generic/120	[not run] atime related mount options have no effect on fuse.gocryptfs
 generic/121	[not run] Dedupe not supported by test filesystem type: fuse.gocryptfs
 generic/122	[not run] Dedupe not supported by test filesystem type: fuse.gocryptfs
-generic/123	 2s
-generic/124	 3s
-generic/126	 2s
-generic/127	 350s
-generic/128	 0s
-generic/129	 20s
-generic/130	 4s
-generic/131	 2s
-generic/132	 18s
-generic/133	 15s
+generic/123 2s ...  1s
+generic/124 3s ...  4s
+generic/126 2s ...  1s
+generic/127 350s ...  351s
+generic/128 0s ...  0s
+generic/129 20s ...  19s
+generic/130 4s ...  4s
+generic/131 2s ...  3s
+generic/132 18s ...  17s
+generic/133 15s ...  16s
 generic/134	[not run] Reflink not supported by test filesystem type: fuse.gocryptfs
-generic/135	 1s
+generic/135 1s ...  0s
 generic/136	[not run] Dedupe not supported by test filesystem type: fuse.gocryptfs
 generic/137	[not run] Reflink not supported by test filesystem type: fuse.gocryptfs
 generic/138	[not run] Reflink not supported by test filesystem type: fuse.gocryptfs
 generic/139	[not run] Reflink not supported by test filesystem type: fuse.gocryptfs
 generic/140	[not run] Reflink not supported by test filesystem type: fuse.gocryptfs
-generic/141	 0s
+generic/141 0s ...  0s
 generic/142	[not run] Reflink not supported by test filesystem type: fuse.gocryptfs
 generic/143	[not run] Reflink not supported by test filesystem type: fuse.gocryptfs
 generic/144	[not run] Reflink not supported by test filesystem type: fuse.gocryptfs
@@ -228,7 +228,7 @@ generic/165	[not run] Reflink not supported by scratch filesystem type: fuse.goc
 generic/166	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/167	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/168	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
-generic/169	 0s
+generic/169 0s ...  1s
 generic/170	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/171	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/172	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
@@ -243,7 +243,7 @@ generic/180	[not run] Reflink not supported by test filesystem type: fuse.gocryp
 generic/181	[not run] Reflink not supported by test filesystem type: fuse.gocryptfs
 generic/182	[not run] Dedupe not supported by test filesystem type: fuse.gocryptfs
 generic/183	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
-generic/184	 1s
+generic/184 1s ...  1s
 generic/185	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/186	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/187	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
@@ -252,31 +252,31 @@ generic/189	[not run] Reflink not supported by scratch filesystem type: fuse.goc
 generic/190	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/191	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/192	[not run] atime related mount options have no effect on fuse.gocryptfs
-generic/193	 1s
+generic/193 1s ...  2s
 generic/194	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/195	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/196	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/197	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
-generic/198	 2s
+generic/198 2s ...  2s
 generic/199	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/200	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/201	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/202	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/203	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
-generic/204	 22s
+generic/204 22s ...  22s
 generic/205	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/206	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
-generic/207	 1s
-generic/208	 202s
-generic/209	 32s
-generic/210	 1s
-generic/211	 1s
-generic/212	 2s
-generic/213	 14s
-generic/214	 2s
+generic/207 1s ...  2s
+generic/208 202s ...  201s
+generic/209 32s ...  32s
+generic/210 1s ...  1s
+generic/211 1s ...  1s
+generic/212 2s ...  2s
+generic/213 14s ...  14s
+generic/214 2s ...  2s
 generic/215	- output mismatch (see /opt/fuse-xfstests/results//generic/215.out.bad)
     --- tests/generic/215.out	2018-01-20 14:29:39.085451997 +0100
-    +++ /opt/fuse-xfstests/results//generic/215.out.bad	2021-05-19 18:12:15.681095938 +0200
+    +++ /opt/fuse-xfstests/results//generic/215.out.bad	2021-06-02 21:28:42.726565057 +0200
     @@ -5,4 +5,6 @@
      4096+0 records out
      
@@ -291,14 +291,14 @@ generic/217	[not run] Reflink not supported by scratch filesystem type: fuse.goc
 generic/218	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/219	[not run] disk quotas not supported by this filesystem type: fuse.gocryptfs
 generic/220	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
-generic/221	 2s
+generic/221 2s ...  2s
 generic/222	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/223	[not run] can't mkfs fuse.gocryptfs with geometry
-generic/224	 38s
+generic/224 38s ...  41s
 generic/225	[not run] xfs_io fiemap  failed (old kernel/wrong fs?)
-generic/226	 8s
+generic/226 8s ...  8s
 generic/227	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
-generic/228	 1s
+generic/228 1s ...  2s
 generic/229	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/230	[not run] disk quotas not supported by this filesystem type: fuse.gocryptfs
 generic/231	[not run] disk quotas not supported by this filesystem type: fuse.gocryptfs
@@ -306,45 +306,45 @@ generic/232	[not run] disk quotas not supported by this filesystem type: fuse.go
 generic/233	[not run] disk quotas not supported by this filesystem type: fuse.gocryptfs
 generic/234	[not run] disk quotas not supported by this filesystem type: fuse.gocryptfs
 generic/235	[not run] disk quotas not supported by this filesystem type: fuse.gocryptfs
-generic/236	 3s
-generic/237	 1s
+generic/236 3s ...  2s
+generic/237 1s ...  1s
 generic/238	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
-generic/239	 12s
+generic/239 12s ...  11s
 generic/240	[not run] fs block size must be larger than the device block size.  fs block size: 4096, device block size: 4096
-generic/241	 75s
+generic/241 75s ...  75s
 generic/242	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/243	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/244	[not run] disk quotas not supported by this filesystem type: fuse.gocryptfs
-generic/245	 3s
-generic/246	 2s
-generic/247	 11s
-generic/248	 3s
-generic/249	 4s
+generic/245 3s ...  2s
+generic/246 2s ...  3s
+generic/247 11s ...  12s
+generic/248 3s ...  3s
+generic/249 4s ...  4s
 generic/250	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/252	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/253	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/254	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/255	[not run] xfs_io fpunch  failed (old kernel/wrong fs?)
 generic/256	[not run] xfs_io fpunch  failed (old kernel/wrong fs?)
-generic/257	 3s
-generic/258	 3s
+generic/257 3s ...  3s
+generic/258 3s ...  3s
 generic/259	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/260	[not run] FITRIM not supported on /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir
 generic/261	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/262	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
-generic/263	 17s
+generic/263 17s ...  16s
 generic/264	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/265	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/266	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/267	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/268	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
-generic/269	 29s
+generic/269 29s ...  28s
 generic/270	[not run] disk quotas not supported by this filesystem type: fuse.gocryptfs
 generic/271	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/272	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
-generic/273	 51s
-generic/274	 20s
-generic/275	 32s
+generic/273 51s ...  54s
+generic/274 20s ...  20s
+generic/275 32s ...  33s
 generic/276	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/277	[not run] file system doesn't support chattr +A
 generic/278	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
@@ -356,26 +356,14 @@ generic/283	[not run] Reflink not supported by scratch filesystem type: fuse.goc
 generic/284	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/285	[failed, exit status 1]- output mismatch (see /opt/fuse-xfstests/results//generic/285.out.bad)
     --- tests/generic/285.out	2018-01-20 14:29:39.093452018 +0100
-    +++ /opt/fuse-xfstests/results//generic/285.out.bad	2021-05-19 18:17:45.985521954 +0200
+    +++ /opt/fuse-xfstests/results//generic/285.out.bad	2021-06-02 21:34:21.185860828 +0200
     @@ -1 +1,3 @@
      QA output created by 285
     +seek sanity check failed!
     +(see /opt/fuse-xfstests/results//generic/285.full for details)
     ...
     (Run 'diff -u /opt/fuse-xfstests/tests/generic/285.out /opt/fuse-xfstests/results//generic/285.out.bad'  to see the entire diff)
-generic/286	- output mismatch (see /opt/fuse-xfstests/results//generic/286.out.bad)
-    --- tests/generic/286.out	2018-01-20 14:29:39.093452018 +0100
-    +++ /opt/fuse-xfstests/results//generic/286.out.bad	2021-05-19 18:19:02.781853509 +0200
-    @@ -1 +1,40 @@
-     QA output created by 286
-    +ERROR: [error:38] reached EOF:Success
-    +ERROR: [error:38] reached EOF:Success
-    +ERROR: [error:38] reached EOF:Success
-    +ERROR: [error:38] reached EOF:Success
-    +ERROR: [error:38] reached EOF:Success
-    +ERROR: [error:38] reached EOF:Success
-    ...
-    (Run 'diff -u /opt/fuse-xfstests/tests/generic/286.out /opt/fuse-xfstests/results//generic/286.out.bad'  to see the entire diff)
+generic/286	 9s
 generic/287	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/288	[not run] FITRIM not supported on /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir
 generic/289	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
@@ -383,7 +371,7 @@ generic/290	[not run] Reflink not supported by scratch filesystem type: fuse.goc
 generic/291	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/292	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/293	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
-generic/294	 1s
+generic/294 1s ...  1s
 generic/295	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/296	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/297	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
@@ -395,22 +383,22 @@ generic/302	[not run] Reflink not supported by scratch filesystem type: fuse.goc
 generic/303	[not run] Reflink not supported by test filesystem type: fuse.gocryptfs
 generic/304	[not run] Dedupe not supported by test filesystem type: fuse.gocryptfs
 generic/305	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
-generic/306	 3s
-generic/307	 2s
-generic/308	 3s
-generic/309	 3s
-generic/310	 68s
+generic/306 3s ...  3s
+generic/307 2s ...  2s
+generic/308 3s ...  3s
+generic/309 3s ...  4s
+generic/310 68s ...  67s
 generic/311	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
-generic/312	 1s
-generic/313	 7s
-generic/314	 3s
-generic/315	 3s
+generic/312 1s ...  1s
+generic/313 7s ...  8s
+generic/314 3s ...  3s
+generic/315 3s ...  4s
 generic/316	[not run] xfs_io fpunch  failed (old kernel/wrong fs?)
-generic/317	 1s
-generic/318	 0s
+generic/317 1s ...  1s
+generic/318 0s ...  0s
 generic/319	- output mismatch (see /opt/fuse-xfstests/results//generic/319.out.bad)
     --- tests/generic/319.out	2021-05-08 21:11:05.298395917 +0200
-    +++ /opt/fuse-xfstests/results//generic/319.out.bad	2021-05-19 18:20:42.045278614 +0200
+    +++ /opt/fuse-xfstests/results//generic/319.out.bad	2021-06-02 21:36:11.981284451 +0200
     @@ -13,7 +13,7 @@
      # owner: 0
      # group: 0
@@ -421,10 +409,10 @@ generic/319	- output mismatch (see /opt/fuse-xfstests/results//generic/319.out.b
      default:user::rwx
     ...
     (Run 'diff -u /opt/fuse-xfstests/tests/generic/319.out /opt/fuse-xfstests/results//generic/319.out.bad'  to see the entire diff)
-generic/320	 31s
+generic/320 31s ...  32s
 generic/321	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/322	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
-generic/323	 124s
+generic/323 124s ...  123s
 generic/324	[not run] defragmentation not supported for fstype "fuse.gocryptfs"
 generic/325	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/326	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
@@ -438,27 +426,27 @@ generic/333	[not run] Reflink not supported by scratch filesystem type: fuse.goc
 generic/334	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/335	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/336	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
-generic/337	 0s
+generic/337 0s ...  0s
 generic/338	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
-generic/339	 10s
-generic/340	 4s
+generic/339 10s ...  11s
+generic/340 4s ...  4s
 generic/341	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/342	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/343	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
-generic/344	 18s
-generic/345	 8s
-generic/346	 15s
+generic/344 18s ...  18s
+generic/345 8s ...  8s
+generic/346 15s ...  15s
 generic/347	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/348	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/352	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/353	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
-generic/354	 4s
-generic/355	 3s
+generic/354 4s ...  4s
+generic/355 3s ...  4s
 generic/356	[not run] swapfiles are not supported
 generic/357	[not run] swapfiles are not supported
 generic/358	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/359	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
-generic/360	 4s
+generic/360 4s ...  4s
 generic/361	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/362	[not run] this test requires richacl support on $SCRATCH_DEV
 generic/363	[not run] this test requires richacl support on $SCRATCH_DEV
@@ -469,26 +457,14 @@ generic/367	[not run] this test requires richacl support on $SCRATCH_DEV
 generic/368	[not run] this test requires richacl support on $SCRATCH_DEV
 generic/369	[not run] this test requires richacl support on $SCRATCH_DEV
 generic/370	[not run] this test requires richacl support on $SCRATCH_DEV
-generic/371	 126s
+generic/371 126s ...  125s
 generic/372	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/373	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/374	[not run] Dedupe not supported by scratch filesystem type: fuse.gocryptfs
-generic/375	- output mismatch (see /opt/fuse-xfstests/results//generic/375.out.bad)
-    --- tests/generic/375.out	2018-06-27 21:12:13.656235105 +0200
-    +++ /opt/fuse-xfstests/results//generic/375.out.bad	2021-05-19 18:26:40.767491672 +0200
-    @@ -4,7 +4,7 @@
-     -rwxrwsrwx
-     *** SGID should be cleared (twice)
-     -rwxrwxrwx
-    --rwxrwxrwx
-    +-rwxrwsrwx
-     *** Expected failure
-     chmod: changing permissions of 'testfile.375': Operation not permitted
-    ...
-    (Run 'diff -u /opt/fuse-xfstests/tests/generic/375.out /opt/fuse-xfstests/results//generic/375.out.bad'  to see the entire diff)
+generic/375	 4s
 generic/376	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
-generic/377	 1s
-generic/378	 3s
+generic/377 1s ...  0s
+generic/378 3s ...  4s
 generic/379	[not run] disk quotas not supported by this filesystem type: fuse.gocryptfs
 generic/380	[not run] disk quotas not supported by this filesystem type: fuse.gocryptfs
 generic/381	[not run] disk quotas not supported by this filesystem type: fuse.gocryptfs
@@ -501,55 +477,44 @@ generic/387	[not run] Reflink not supported by scratch filesystem type: fuse.goc
 generic/388	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be local device
 generic/389	[not run] O_TMPFILE is not supported
 generic/390	[not run] fuse.gocryptfs does not support freezing
-generic/391	 8s
+generic/391 8s ...  8s
 generic/392	[not run] fuse.gocryptfs does not support shutdown
-generic/393	 1s
-generic/394	 4s
+generic/393 1s ...  1s
+generic/394 4s ...  5s
 generic/395	[not run] No encryption support for fuse.gocryptfs
 generic/396	[not run] No encryption support for fuse.gocryptfs
 generic/397	[not run] No encryption support for fuse.gocryptfs
 generic/398	[not run] No encryption support for fuse.gocryptfs
 generic/399	[not run] No encryption support for fuse.gocryptfs
 generic/400	[not run] disk quotas not supported by this filesystem type: fuse.gocryptfs
-generic/401	- output mismatch (see /opt/fuse-xfstests/results//generic/401.out.bad)
-    --- tests/generic/401.out	2018-06-27 21:12:13.659235117 +0200
-    +++ /opt/fuse-xfstests/results//generic/401.out.bad	2021-05-19 18:27:00.961559960 +0200
-    @@ -1,6 +1,4 @@
-     QA output created by 401
-    -. d
-    -.. d
-     b b
-     c c
-     d d
-    ...
-    (Run 'diff -u /opt/fuse-xfstests/tests/generic/401.out /opt/fuse-xfstests/results//generic/401.out.bad'  to see the entire diff)
+generic/401	 1s
 generic/402	[not run] filesystem fuse.gocryptfs timestamp bounds are unknown
-generic/403	 0s
+generic/403 0s ...  0s
 generic/404	[not run] xfs_io finsert  failed (old kernel/wrong fs?)
 generic/405	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
-generic/406	 1s
+generic/406 1s ...  1s
 generic/407	[not run] Reflink not supported by test filesystem type: fuse.gocryptfs
 generic/408	[not run] Dedupe not supported by test filesystem type: fuse.gocryptfs
 generic/409	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be local device
 generic/410	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be local device
 generic/411	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be local device
-generic/412	 1s
+generic/412 1s ...  2s
 generic/413	[not run] /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev fuse.gocryptfs does not support -o dax
 generic/414	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/415	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
-generic/416	 71s
+generic/416 71s ...  69s
 generic/417	[not run] fuse.gocryptfs does not support shutdown
 generic/418	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/testdev to be valid block disk
 generic/419	[not run] No encryption support for fuse.gocryptfs
 generic/420	[not run] xfs_io fpunch  failed (old kernel/wrong fs?)
 generic/421	[not run] No encryption support for fuse.gocryptfs
-generic/422	 5s
-generic/423	 4s
+generic/422 5s ...  4s
+generic/423 4s ...  4s
 generic/424	[not run] file system doesn't support any of /usr/bin/chattr +a/+c/+d/+i
 generic/425	[not run] xfs_io fiemap -a failed (old kernel/wrong fs?)
 generic/426	- output mismatch (see /opt/fuse-xfstests/results//generic/426.out.bad)
     --- tests/generic/426.out	2018-06-27 21:12:13.662235128 +0200
-    +++ /opt/fuse-xfstests/results//generic/426.out.bad	2021-05-19 18:28:36.349928044 +0200
+    +++ /opt/fuse-xfstests/results//generic/426.out.bad	2021-06-02 21:44:08.678078176 +0200
     @@ -1,5 +1,3077 @@
      QA output created by 426
      test_file_handles TEST_DIR/426-dir -d
@@ -560,25 +525,25 @@ generic/426	- output mismatch (see /opt/fuse-xfstests/results//generic/426.out.b
     +open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/426-dir/file000003) returned 116 incorrectly on a linked file!
     ...
     (Run 'diff -u /opt/fuse-xfstests/tests/generic/426.out /opt/fuse-xfstests/results//generic/426.out.bad'  to see the entire diff)
-generic/427	 4s
-generic/428	 5s
+generic/427 4s ...  4s
+generic/428 5s ...  6s
 generic/429	[not run] No encryption support for fuse.gocryptfs
-generic/430	 4s
-generic/431	 5s
-generic/432	 4s
-generic/433	 5s
-generic/434	 4s
+generic/430 4s ...  5s
+generic/431 5s ...  5s
+generic/432 4s ...  5s
+generic/433 5s ...  5s
+generic/434 4s ...  5s
 generic/435	[not run] No encryption support for fuse.gocryptfs
-generic/436	 4s
-generic/437	 5s
-generic/438	 33s
+generic/436 4s ...  5s
+generic/437 5s ...  6s
+generic/438 33s ...  33s
 generic/439	[not run] xfs_io fpunch  failed (old kernel/wrong fs?)
 generic/440	[not run] No encryption support for fuse.gocryptfs
 generic/441	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
-generic/443	 4s
+generic/443 4s ...  4s
 generic/444	- output mismatch (see /opt/fuse-xfstests/results//generic/444.out.bad)
     --- tests/generic/444.out	2018-06-27 21:12:13.664235135 +0200
-    +++ /opt/fuse-xfstests/results//generic/444.out.bad	2021-05-19 18:30:00.434288630 +0200
+    +++ /opt/fuse-xfstests/results//generic/444.out.bad	2021-06-02 21:45:37.949410297 +0200
     @@ -1,3 +1,3 @@
      QA output created by 444
     -drwxrwsr-x
@@ -587,31 +552,31 @@ generic/444	- output mismatch (see /opt/fuse-xfstests/results//generic/444.out.b
     +drwxr-sr-x
     ...
     (Run 'diff -u /opt/fuse-xfstests/tests/generic/444.out /opt/fuse-xfstests/results//generic/444.out.bad'  to see the entire diff)
-generic/445	 4s
+generic/445 4s ...  6s
 generic/446	[not run] xfs_io fpunch  failed (old kernel/wrong fs?)
 generic/447	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
-generic/448	 5s
-generic/449	 9s
+generic/448 5s ...  5s
+generic/449 9s ...  10s
 generic/450	[not run] Only test on sector size < half of block size
-generic/451	 35s
-generic/452	 0s
-generic/453	 0s
-generic/454	 1s
+generic/451 35s ...  35s
+generic/452 0s ...  0s
+generic/453 0s ...  1s
+generic/454 1s ...  0s
 generic/455	[not run] This test requires a valid $LOGWRITES_DEV
 generic/456	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/457	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/458	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/459	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/460	[not run] This test requires at least 1GB free on /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir to run
-generic/461	[not run] _scratch_mkfs failed on /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev
+generic/461	[not run] fuse.gocryptfs does not support shutdown
 generic/462	[not run] /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev fuse.gocryptfs does not support -o dax
 generic/463	[not run] Reflink not supported by test filesystem type: fuse.gocryptfs
-generic/464	 61s
-generic/465	 1s
+generic/464 61s ...  62s
+generic/465 1s ...  2s
 generic/466	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/467	- output mismatch (see /opt/fuse-xfstests/results//generic/467.out.bad)
     --- tests/generic/467.out	2018-06-27 21:12:13.667235146 +0200
-    +++ /opt/fuse-xfstests/results//generic/467.out.bad	2021-05-19 18:32:12.438854715 +0200
+    +++ /opt/fuse-xfstests/results//generic/467.out.bad	2021-06-02 21:47:53.286913802 +0200
     @@ -1,9 +1,82 @@
      QA output created by 467
      test_file_handles TEST_DIR/467-dir -dp
@@ -623,16 +588,16 @@ generic/467	- output mismatch (see /opt/fuse-xfstests/results//generic/467.out.b
     ...
     (Run 'diff -u /opt/fuse-xfstests/tests/generic/467.out /opt/fuse-xfstests/results//generic/467.out.bad'  to see the entire diff)
 generic/468	[not run] fuse.gocryptfs does not support shutdown
-generic/469	 5s
+generic/469 5s ...  5s
 generic/470	[not run] This test requires a valid $LOGWRITES_DEV
 generic/471	[not run] xfs_io pwrite  -V 1 -b 4k -N failed (old kernel/wrong fs?)
 generic/472	[not run] swapfiles are not supported
 generic/474	[not run] fuse.gocryptfs does not support shutdown
 generic/475	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
-generic/476	^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B                                                                                                                                                                                                                                                                     568s
+generic/476 568s ...  476s
 generic/477	- output mismatch (see /opt/fuse-xfstests/results//generic/477.out.bad)
     --- tests/generic/477.out	2018-06-27 21:12:13.669235154 +0200
-    +++ /opt/fuse-xfstests/results//generic/477.out.bad	2021-05-19 18:41:56.384150664 +0200
+    +++ /opt/fuse-xfstests/results//generic/477.out.bad	2021-06-02 21:56:04.753731431 +0200
     @@ -1,5 +1,48 @@
      QA output created by 477
      test_file_handles after cycle mount
@@ -643,27 +608,19 @@ generic/477	- output mismatch (see /opt/fuse-xfstests/results//generic/477.out.b
     +open_by_handle(/var/tmp/fuse-xfstests/check-gocryptfs/testdir/file000004) returned 116 incorrectly on a linked file!
     ...
     (Run 'diff -u /opt/fuse-xfstests/tests/generic/477.out /opt/fuse-xfstests/results//generic/477.out.bad'  to see the entire diff)
-generic/478	 15s
+generic/478 15s ...  9s
 generic/479	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/480	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/481	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/482	[not run] This test requires a valid $LOGWRITES_DEV
 generic/483	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
-generic/484	 5s
+generic/484 5s ...  5s
 generic/485	[not run] xfs_io finsert  failed (old kernel/wrong fs?)
-generic/486	 1s
+generic/486 1s ...  0s
 generic/487	[not run] This test requires a valid $SCRATCH_LOGDEV
-generic/488	 1s
+generic/488 1s ...  1s
 generic/489	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
-generic/490	[failed, exit status 1]- output mismatch (see /opt/fuse-xfstests/results//generic/490.out.bad)
-    --- tests/generic/490.out	2018-06-27 21:12:13.676235180 +0200
-    +++ /opt/fuse-xfstests/results//generic/490.out.bad	2021-05-19 18:42:20.063231357 +0200
-    @@ -1 +1,3 @@
-     QA output created by 490
-    +seek sanity check failed!
-    +(see /opt/fuse-xfstests/results//generic/490.full for details)
-    ...
-    (Run 'diff -u /opt/fuse-xfstests/tests/generic/490.out /opt/fuse-xfstests/results//generic/490.out.bad'  to see the entire diff)
+generic/490	 5s
 generic/491	[not run] fuse.gocryptfs does not support freezing
 generic/492	[not run] xfs_io label  support is missing (missing syscall?)
 generic/493	[not run] swapfiles are not supported
@@ -677,7 +634,7 @@ generic/500	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev 
 generic/501	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/502	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/503	[not run] xfs_io fpunch  failed (old kernel/wrong fs?)
-generic/504	 5s
+generic/504 5s ...  5s
 generic/505	[not run] fuse.gocryptfs does not support shutdown
 generic/506	[not run] fuse.gocryptfs does not support shutdown
 generic/507	[not run] file system doesn't support chattr +AsSu
@@ -692,33 +649,31 @@ generic/515	[not run] Reflink not supported by scratch filesystem type: fuse.goc
 generic/516	[not run] Dedupe not supported by test filesystem type: fuse.gocryptfs
 generic/517	[not run] Dedupe not supported by scratch filesystem type: fuse.gocryptfs
 generic/518	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
-generic/519	 0s
+generic/519 0s ...  0s
 generic/520	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
-generic/523	[33mListXAttr: invalid xattr name "user.gocryptfs.6AJTESQuk-hw0nWKiv85oA": bad message[0m
-fsck: corrupt xattr name on file "moofile": "user.gocryptfs.6AJTESQuk-hw0nWKiv85oA"
-fsck summary: 1 corrupt files, 0 files skipped
-- output mismatch (see /opt/fuse-xfstests/results//generic/523.out.bad)
+generic/523	- output mismatch (see /opt/fuse-xfstests/results//generic/523.out.bad)
     --- tests/generic/523.out	2021-05-08 21:11:05.304395950 +0200
-    +++ /opt/fuse-xfstests/results//generic/523.out.bad	2021-05-19 18:42:33.330276564 +0200
-    @@ -1,6 +1,3 @@
+    +++ /opt/fuse-xfstests/results//generic/523.out.bad	2021-06-02 21:56:38.395855827 +0200
+    @@ -1,6 +1,4 @@
      QA output created by 523
      set attr
+    +setfattr: /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/moofile: Invalid argument
      check attr
     -# file: SCRATCH_MNT/moofile
     -user.boo/hoo="woof"
     -
     ...
     (Run 'diff -u /opt/fuse-xfstests/tests/generic/523.out /opt/fuse-xfstests/results//generic/523.out.bad'  to see the entire diff)
-generic/524	 8s
+generic/524 8s ...  8s
 generic/525	[not run] filesystem does not support huge file size
 generic/526	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/527	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/528	[not run] inode creation time not supported by this filesystem
-generic/529	 1s
+generic/529 1s ...  0s
 generic/530	[not run] fuse.gocryptfs does not support shutdown
-generic/531	 2s
-generic/532	 4s
-generic/533	 5s
+generic/531 2s ...  2s
+generic/532 4s ...  5s
+generic/533 5s ...  5s
 generic/534	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/535	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/536	[not run] fuse.gocryptfs does not support shutdown
@@ -736,39 +691,27 @@ generic/547	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev 
 generic/548	[not run] No encryption support for fuse.gocryptfs
 generic/549	[not run] No encryption support for fuse.gocryptfs
 generic/550	[not run] No encryption support for fuse.gocryptfs
-generic/551	 1044s
+generic/551 1044s ...  1026s
 generic/552	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
 generic/553	[not run] xfs_io chattr +i support is missing (missing syscall?)
 generic/554	[not run] swapfiles are not supported
 generic/555	[not run] xfs_io chattr +ia support is missing (missing syscall?)
 generic/556	[not run] fuse.gocryptfs does not support casefold feature
 generic/557	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
-generic/558	 47s
+generic/558 47s ...  45s
 generic/559	[not run] duperemove utility required, skipped this test
 generic/560	[not run] duperemove utility required, skipped this test
 generic/561	[not run] duperemove utility required, skipped this test
 generic/562	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 generic/563	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
-generic/564	- output mismatch (see /opt/fuse-xfstests/results//generic/564.out.bad)
-    --- tests/generic/564.out	2021-05-08 21:11:05.307395966 +0200
-    +++ /opt/fuse-xfstests/results//generic/564.out.bad	2021-05-19 19:01:16.912888879 +0200
-    @@ -31,7 +31,7 @@
-     source range beyond 8TiB returns 0
-     
-     destination range beyond 8TiB returns EFBIG
-    -copy_range: File too large
-    +copy_range: Function not implemented
-     
-     destination larger than rlimit returns EFBIG
-    ...
-    (Run 'diff -u /opt/fuse-xfstests/tests/generic/564.out /opt/fuse-xfstests/results//generic/564.out.bad'  to see the entire diff)
-generic/565	 6s
+generic/564	 5s
+generic/565 6s ...  6s
 generic/566	[not run] disk quotas not supported by this filesystem type: fuse.gocryptfs
 generic/567	[not run] xfs_io fpunch  failed (old kernel/wrong fs?)
-generic/568	 0s
+generic/568 0s ...  0s
 generic/569	[not run] swapfiles are not supported
 generic/570	[not run] require /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev to be valid block disk
-generic/571	 10s
+generic/571 10s ...  11s
 generic/572	[not run] fsverity utility required, skipped this test
 generic/573	[not run] fsverity utility required, skipped this test
 generic/574	[not run] fsverity utility required, skipped this test
@@ -783,7 +726,7 @@ generic/582	[not run] No encryption support for fuse.gocryptfs
 generic/583	[not run] No encryption support for fuse.gocryptfs
 generic/584	[not run] No encryption support for fuse.gocryptfs
 generic/585	[not run] kernel doesn't support renameat2 syscall
-generic/586	 7s
+generic/586 7s ...  7s
 generic/587	[not run] disk quotas not supported by this filesystem type: fuse.gocryptfs
 generic/588	[not run] Reflink not supported by scratch filesystem type: fuse.gocryptfs
 shared/002	[not run] not suitable for this filesystem type: fuse.gocryptfs
@@ -791,9 +734,7 @@ shared/032	[not run] not suitable for this filesystem type: fuse.gocryptfs
 shared/298	[not run] not suitable for this filesystem type: fuse.gocryptfs
 Ran: generic/001 generic/002 generic/003 generic/004 generic/005 generic/006 generic/007 generic/008 generic/009 generic/010 generic/011 generic/012 generic/013 generic/014 generic/015 generic/016 generic/017 generic/018 generic/020 generic/021 generic/022 generic/023 generic/024 generic/025 generic/026 generic/027 generic/028 generic/029 generic/030 generic/031 generic/032 generic/033 generic/034 generic/035 generic/036 generic/037 generic/038 generic/039 generic/040 generic/041 generic/043 generic/044 generic/045 generic/046 generic/047 generic/048 generic/049 generic/050 generic/051 generic/052 generic/053 generic/054 generic/055 generic/056 generic/057 generic/058 generic/059 generic/060 generic/061 generic/062 generic/063 generic/064 generic/065 generic/066 generic/067 generic/068 generic/069 generic/070 generic/071 generic/072 generic/073 generic/074 generic/075 generic/076 generic/077 generic/078 generic/079 generic/080 generic/081 generic/082 generic/083 generic/084 generic/085 generic/086 generic/087 generic/088 generic/089 generic/090 generic/091 generic/092 generic/093 generic/094 generic/095 generic/096 generic/097 generic/098 generic/099 generic/100 generic/101 generic/102 generic/103 generic/104 generic/105 generic/106 generic/107 generic/108 generic/109 generic/110 generic/111 generic/112 generic/113 generic/114 generic/115 generic/116 generic/117 generic/118 generic/119 generic/120 generic/121 generic/122 generic/123 generic/124 generic/126 generic/127 generic/128 generic/129 generic/130 generic/131 generic/132 generic/133 generic/134 generic/135 generic/136 generic/137 generic/138 generic/139 generic/140 generic/141 generic/142 generic/143 generic/144 generic/145 generic/146 generic/147 generic/148 generic/149 generic/150 generic/151 generic/152 generic/153 generic/154 generic/155 generic/156 generic/157 generic/158 generic/159 generic/160 generic/161 generic/162 generic/163 generic/164 generic/165 generic/166 generic/167 generic/168 generic/169 generic/170 generic/171 generic/172 generic/173 generic/174 generic/175 generic/176 generic/177 generic/178 generic/179 generic/180 generic/181 generic/182 generic/183 generic/184 generic/185 generic/186 generic/187 generic/188 generic/189 generic/190 generic/191 generic/192 generic/193 generic/194 generic/195 generic/196 generic/197 generic/198 generic/199 generic/200 generic/201 generic/202 generic/203 generic/204 generic/205 generic/206 generic/207 generic/208 generic/209 generic/210 generic/211 generic/212 generic/213 generic/214 generic/215 generic/216 generic/217 generic/218 generic/219 generic/220 generic/221 generic/222 generic/223 generic/224 generic/225 generic/226 generic/227 generic/228 generic/229 generic/230 generic/231 generic/232 generic/233 generic/234 generic/235 generic/236 generic/237 generic/238 generic/239 generic/240 generic/241 generic/242 generic/243 generic/244 generic/245 generic/246 generic/247 generic/248 generic/249 generic/250 generic/252 generic/253 generic/254 generic/255 generic/256 generic/257 generic/258 generic/259 generic/260 generic/261 generic/262 generic/263 generic/264 generic/265 generic/266 generic/267 generic/268 generic/269 generic/270 generic/271 generic/272 generic/273 generic/274 generic/275 generic/276 generic/277 generic/278 generic/279 generic/280 generic/281 generic/282 generic/283 generic/284 generic/285 generic/286 generic/287 generic/288 generic/289 generic/290 generic/291 generic/292 generic/293 generic/294 generic/295 generic/296 generic/297 generic/298 generic/299 generic/300 generic/301 generic/302 generic/303 generic/304 generic/305 generic/306 generic/307 generic/308 generic/309 generic/310 generic/311 generic/312 generic/313 generic/314 generic/315 generic/316 generic/317 generic/318 generic/319 generic/320 generic/321 generic/322 generic/323 generic/324 generic/325 generic/326 generic/327 generic/328 generic/329 generic/330 generic/331 generic/332 generic/333 generic/334 generic/335 generic/336 generic/337 generic/338 generic/339 generic/340 generic/341 generic/342 generic/343 generic/344 generic/345 generic/346 generic/347 generic/348 generic/352 generic/353 generic/354 generic/355 generic/356 generic/357 generic/358 generic/359 generic/360 generic/361 generic/362 generic/363 generic/364 generic/365 generic/366 generic/367 generic/368 generic/369 generic/370 generic/371 generic/372 generic/373 generic/374 generic/375 generic/376 generic/377 generic/378 generic/379 generic/380 generic/381 generic/382 generic/383 generic/384 generic/385 generic/386 generic/387 generic/388 generic/389 generic/390 generic/391 generic/392 generic/393 generic/394 generic/395 generic/396 generic/397 generic/398 generic/399 generic/400 generic/401 generic/402 generic/403 generic/404 generic/405 generic/406 generic/407 generic/408 generic/409 generic/410 generic/411 generic/412 generic/413 generic/414 generic/415 generic/416 generic/417 generic/418 generic/419 generic/420 generic/421 generic/422 generic/423 generic/424 generic/425 generic/426 generic/427 generic/428 generic/429 generic/430 generic/431 generic/432 generic/433 generic/434 generic/435 generic/436 generic/437 generic/438 generic/439 generic/440 generic/441 generic/443 generic/444 generic/445 generic/446 generic/447 generic/448 generic/449 generic/450 generic/451 generic/452 generic/453 generic/454 generic/455 generic/456 generic/457 generic/458 generic/459 generic/460 generic/461 generic/462 generic/463 generic/464 generic/465 generic/466 generic/467 generic/468 generic/469 generic/470 generic/471 generic/472 generic/474 generic/475 generic/476 generic/477 generic/478 generic/479 generic/480 generic/481 generic/482 generic/483 generic/484 generic/485 generic/486 generic/487 generic/488 generic/489 generic/490 generic/491 generic/492 generic/493 generic/494 generic/495 generic/496 generic/497 generic/498 generic/499 generic/500 generic/501 generic/502 generic/503 generic/504 generic/505 generic/506 generic/507 generic/508 generic/509 generic/510 generic/511 generic/512 generic/513 generic/514 generic/515 generic/516 generic/517 generic/518 generic/519 generic/520 generic/523 generic/524 generic/525 generic/526 generic/527 generic/528 generic/529 generic/530 generic/531 generic/532 generic/533 generic/534 generic/535 generic/536 generic/537 generic/538 generic/539 generic/540 generic/541 generic/542 generic/543 generic/544 generic/545 generic/546 generic/547 generic/548 generic/549 generic/550 generic/551 generic/552 generic/553 generic/554 generic/555 generic/556 generic/557 generic/558 generic/559 generic/560 generic/561 generic/562 generic/563 generic/564 generic/565 generic/566 generic/567 generic/568 generic/569 generic/570 generic/571 generic/572 generic/573 generic/574 generic/575 generic/576 generic/577 generic/578 generic/579 generic/580 generic/581 generic/582 generic/583 generic/584 generic/585 generic/586 generic/587 generic/588 shared/002 shared/032 shared/298
 Not run: generic/003 generic/004 generic/008 generic/009 generic/012 generic/016 generic/017 generic/018 generic/021 generic/022 generic/025 generic/026 generic/031 generic/032 generic/033 generic/034 generic/038 generic/039 generic/040 generic/041 generic/043 generic/044 generic/045 generic/046 generic/047 generic/048 generic/049 generic/050 generic/051 generic/052 generic/054 generic/055 generic/056 generic/057 generic/058 generic/059 generic/060 generic/061 generic/063 generic/064 generic/065 generic/066 generic/067 generic/068 generic/072 generic/073 generic/076 generic/078 generic/079 generic/081 generic/082 generic/085 generic/090 generic/092 generic/094 generic/096 generic/101 generic/104 generic/106 generic/107 generic/108 generic/110 generic/111 generic/114 generic/115 generic/116 generic/118 generic/119 generic/120 generic/121 generic/122 generic/134 generic/136 generic/137 generic/138 generic/139 generic/140 generic/142 generic/143 generic/144 generic/145 generic/146 generic/147 generic/148 generic/149 generic/150 generic/151 generic/152 generic/153 generic/154 generic/155 generic/156 generic/157 generic/158 generic/159 generic/160 generic/161 generic/162 generic/163 generic/164 generic/165 generic/166 generic/167 generic/168 generic/170 generic/171 generic/172 generic/173 generic/174 generic/175 generic/176 generic/177 generic/178 generic/179 generic/180 generic/181 generic/182 generic/183 generic/185 generic/186 generic/187 generic/188 generic/189 generic/190 generic/191 generic/192 generic/194 generic/195 generic/196 generic/197 generic/199 generic/200 generic/201 generic/202 generic/203 generic/205 generic/206 generic/216 generic/217 generic/218 generic/219 generic/220 generic/222 generic/223 generic/225 generic/227 generic/229 generic/230 generic/231 generic/232 generic/233 generic/234 generic/235 generic/238 generic/240 generic/242 generic/243 generic/244 generic/250 generic/252 generic/253 generic/254 generic/255 generic/256 generic/259 generic/260 generic/261 generic/262 generic/264 generic/265 generic/266 generic/267 generic/268 generic/270 generic/271 generic/272 generic/276 generic/277 generic/278 generic/279 generic/280 generic/281 generic/282 generic/283 generic/284 generic/287 generic/288 generic/289 generic/290 generic/291 generic/292 generic/293 generic/295 generic/296 generic/297 generic/298 generic/299 generic/300 generic/301 generic/302 generic/303 generic/304 generic/305 generic/311 generic/316 generic/321 generic/322 generic/324 generic/325 generic/326 generic/327 generic/328 generic/329 generic/330 generic/331 generic/332 generic/333 generic/334 generic/335 generic/336 generic/338 generic/341 generic/342 generic/343 generic/347 generic/348 generic/352 generic/353 generic/356 generic/357 generic/358 generic/359 generic/361 generic/362 generic/363 generic/364 generic/365 generic/366 generic/367 generic/368 generic/369 generic/370 generic/372 generic/373 generic/374 generic/376 generic/379 generic/380 generic/381 generic/382 generic/383 generic/384 generic/385 generic/386 generic/387 generic/388 generic/389 generic/390 generic/392 generic/395 generic/396 generic/397 generic/398 generic/399 generic/400 generic/402 generic/404 generic/405 generic/407 generic/408 generic/409 generic/410 generic/411 generic/413 generic/414 generic/415 generic/417 generic/418 generic/419 generic/420 generic/421 generic/424 generic/425 generic/429 generic/435 generic/439 generic/440 generic/441 generic/446 generic/447 generic/450 generic/455 generic/456 generic/457 generic/458 generic/459 generic/460 generic/461 generic/462 generic/463 generic/466 generic/468 generic/470 generic/471 generic/472 generic/474 generic/475 generic/479 generic/480 generic/481 generic/482 generic/483 generic/485 generic/487 generic/489 generic/491 generic/492 generic/493 generic/494 generic/495 generic/496 generic/497 generic/498 generic/499 generic/500 generic/501 generic/502 generic/503 generic/505 generic/506 generic/507 generic/508 generic/509 generic/510 generic/511 generic/512 generic/513 generic/514 generic/515 generic/516 generic/517 generic/518 generic/520 generic/525 generic/526 generic/527 generic/528 generic/530 generic/534 generic/535 generic/536 generic/537 generic/538 generic/539 generic/540 generic/541 generic/542 generic/543 generic/544 generic/545 generic/546 generic/547 generic/548 generic/549 generic/550 generic/552 generic/553 generic/554 generic/555 generic/556 generic/557 generic/559 generic/560 generic/561 generic/562 generic/563 generic/566 generic/567 generic/569 generic/570 generic/572 generic/573 generic/574 generic/575 generic/576 generic/577 generic/578 generic/579 generic/580 generic/581 generic/582 generic/583 generic/584 generic/585 generic/587 generic/588 shared/002 shared/032 shared/298
-Failures: generic/035 generic/062 generic/080 generic/093 generic/099 generic/215 generic/285 generic/286 generic/319 generic/375 generic/401 generic/426 generic/444 generic/467 generic/477 generic/490 generic/523 generic/564
-Failed 18 of 580 tests
+Failures: generic/035 generic/062 generic/080 generic/093 generic/099 generic/215 generic/285 generic/319 generic/426 generic/444 generic/467 generic/477 generic/523
+Failed 13 of 580 tests
 
-Runtime was 4582 seconds, exit code 1
-kroot@brikett:/opt/fuse-xfstests\[?2004h[root@brikett fuse-xfstests]# [?2004l
-exit
+Runtime was 4412 seconds, exit code 1

@@ -1,4 +1,4 @@
 *** mkfs -dsize=268435456,agcount=6
 
 /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev is a mountpoint
-seed = 1621464030
+seed = 1622600687

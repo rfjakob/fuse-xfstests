@@ -1,11 +1,11 @@
 /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev is a mountpoint
-fsstress -p128 -n999999999 -f setattr=1 -ffsync=0 -fsync=0 -ffdatasync=0 -d /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/fsstress.2952617
+fsstress -p128 -n999999999 -f setattr=1 -ffsync=0 -fsync=0 -ffdatasync=0 -d /var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/fsstress.1702751
 dd: error writing '/var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/SPACE_CONSUMER': No space left on device
 10+0 records in
 9+0 records out
 dd: error writing '/var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/SPACE_CONSUMER': No space left on device
-1+0 records in
-0+0 records out
+2+0 records in
+1+0 records out
 dd: error writing '/var/tmp/fuse-xfstests/check-gocryptfs/scratchdir/SPACE_CONSUMER': No space left on device
 1+0 records in
 0+0 records out

@@ -1,3 +1,3 @@
 /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev is a mountpoint
 wrote 270532608/270532608 bytes at offset 0
-258 MiB, 1 ops; 0.6802 sec (379.282 MiB/sec and 1.4701 ops/sec)
+258 MiB, 1 ops; 0.6491 sec (397.431 MiB/sec and 1.5404 ops/sec)

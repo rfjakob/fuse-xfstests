@@ -1,2 +1,4 @@
 device-mapper: remove ioctl on error-test  failed: No such device or address
 Command failed.
+device-mapper: remove ioctl on error-test  failed: No such device or address
+Command failed.

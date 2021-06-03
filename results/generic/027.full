@@ -1,7 +1,7 @@
 /var/tmp/fuse-xfstests/check-gocryptfs/scratchdev is a mountpoint
 Reserve 2M space
 wrote 2097152/2097152 bytes at offset 0
-2 MiB, 512 ops; 0.0288 sec (69.382 MiB/sec and 17761.7429 ops/sec)
+2 MiB, 512 ops; 0.0262 sec (76.307 MiB/sec and 19534.5288 ops/sec)
 Fulfill the fs
 pwrite: No space left on device
 Remove reserved file

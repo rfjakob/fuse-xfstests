@@ -32,12 +32,12 @@ Allocation size: 4096
 03.10 SEEK_DATA expected -1 with errno -6, got -6.                succ
 
 04. Test file hole at beg, data at end                
-04.01 SEEK_HOLE expected 0 or 8200, got 4046.                     FAIL
-04.02 SEEK_HOLE expected 1 or 8200, got 4046.                     FAIL
+04.01 SEEK_HOLE expected 0 or 8200, got 4096.                     FAIL
+04.02 SEEK_HOLE expected 1 or 8200, got 4096.                     FAIL
 04.03 SEEK_DATA expected 8192 or 8192, got 0.                     FAIL
 04.04 SEEK_DATA expected 8192 or 8192, got 1.                     FAIL
-04.05 SEEK_HOLE expected 8191 or 8200, got 8200.                  succ
-04.06 SEEK_DATA expected 8192 or 8192, got 8191.                  FAIL
+04.05 SEEK_HOLE expected 8191 or 8200, got 8191.                  succ
+04.06 SEEK_DATA expected 8192 or 8192, got 8192.                  succ
 04.07 SEEK_HOLE expected 8200 or 8200, got 8200.                  succ
 04.08 SEEK_DATA expected 8192 or 8192, got 8192.                  succ
 04.09 SEEK_HOLE expected 8200 or 8200, got 8200.                  succ
