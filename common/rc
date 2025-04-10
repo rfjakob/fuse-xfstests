@@ -512,6 +512,11 @@ _scratch_unmount()
 	tmpfs)
 		_unmount $SCRATCH_MNT
 		;;
+	fuse)
+		# The "source device" can be an arbitrary string for fuse filesystems
+		# and may not be unique. Unmount by mountpoint instead.
+		_unmount $SCRATCH_MNT
+		;;
 	*)
 		_unmount $SCRATCH_DEV
 		;;
@@ -703,6 +708,10 @@ _test_unmount()
 {
 	if [ "$FSTYP" == "overlay" ]; then
 		_overlay_test_unmount
+	elif [ "$FSTYP" == "fuse" ]; then
+		# The "source device" can be an arbitrary string for fuse filesystems
+		# and may not be unique. Unmount by mountpoint instead.
+		_unmount $TEST_DIR
 	else
 		_unmount $TEST_DEV
 	fi
@@ -5021,7 +5030,7 @@ init_rc()
 
 	# Sanity check that TEST partition is not mounted at another mount point
 	# or as another fs type
-	_check_mounted_on TEST_DEV $TEST_DEV TEST_DIR $TEST_DIR $FSTYP || _exit 1
+	_check_mounted_on TEST_DEV $TEST_DEV TEST_DIR $TEST_DIR $FSTYP$FUSE_SUBTYP || exit 1
 	if [ -n "$SCRATCH_DEV" ]; then
 		# Sanity check that SCRATCH partition is not mounted at another
 		# mount point, because it is about to be unmounted and formatted.

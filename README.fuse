@@ -1,3 +1,6 @@
+passthrough_ll
+==============
+
 Here are instructions for testing fuse using the passthrough_ll example
 filesystem provided in the libfuse source tree:
 
@@ -22,5 +25,32 @@ export SCRATCH_DEV=non2
 export SCRATCH_MNT=/mnt/scratch
 export FSTYP=fuse
 export FUSE_SUBTYP=.passthrough_ll
-export MOUNT_OPTIONS="-osource=/home/test/scratch,allow_other,default_permissions"
-export TEST_FS_MOUNT_OPTS="-osource=/home/test/test,allow_other,default_permissions"
+export MOUNT_OPTIONS="-osource=/home/test/scratch,subtype=passthrough_ll,allow_other,default_permissions"
+export TEST_FS_MOUNT_OPTS="-osource=/home/test/test,subtype=passthrough_ll,allow_other,default_permissions"
+
+
+gocryptfs
+=========
+
+Here are the instructions for gocryptfs:
+
+git clone https://github.com/rfjakob/gocryptfs.git
+cd gocryptfs
+./build.bash
+cat << EOF | sudo tee /sbin/mount.fuse.gocryptfs
+#!/bin/bash
+exec $(pwd)/gocryptfs -q -allow_other -acl -extpass "echo test" "\$@"
+EOF
+sudo chmod +x /sbin/mount.fuse.gocryptfs
+mkdir -p /mnt/gocryptfs.test /mnt/gocryptfs.scratch /home/test/gocryptfs.test /home/test/gocryptfs.scratch
+gocryptfs -init -q -scryptn=10 -extpass "echo test" /home/test/gocryptfs.test
+gocryptfs -init -q -scryptn=10 -extpass "echo test" /home/test/gocryptfs.scratch
+
+Use the following local.config file:
+
+export TEST_DEV=/home/test/gocryptfs.test
+export TEST_DIR=/mnt/gocryptfs.test
+export SCRATCH_DEV=/home/test/gocryptfs.scratch
+export SCRATCH_MNT=/mnt/gocryptfs.scratch
+export FSTYP=fuse
+export FUSE_SUBTYP=.gocryptfs
